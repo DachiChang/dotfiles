@@ -1,7 +1,5 @@
 # dotfiles
 
-## Tmux
-
 ## Vim
 
 Reference
@@ -12,3 +10,11 @@ Command
  - PluginInstall
  - PluginClean
  - PluginList
+
+## Tmux
+
+## Screen
+
+KeyBind
+ - F11 previous screen
+ - F12 next screen
