@@ -73,14 +73,6 @@ nmap <C-t> :tabnew<CR>
 nmap <S-n> :tabnext<CR>
 nmap <S-p> :tabprev<CR>
 
-"keyboard mapping
-nmap <C-W>- <C-W>s
-nmap <C-W>\| <C-W>v
-nmap <C-k> <C-W>k
-nmap <C-j> <C-W>j
-nmap <C-h> <C-W>h
-nmap <C-l> <C-W>l
-
 "highlight whitespace
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
