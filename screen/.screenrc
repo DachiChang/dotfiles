@@ -1,0 +1,18 @@
+#screen setting
+cjkwidth off
+startup_message off
+
+#support 256 color
+termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
+
+#statusbar
+caption always "%{=u .r} %-w%<%{=ub .Y}%n %t%{=u .r}%+w "
+hardstatus alwaysignore
+hardstatus alwayslastline "%{= .K} [%l]%<%=%{= .Y}$USER%{= .R}@%H %=%{= .m} %Y/%m/%d%{= .M} %0c "
+
+#key bind
+bind b encoding big5 utf8
+bind u encoding utf8 utf8
+bindkey -k F1 prev
+bindkey -k F2 next
+defscrollback 1000
