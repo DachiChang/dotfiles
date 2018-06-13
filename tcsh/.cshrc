@@ -10,7 +10,7 @@ set savehist = 5000
 set mail = (/var/mail/$USER)
 
 # custom alias
-alias ls    'ls -hFG'
+alias ls    'ls -hF --color'
 alias grep  'grep --color=auto'
 alias rm    'rm -i'
 alias cp    'cp -i'
