@@ -29,7 +29,7 @@ umask 22
 
 # custom environment
 setenv EDITOR   vim
-setenv PAGER    more
+setenv PAGER    less
 setenv BLOCKSIZE	K
 
 # bindkey setting
