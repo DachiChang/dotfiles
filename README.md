@@ -20,3 +20,10 @@ KeyBind
  - F12 next screen
 
 ## Tcsh
+
+## Misc
+
+### editrc
+
+Reference
+ - https://dev.mysql.com/doc/refman/5.6/en/mysql-tips.html
