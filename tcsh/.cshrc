@@ -10,7 +10,7 @@ set savehist = 5000
 set mail = (/var/mail/$USER)
 
 # custom alias
-alias ls    'ls -hF --color'
+alias ls    'ls -hF --color=auto'
 alias grep  'grep --color=auto'
 alias rm    'rm -i'
 alias cp    'cp -i'
@@ -23,6 +23,7 @@ alias j	    jobs -l
 alias la    ls -a
 alias lf    ls -FA
 alias ll    ls -lA
+alias more  less
 
 # A righteous umask
 umask 22
