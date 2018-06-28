@@ -69,9 +69,9 @@ highlight User4 term=underline cterm=underline ctermfg=059
 highlight User5 ctermfg=215
 
 "tab page mapping
-nmap <C-t> :tabnew<CR>
-nmap <S-n> :tabnext<CR>
-nmap <S-p> :tabprev<CR>
+nmap <C-t>t :tabnew<CR>
+nmap <C-t>l :tabnext<CR>
+nmap <C-t>h :tabprev<CR>
 
 "highlight whitespace
 highlight ExtraWhitespace ctermbg=red guibg=red
