@@ -1,26 +1,25 @@
 "auto vundle
-let iCanHazVundle=1
-let vundle_readme=expand('~/.vim/bundle/vundle/README.md')
-if !filereadable(vundle_readme)
-    echo "Installing Vundle.."
-    echo ""
+set nocompatible
+filetype off
+let vundle_install=expand('~/.vim/bundle/vundle/README.md')
+if !filereadable(vundle_install)
+    echo "Installing Vundle....."
     silent !mkdir -p ~/.vim/bundle
-    silent !git clone https://github.com/gmarik/vundle ~/.vim/bundle/vundle
-    let iCanHazVundle=0
+    silent !git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/vundle
 endif
-
 set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-"Bundle plugin setting
-Bundle 'gmarik/vundle'
-Bundle 'kien/ctrlp.vim'
+call vundle#begin()
+"vundle plugin setting
+Plugin 'kien/ctrlp.vim'
+Plugin 'ekalinin/Dockerfile.vim'
+Plugin 'editorconfig/editorconfig-vim'
+call vundle#end()
 
 "vim base setting
 set t_Co=256
 colorscheme molokai
 filetype plugin indent on
 set noswf               "don't use swap file all in memory
-set nocompatible        "vi and vim is not comaptible
 set backspace=2         "use backspace as directer key
 set ttymouse=xterm2
 set clipboard=unnamedplus
@@ -97,10 +96,3 @@ nmap <F9> :set paste!<BAR>set paste?<CR>
 "ctrlp setting
 let g:ctrlp_custom_ignore = { 'dir': '\v[\/]\.(git|hg|svn)$', 'file': '\v\.(exe|so|dll)$', 'link': 'some_bad_symbolic_links' }
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard']
-
-"xml fold by indent
-autocmd FileType xml
-    \ let xml_syntax_folding=1 |
-    \ setlocal syntax=xml |
-    \ setlocal foldmethod=syntax |
-    \ setlocal foldlevel=2
