@@ -8,12 +8,13 @@ if !filereadable(vundle_install)
     silent !git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 endif
 set rtp+=~/.vim/bundle/Vundle.vim/
-call vundle#begin()
 "vundle plugin setting
+call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'ekalinin/Dockerfile.vim'
 Plugin 'editorconfig/editorconfig-vim'
+Plugin 'ycm-core/YouCompleteMe' "Inastall Note: cd ~/.vim/bundle/YouCompleteMe && ./install.py --clang-completer --ts-completer
 call vundle#end()
 
 "vim base setting
@@ -97,3 +98,9 @@ nmap <F9> :set paste!<BAR>set paste?<CR>
 "ctrlp setting
 let g:ctrlp_custom_ignore = { 'dir': '\v[\/]\.(git|hg|svn)$', 'file': '\v\.(exe|so|dll)$', 'link': 'some_bad_symbolic_links' }
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard']
+
+"YouCompleteMe setting
+let g:ycm_autoclose_preview_window_after_completion = 1
+let g:ycm_autoclose_preview_window_after_insertion = 1
+let g:ycm_key_list_stop_completion = ['<Esc>']
+let g:ycm_confirm_extra_conf=0
