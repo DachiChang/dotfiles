@@ -1,15 +1,16 @@
 "auto vundle
 set nocompatible
 filetype off
-let vundle_install=expand('~/.vim/bundle/vundle/README.md')
+let vundle_install=expand('~/.vim/bundle/Vundle.vim/README.md')
 if !filereadable(vundle_install)
     echo "Installing Vundle....."
     silent !mkdir -p ~/.vim/bundle
-    silent !git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/vundle
+    silent !git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 endif
-set rtp+=~/.vim/bundle/vundle/
+set rtp+=~/.vim/bundle/Vundle.vim/
 call vundle#begin()
 "vundle plugin setting
+Plugin 'VundleVim/Vundle.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'ekalinin/Dockerfile.vim'
 Plugin 'editorconfig/editorconfig-vim'
