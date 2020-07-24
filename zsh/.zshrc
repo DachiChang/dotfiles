@@ -6,14 +6,20 @@ export PAGER='less'
 export LANG=en_US.UTF-8
 
 # Oh-my-zsh config and activate
-ZSH_THEME="dachi"
-DISABLE_AUTO_TITLE="true"
+DISABLE_AUTO_TITLE='true'
+CASE_SENSITIVE='true'
 plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
+# Zsh prompt setting
+PROMPT='%F{222}(%T)-%F{215}(%n)-%F{173}(%m)-%F{101}(%~)$(git_prompt_info) %F{59}%# %f'
+ZSH_THEME_GIT_PROMPT_PREFIX='%F{101}-%F{59}('
+ZSH_THEME_GIT_PROMPT_SUFFIX='%f'
+ZSH_THEME_GIT_PROMPT_DIRTY='*%F{59})'
+ZSH_THEME_GIT_PROMPT_CLEAN='%F{59})'
+
 # Zsh setting
 setopt noautomenu
-setopt nomenucomplete
 
 # Key binding
 bindkey '\e\eOC' forward-word   # for tmux
