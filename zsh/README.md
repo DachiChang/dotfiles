@@ -18,9 +18,3 @@ The detail of Oh-my-zsh plugin, you can refer to [github](https://github.com/ohm
 ```
 cp .zshrc ~/
 ```
-
-## Install themes
-
-```
-cp themes/dachi.zsh-theme ~/.oh-my-zsh/themes/
-```
