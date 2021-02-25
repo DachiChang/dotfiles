@@ -16,7 +16,7 @@ Plugin 'ekalinin/Dockerfile.vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'stephpy/vim-yaml'
 Plugin 'editorconfig/editorconfig-vim'
-Plugin 'ycm-core/YouCompleteMe' "Inastall Note: cd ~/.vim/bundle/YouCompleteMe && ./install.py --clang-completer --ts-completer
+Plugin 'ycm-core/YouCompleteMe' "Install Note: cd ~/.vim/bundle/YouCompleteMe && ./install.py --clang-completer --ts-completer
 call vundle#end()
 
 "vim base setting
