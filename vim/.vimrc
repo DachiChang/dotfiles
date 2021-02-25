@@ -105,3 +105,5 @@ let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-stand
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_confirm_extra_conf=0
+nnoremap gd :YcmCompleter GoTo<CR>
+nnoremap gt :YcmCompleter GetType<CR>
