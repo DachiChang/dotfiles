@@ -103,8 +103,8 @@ let g:ctrlp_custom_ignore = { 'dir': '\v[\/]\.(git|hg|svn)$', 'file': '\v\.(exe|
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard']
 
 "YouCompleteMe setting
-let g:ycm_autoclose_preview_window_after_completion = 1
-let g:ycm_autoclose_preview_window_after_insertion = 1
+let g:ycm_autoclose_preview_window_after_completion=1
+let g:ycm_autoclose_preview_window_after_insertion=1
 let g:ycm_confirm_extra_conf=0
 nnoremap gd :YcmCompleter GoTo<CR>
 nnoremap gt :YcmCompleter GetType<CR>
@@ -124,3 +124,4 @@ autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTr
     \ quit | endif
 autocmd BufWinEnter * silent NERDTreeMirror
 let NERDTreeShowHidden=1
+let NERDTreeMinimalUI=1
