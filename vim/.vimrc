@@ -110,6 +110,15 @@ nnoremap gd :YcmCompleter GoTo<CR>
 nnoremap gt :YcmCompleter GetType<CR>
 
 "NERDTree setting
+"o  open in current window, and focus
+"go open in current window, but stay NERDTree
+"t  open in new tab, and focus
+"T  open in new tab, but stay NERDTree
+"i  open in a new horizontal window, and focus
+"gi open in a new horizontal window, but stay NERDTree
+"s  open in a new vertical window, and focus
+"gs open in a new vertical window, but stay NERDTree
+"O  open directory recursively
 nnoremap <F1> :NERDTreeToggle<CR>
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() |
     \ quit | endif
