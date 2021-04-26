@@ -16,7 +16,8 @@ Plugin 'ekalinin/Dockerfile.vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'stephpy/vim-yaml'
 Plugin 'editorconfig/editorconfig-vim'
-Plugin 'ycm-core/YouCompleteMe' "Install Note: cd ~/.vim/bundle/YouCompleteMe && ./install.py --clang-completer --ts-completer
+Plugin 'preservim/nerdtree'
+Plugin 'ycm-core/YouCompleteMe' "Inastall Note: cd ~/.vim/bundle/YouCompleteMe && ./install.py --clang-completer --ts-completer
 call vundle#end()
 
 "vim base setting
@@ -71,11 +72,6 @@ highlight User3 ctermfg=173
 highlight User4 term=underline cterm=underline ctermfg=059
 highlight User5 ctermfg=215
 
-"tab page mapping
-nmap <C-t>t :tabnew<CR>
-nmap <C-t>l :tabnext<CR>
-nmap <C-t>h :tabprev<CR>
-
 "highlight whitespace
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
@@ -85,6 +81,11 @@ autocmd InsertLeave * match ExtraWhitespace /\\+$/
 autocmd BufWinLeave * call clearmatches()
 highlight ExtraTab ctermbg=blue guibg=blue
 match ExtraTab /\t/
+
+"tab page mapping
+nmap <C-h> :tabprev<CR>
+nmap <C-l> :tabnext<CR>
+nmap <C-t> :tabnew<CR>
 
 "functional mapping
 nmap <F5> :e!<CR>
@@ -107,3 +108,10 @@ let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_confirm_extra_conf=0
 nnoremap gd :YcmCompleter GoTo<CR>
 nnoremap gt :YcmCompleter GetType<CR>
+
+"NERDTree setting
+nnoremap <F1> :NERDTreeToggle<CR>
+autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() |
+    \ quit | endif
+autocmd BufWinEnter * silent NERDTreeMirror
+let NERDTreeShowHidden=1
