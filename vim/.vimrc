@@ -71,6 +71,10 @@ highlight User2 ctermfg=101
 highlight User3 ctermfg=173
 highlight User4 term=underline cterm=underline ctermfg=059
 highlight User5 ctermfg=215
+"highlight TabLine
+highlight TabLineFill ctermfg=235
+highlight TabLine term=none cterm=none ctermfg=252 ctermbg=235
+highlight TabLineSel term=bold cterm=bold ctermfg=255 ctermbg=238
 
 "highlight whitespace
 highlight ExtraWhitespace ctermbg=red guibg=red
@@ -86,6 +90,7 @@ match ExtraTab /\t/
 nmap <C-h> :tabprev<CR>
 nmap <C-l> :tabnext<CR>
 nmap <C-t> :tabnew<CR>
+nmap <C-c> :tabclose<CR>
 
 "functional mapping
 nmap <F5> :e!<CR>
