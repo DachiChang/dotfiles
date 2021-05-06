@@ -11,7 +11,6 @@ set rtp+=~/.vim/bundle/Vundle.vim/
 "vundle plugin setting
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'kien/ctrlp.vim'
 Plugin 'ekalinin/Dockerfile.vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'stephpy/vim-yaml'
@@ -87,10 +86,10 @@ highlight ExtraTab ctermbg=blue guibg=blue
 match ExtraTab /\t/
 
 "tab page mapping
-nmap <C-h> :tabprev<CR>
-nmap <C-l> :tabnext<CR>
+nmap <C-p> :tabprev<CR>
+nmap <C-n> :tabnext<CR>
 nmap <C-t> :tabnew<CR>
-nmap <C-c> :tabclose<CR>
+nmap <C-q> :tabclose<CR>
 
 "functional mapping
 nmap <F5> :e!<CR>
@@ -102,10 +101,6 @@ nmap <F7> :if exists("syntax_on")<BAR>
     \ endif <CR>
 nmap <F8> :set hls!<BAR>set hls?<CR>
 nmap <F9> :set paste!<BAR>set paste?<CR>
-
-"ctrlp setting
-let g:ctrlp_custom_ignore = { 'dir': '\v[\/]\.(git|hg|svn)$', 'file': '\v\.(exe|so|dll)$', 'link': 'some_bad_symbolic_links' }
-let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard']
 
 "YouCompleteMe setting
 let g:ycm_autoclose_preview_window_after_completion=1
