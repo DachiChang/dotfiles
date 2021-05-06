@@ -28,6 +28,7 @@ set backspace=2         "use backspace as directer key
 set ttymouse=xterm2
 set clipboard=unnamedplus
 set titlestring=Vim\ -\ %f
+set nofoldenable        "disable folding
 
 "file encoding
 set fencs=utf-8,big5
