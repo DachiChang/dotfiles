@@ -20,6 +20,7 @@ Plugin 'ycm-core/YouCompleteMe' "Inastall Note: cd ~/.vim/bundle/YouCompleteMe &
 call vundle#end()
 
 "vim base setting
+set mouse=a
 set t_Co=256
 colorscheme molokai
 filetype plugin indent on
