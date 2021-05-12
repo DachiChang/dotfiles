@@ -20,12 +20,12 @@ Plugin 'ycm-core/YouCompleteMe' "Inastall Note: cd ~/.vim/bundle/YouCompleteMe &
 call vundle#end()
 
 "vim base setting
-set mouse=a
 set t_Co=256
 colorscheme molokai
 filetype plugin indent on
 set noswf               "don't use swap file all in memory
 set backspace=2         "use backspace as directer key
+set mouse=n             "enable mouse only normal mode
 set ttymouse=xterm2
 set clipboard=unnamedplus
 set titlestring=Vim\ -\ %f
