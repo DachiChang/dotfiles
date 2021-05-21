@@ -108,8 +108,9 @@ nmap <F9> :set paste!<BAR>set paste?<CR>
 let g:ycm_autoclose_preview_window_after_completion=1
 let g:ycm_autoclose_preview_window_after_insertion=1
 let g:ycm_confirm_extra_conf=0
+let g:ycm_auto_hover="" "Doc: When set to an empty string, the popup is not automatically displayed.
 nnoremap gd :YcmCompleter GoTo<CR>
-nnoremap gt :YcmCompleter GetType<CR>
+nmap gt <plug>(YCMHover)
 
 "NERDTree setting
 "o  open in current window, and focus
