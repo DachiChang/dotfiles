@@ -39,7 +39,7 @@ set enc=utf-8
 "search setting
 set hlsearch            "use hight light for search
 set incsearch           "search patern immediate
-set ignorecase          "ignore charector case
+set noignorecase        "search in case sensitive
 
 "programming setting
 syntax on
