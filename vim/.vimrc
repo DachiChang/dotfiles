@@ -39,7 +39,7 @@ set enc=utf-8
 "search setting
 set hlsearch            "use hight light for search
 set incsearch           "search patern immediate
-set noignorecase        "search in case sensitive
+set ignorecase          "search in case un-sensitive
 
 "programming setting
 syntax on
@@ -127,4 +127,4 @@ autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTr
     \ quit | endif
 autocmd BufWinEnter * silent NERDTreeMirror
 let NERDTreeShowHidden=1
-let NERDTreeMinimalUI=1
+"let NERDTreeMinimalUI=1
