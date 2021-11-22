@@ -17,6 +17,7 @@ Plugin 'stephpy/vim-yaml'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'preservim/nerdtree'
 Plugin 'ycm-core/YouCompleteMe' "Inastall Note: cd ~/.vim/bundle/YouCompleteMe && brew install vim python3 cmake && python3 install.py --go-completer --ts-completer
+Plugin 'tell-k/vim-autopep8'
 call vundle#end()
 
 "vim base setting
@@ -111,6 +112,11 @@ let g:ycm_confirm_extra_conf=0
 let g:ycm_auto_hover="" "Doc: When set to an empty string, the popup is not automatically displayed.
 nnoremap gd :YcmCompleter GoTo<CR>
 nmap gt <plug>(YCMHover)
+
+"Autopep8 setting
+let g:autopep8_max_line_length=140
+let g:autopep8_disable_show_diff=1
+autocmd FileType python noremap <buffer> <F10> :call Autopep8()<CR>
 
 "NERDTree setting
 "o  open in current window, and focus
