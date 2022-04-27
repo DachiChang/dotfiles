@@ -18,6 +18,8 @@ Plugin 'editorconfig/editorconfig-vim'
 Plugin 'preservim/nerdtree'
 Plugin 'ycm-core/YouCompleteMe' "Inastall Note: cd ~/.vim/bundle/YouCompleteMe && brew install vim python3 cmake && python3 install.py --go-completer --ts-completer
 Plugin 'tell-k/vim-autopep8'
+Plugin 'hashivim/vim-terraform'
+Plugin 'jistr/vim-nerdtree-tabs'
 call vundle#end()
 
 "vim base setting
@@ -128,7 +130,7 @@ autocmd FileType python noremap <buffer> <F10> :call Autopep8()<CR>
 "s  open in a new vertical window, and focus
 "gs open in a new vertical window, but stay NERDTree
 "O  open directory recursively
-nnoremap <F1> :NERDTreeToggle<CR>
+nnoremap <F1> :NERDTreeTabsToggle<CR>
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() |
     \ quit | endif
 autocmd BufWinEnter * silent NERDTreeMirror
