@@ -130,9 +130,9 @@ autocmd FileType python noremap <buffer> <F10> :call Autopep8()<CR>
 "s  open in a new vertical window, and focus
 "gs open in a new vertical window, but stay NERDTree
 "O  open directory recursively
-nnoremap <F1> :NERDTreeTabsToggle<CR>
-autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() |
-    \ quit | endif
-autocmd BufWinEnter * silent NERDTreeMirror
 let NERDTreeShowHidden=1
-"let NERDTreeMinimalUI=1
+
+"NERDTree-tabs setting
+nnoremap <F1> :NERDTreeTabsToggle<CR>
+
+set clipboard=unnamed
