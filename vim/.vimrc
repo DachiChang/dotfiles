@@ -20,6 +20,7 @@ Plugin 'ycm-core/YouCompleteMe' "Inastall Note: cd ~/.vim/bundle/YouCompleteMe &
 Plugin 'tell-k/vim-autopep8'
 Plugin 'hashivim/vim-terraform'
 Plugin 'jistr/vim-nerdtree-tabs'
+Plugin 'darrikonn/vim-gofmt'
 call vundle#end()
 
 "vim base setting
@@ -106,6 +107,7 @@ nmap <F7> :if exists("syntax_on")<BAR>
     \ endif <CR>
 nmap <F8> :set hls!<BAR>set hls?<CR>
 nmap <F9> :set paste!<BAR>set paste?<CR>
+nmap <F10> :GoFmt<CR>
 
 "YouCompleteMe setting
 let g:ycm_autoclose_preview_window_after_completion=1
