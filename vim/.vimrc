@@ -96,8 +96,6 @@ nmap <C-p> :tabprev<CR>
 nmap <C-n> :tabnext<CR>
 nmap <C-t> :tabnew<CR>
 nmap <C-q> :tabclose<CR>
-nmap <C-S-p> :tabm -1<CR>
-nmap <C-S-n> :tabm +1<CR>
 
 "functional mapping
 nmap <F5> :e!<CR>
