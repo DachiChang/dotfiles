@@ -28,7 +28,7 @@ bindkey '\e\e[C' forward-word
 bindkey '\e\e[D' backward-word
 
 # Aliases setting
-alias ll='ls -lA'
+alias ll='ls -lhA'
 alias la='ls -A'
 alias rm='rm -i'
 alias cp='cp -i'
