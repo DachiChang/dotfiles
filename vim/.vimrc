@@ -21,6 +21,7 @@ Plugin 'tell-k/vim-autopep8'
 Plugin 'hashivim/vim-terraform'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'darrikonn/vim-gofmt'
+Plugin 'webdevel/tabulous'
 call vundle#end()
 
 "vim base setting
@@ -136,5 +137,8 @@ let NERDTreeShowHidden=1
 
 "NERDTree-tabs setting
 nnoremap <F1> :NERDTreeTabsToggle<CR>
+
+"Tabulous setting
+let tabulousLabelNameOptions = ':t'
 
 set clipboard=unnamed
