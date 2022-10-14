@@ -16,7 +16,7 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'stephpy/vim-yaml'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'preservim/nerdtree'
-Plugin 'ycm-core/YouCompleteMe' "Inastall Note: cd ~/.vim/bundle/YouCompleteMe && brew install vim python3 cmake && python3 install.py --go-completer --ts-completer
+Plugin 'ycm-core/YouCompleteMe' "Inastall Note: cd ~/.vim/bundle/YouCompleteMe && brew install vim python3 cmake node && python3 install.py --go-completer --ts-completer
 Plugin 'tell-k/vim-autopep8'
 Plugin 'hashivim/vim-terraform'
 Plugin 'jistr/vim-nerdtree-tabs'
@@ -140,5 +140,6 @@ nnoremap <F1> :NERDTreeTabsToggle<CR>
 
 "Tabulous setting
 let tabulousLabelNameOptions = ':t'
+let tabulousLabelNameTruncate = 0
 
 set clipboard=unnamed
