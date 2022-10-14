@@ -1,0 +1,8 @@
+#!/bin/bash
+
+chdirTo=`pwd`
+tmux split-window -h -c $chdirTo
+tmux split-window -v -c $chdirTo
+tmux select-pane -L
+tmux split-window -v -c $chdirTo
+tmux select-pane -U
