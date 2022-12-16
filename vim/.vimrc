@@ -22,6 +22,7 @@ Plugin 'hashivim/vim-terraform'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'darrikonn/vim-gofmt'
 Plugin 'webdevel/tabulous'
+Plugin 'mattn/emmet-vim'
 call vundle#end()
 
 "vim base setting
@@ -115,6 +116,10 @@ let g:ycm_autoclose_preview_window_after_completion=1
 let g:ycm_autoclose_preview_window_after_insertion=1
 let g:ycm_confirm_extra_conf=0
 let g:ycm_auto_hover="" "Doc: When set to an empty string, the popup is not automatically displayed.
+let g:ycm_semantic_triggers = {
+    \   'scss,sass,css': [ 're!^\s{2}', 're!:\s+' ],
+    \   'html': ['<', '"', '</', ' '],
+    \ }
 nnoremap gd :YcmCompleter GoTo<CR>
 nmap gt <plug>(YCMHover)
 
