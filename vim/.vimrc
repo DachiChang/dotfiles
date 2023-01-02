@@ -19,7 +19,6 @@ Plugin 'preservim/nerdtree'
 Plugin 'ycm-core/YouCompleteMe' "Inastall Note: cd ~/.vim/bundle/YouCompleteMe && brew install vim python3 cmake node && python3 install.py --go-completer --ts-completer
 Plugin 'tell-k/vim-autopep8'
 Plugin 'hashivim/vim-terraform'
-Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'darrikonn/vim-gofmt'
 Plugin 'webdevel/tabulous'
 Plugin 'mattn/emmet-vim'
@@ -139,9 +138,6 @@ autocmd FileType python noremap <buffer> <F10> :call Autopep8()<CR>
 "gs open in a new vertical window, but stay NERDTree
 "O  open directory recursively
 let NERDTreeShowHidden=1
-
-"NERDTree-tabs setting
-nnoremap <F1> :NERDTreeTabsToggle<CR>
 
 "Tabulous setting
 let tabulousLabelNameOptions = ':t'
