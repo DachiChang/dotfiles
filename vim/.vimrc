@@ -140,7 +140,7 @@ autocmd FileType python noremap <buffer> <F10> :call Autopep8()<CR>
 let NERDTreeShowHidden=1
 let NERDTreeQuitOnOpen = 1
 let NERDTreeAutoDeleteBuffer = 1
-let NERDTreeCustomOpenArgs = {'file': {'reuse':'currenttab'}} "open in tab will jump to the window which already opened
+let NERDTreeCustomOpenArgs = {'file': {'reuse':''}}
 nnoremap <F1> :NERDTreeToggle<CR>
 autocmd BufWinEnter * if getcmdwintype() == '' | silent NERDTreeMirror | endif
 autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
