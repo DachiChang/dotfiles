@@ -1,5 +1,16 @@
 # dotfiles
 
+## NeoVim
+
+Command
+ - PackerSync
+
+Should install
+ - Mason
+   - Autopep8 (formatter)
+ - Brew
+   - brew install ripgrep
+
 ## Vim
 
 Reference
