@@ -1,0 +1,13 @@
+-- plugins manager setup
+require('plugins').setup()
+require('basic')
+require('keymaps')
+require('plugin_config.lualine')
+require('plugin_config.nvim-tree')
+require('plugin_config.telescope')
+require('plugin_config.tabulous')
+-- require('plugin_config.whitespace')
+require('plugin_config.lsp')
+require('plugin_config.diagnostics')
+require('plugin_config.nvim-cmp')
+require('plugin_config.toggleterm')
