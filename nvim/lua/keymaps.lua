@@ -7,8 +7,8 @@ local expr_opts = { noremap = true, expr = true }
 keymap("n", "<C-q>", ":q!<CR>", default_opts)
 
 -- Tab
-keymap("n", "<Tab>", ":tabnext<CR>", default_opts)
-keymap("n", "<BS>", ":tabprev<CR>", default_opts)
+keymap("n", "<C-]>", ":tabnext<CR>", default_opts)
+keymap("n", "<C-[>", ":tabprev<CR>", default_opts)
 keymap("n", "<C-t>", ":tabnew<CR>", default_opts)
 
 -- Functional
