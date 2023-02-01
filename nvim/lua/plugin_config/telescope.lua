@@ -7,6 +7,11 @@ require('telescope').setup {
         ['v'] = "select_vertical",
         ['s'] = "select_horizontal",
       },
+      i = {
+        ['C-t'] = "select_tab",
+        ['C-v'] = "select_vertical",
+        ['C-s'] = "select_horizontal",
+      },
     }
   }
 }
