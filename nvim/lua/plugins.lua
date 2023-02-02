@@ -83,6 +83,12 @@ function M.setup()
       }
     }
 
+    -- tagbar, overview of file structure
+    -- REQUIRED: brew install universal-ctags, gotags
+    use {
+      'preservim/tagbar',
+    }
+
     -- emmet-vim
     use {
       'mattn/emmet-vim', -- ctrl-y + , (trigger)
