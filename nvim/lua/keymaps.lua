@@ -25,3 +25,6 @@ keymap("n", "<S-Right>", ":vertical resize +3<CR>", default_opts)
 keymap("n", "<S-Left>", ":vertical resize -3<CR>", default_opts)
 keymap("n", "<S-Down>", ":resize -3<CR>", default_opts)
 keymap("n", "<S-Up>", ":resize +3<CR>", default_opts)
+
+-- Temporary disable hightlight
+keymap("n", "<ESC>", ":noh<CR>", default_opts)
