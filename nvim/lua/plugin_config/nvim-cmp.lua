@@ -1,6 +1,19 @@
 vim.opt.completeopt = { 'menu', 'menuone', 'noselect' }
 require('luasnip.loaders.from_vscode').lazy_load() -- load friendly-snippets
 
+-- cmp menu color
+vim.api.nvim_set_hl(0, "CmpPmenu", { ctermbg = 234 })
+vim.api.nvim_set_hl(0, "CmpPmenuSel", { ctermbg = 238 })
+vim.api.nvim_set_hl(0, "CmpItemMenu", { ctermfg = 243 })
+vim.api.nvim_set_hl(0, "CmpItemAbbrMatch", { ctermfg = 81 })
+vim.api.nvim_set_hl(0, "CmpItemAbbrMatchFuzzy", { ctermfg = 81 })
+vim.api.nvim_set_hl(0, "CmpItemKindMethod", { ctermfg = 118 })
+vim.api.nvim_set_hl(0, "CmpItemKindFunction", { ctermfg = 118 })
+vim.api.nvim_set_hl(0, "CmpItemKindVariable", { ctermfg = 161 })
+vim.api.nvim_set_hl(0, "CmpItemKindClass", { ctermfg = 81 })
+vim.api.nvim_set_hl(0, "CmpItemKindModule", { ctermfg = 214 })
+vim.api.nvim_set_hl(0, "CmpItemKindConstant", { ctermfg = 135 })
+
 local cmp = require('cmp')
 cmp.setup({
   snippet = {
@@ -10,7 +23,9 @@ cmp.setup({
     end,
   },
   window = {
-    completion = cmp.config.window.bordered(),
+    completion = cmp.config.window.bordered({
+      winhighlight = "Normal:CmpPmenu,FloatBorder:CmpPmenu,CursorLine:CmpPmenuSel,Search:None",
+    }),
     documentation = cmp.config.window.bordered(),
   },
   formatting = {
