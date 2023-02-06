@@ -99,6 +99,11 @@ function M.setup()
       'tell-k/vim-autopep8',
     }
 
+    -- terraformls
+    use {
+      'hashivim/vim-terraform',
+    }
+
     -- toggleterm
     use {
       'akinsho/toggleterm.nvim', -- ctrl + \ (trigger)

@@ -16,6 +16,8 @@ local lsp_servers = {
   "tsserver",
   "jsonls",
   "yamlls",
+  "terraformls",
+  "tflint",
 }
 require('mason-lspconfig').setup { -- mason lspconfig
   ensure_installed = lsp_servers,
