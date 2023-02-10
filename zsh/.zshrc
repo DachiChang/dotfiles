@@ -39,6 +39,7 @@ alias h='history'
 alias more='less'
 alias python='python3'
 alias pip='pip3'
+alias vim='nvim'
 
 # Python pipenv
 export PIPENV_VENV_IN_PROJECT=1
