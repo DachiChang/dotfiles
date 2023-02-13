@@ -10,6 +10,8 @@ keymap("n", "<C-q>", ":q!<CR>", default_opts)
 keymap("n", "<C-n>", ":tabnext<CR>", default_opts)
 keymap("n", "<C-p>", ":tabprev<CR>", default_opts)
 keymap("n", "<C-t>", ":tabnew<CR>", default_opts)
+keymap("n", "<S-n>", ":tabm +1<CR>", default_opts)
+keymap("n", "<S-p>", ":tabm -1<CR>", default_opts)
 
 -- Functional
 keymap("", "<F1>", ":NvimTreeToggle<CR>", default_opts)
