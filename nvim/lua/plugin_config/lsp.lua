@@ -9,7 +9,7 @@ require('mason').setup { -- Mason installer config
   }
 }
 local lsp_servers = {
-  "sumneko_lua",
+  "lua_ls",
   "html",
   "gopls",
   "pyright",
