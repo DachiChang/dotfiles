@@ -20,3 +20,9 @@ keymap('n', '<leader>f', builtin.find_files, {})
 keymap('n', '<leader>g', builtin.live_grep, {})
 keymap('n', '<leader>h', builtin.help_tags, {})
 keymap('n', '<leader>b', builtin.buffers, {})
+
+-- search and jump to tabs
+require('telescope-tabs').setup()
+local tabs = require('telescope-tabs')
+keymap('n', '<leader>t', tabs.list_tabs, {})
+keymap('n', 'tt', tabs.go_to_previous, {})

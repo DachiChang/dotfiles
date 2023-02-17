@@ -1,3 +1,3 @@
 local keymap = vim.keymap.set
 
-keymap("n", "tt", ":TagbarToggle<CR>")
+keymap("n", "<F11>", ":TagbarToggle<CR>")

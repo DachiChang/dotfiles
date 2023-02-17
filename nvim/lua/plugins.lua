@@ -77,10 +77,14 @@ function M.setup()
     -- telescope, a fuzzy finder
     -- REQUIRED: brew install ripgre
     use {
-      'nvim-telescope/telescope.nvim', tag = '0.1.1',
-      requires = {
-        'nvim-lua/plenary.nvim',
-      }
+      {
+        'nvim-telescope/telescope.nvim',
+        tag = '0.1.1',
+        requires = {
+          'nvim-lua/plenary.nvim',
+        }
+      },
+      'LukasPietzschmann/telescope-tabs',
     }
 
     -- tagbar, overview of file structure
