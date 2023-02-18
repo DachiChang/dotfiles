@@ -50,7 +50,7 @@ function M.setup()
 
     -- detecting whitespace
     use {
-      'johnfrankmorgan/whitespace.nvim',
+      'ntpeters/vim-better-whitespace',
     }
 
     -- lualine
