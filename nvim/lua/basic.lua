@@ -35,4 +35,9 @@ opt.expandtab = true
 opt.splitright = true
 opt.splitbelow = true
 
+-- end of buffer filled line char
 opt.fillchars:append { eob = " " }
+
+-- option
+opt.cursorline = true
+api.nvim_set_hl(0, "CursorLineNr", { ctermfg = 220, cterm = none })
