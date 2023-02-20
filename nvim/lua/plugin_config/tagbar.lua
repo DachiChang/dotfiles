@@ -1,3 +1,5 @@
 local keymap = vim.keymap.set
+local opt = vim.opt
 
-keymap("n", "<F11>", ":TagbarToggle<CR>")
+keymap("n", "gs", ":TagbarToggle<CR>")
+opt.updatetime = 300
