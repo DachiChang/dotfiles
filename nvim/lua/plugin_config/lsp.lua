@@ -23,15 +23,8 @@ require('mason-lspconfig').setup { -- mason lspconfig
   ensure_installed = lsp_servers,
 }
 
--- shortcut variable
 local keymap = vim.keymap
-local diagnostic = vim.diagnostic
 local buf = vim.lsp.buf
-local inspect = vim.inspect
--- diagnostic keybind
-local opts = { noremap = true, silent = true }
-keymap.set('n', 'ep', diagnostic.goto_prev, opts)
-keymap.set('n', 'en', diagnostic.goto_next, opts)
 
 -- for each lsp-server setup
 local lspconfig = require('lspconfig')
@@ -67,3 +60,25 @@ for _, lsp_server in ipairs(lsp_servers) do
     flags = lsp_flags,
   }
 end
+
+-- lsp handler
+local lsp = vim.lsp
+lsp.handlers['textDocument/hover'] = lsp.with(
+  lsp.handlers.hover, {
+  border = 'rounded',
+})
+
+-- diagnostics
+local diagnostic = vim.diagnostic
+local opts = { noremap = true, silent = true }
+diagnostic.config {
+  float = {
+    border = 'rounded',
+  }
+}
+keymap.set('n', 'ge', diagnostic.open_float, opts)
+
+-- color
+local api = vim.api
+api.nvim_set_hl(0, "NormalFloat", { ctermbg = 234 })
+api.nvim_set_hl(0, "FloatBorder", { ctermbg = 234 })
