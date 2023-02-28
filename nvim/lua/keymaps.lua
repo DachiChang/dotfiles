@@ -14,8 +14,7 @@ keymap("n", "<C-p>", ":tabprev<CR>", default_opts)
 keymap("n", "<C-t>", ":tabnew<CR>", default_opts)
 
 -- Functional
-keymap("", "<F1>", ":NvimTreeToggle<CR>", default_opts)
-keymap("", "<F5>", ":e!<CR>", default_opts)
+keymap("n", "<F5>", ":e!<CR>", default_opts)
 
 -- Panes
 keymap("n", "=", "<C-w>=", default_opts)
