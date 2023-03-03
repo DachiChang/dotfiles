@@ -1,5 +1,5 @@
 -- plugins manager setup
-require('plugins').setup()
+require('plugins')
 require('basic')
 require('keymaps')
 require('plugin_config.lualine')
