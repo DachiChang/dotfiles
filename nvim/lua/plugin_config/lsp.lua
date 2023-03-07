@@ -92,4 +92,4 @@ keymap.set('n', 'ge', diagnostic.open_float, opts)
 local api = vim.api
 api.nvim_set_hl(0, "NormalFloat", { ctermbg = 234 })
 api.nvim_set_hl(0, "FloatBorder", { ctermbg = 234 })
-api.nvim_set_hl(0, "LspSignatureActiveParameter", { bold = true, ctermbg = 1 })
+api.nvim_set_hl(0, "LspSignatureActiveParameter", { bold = true, ctermbg = 52 })
