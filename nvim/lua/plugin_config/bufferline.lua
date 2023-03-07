@@ -7,30 +7,31 @@ require("bufferline").setup {
     indicator = {
       style = 'none',
     },
+    always_show_bufferline = false,
   },
   highlights = {
     fill = {
-      ctermfg= 255,
+      ctermfg = 255,
       ctermbg = 236,
     },
     background = {
-      ctermfg= 255,
+      ctermfg = 255,
       ctermbg = 236,
     },
     buffer_selected = {
-      ctermfg= 255,
+      ctermfg = 255,
       ctermbg = 239,
     },
     indicator_selected = {
-      ctermfg= 198,
+      ctermfg = 198,
       ctermbg = 239,
     },
     duplicate_selected = {
-      ctermfg= 255,
+      ctermfg = 255,
       ctermbg = 239,
     },
     duplicate = {
-      ctermfg= 255,
+      ctermfg = 255,
       ctermbg = 236,
     },
     modified_selected = {

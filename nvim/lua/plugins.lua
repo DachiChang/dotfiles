@@ -74,6 +74,7 @@ local plugins = {
     dependencies = {
       'williamboman/mason.nvim',           -- language server installer
       'williamboman/mason-lspconfig.nvim', -- bridge between client and mason
+      'ray-x/lsp_signature.nvim',          -- Show function signature when you type
     },
   },
   -- nvim-cmp

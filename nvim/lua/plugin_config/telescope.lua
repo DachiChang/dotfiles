@@ -3,14 +3,14 @@ require('telescope').setup {
   defaults = {
     mappings = {
       n = {
-        ['t'] = "select_tab",
-        ['v'] = "select_vertical",
-        ['s'] = "select_horizontal",
+            ['t'] = "select_tab",
+            ['v'] = "select_vertical",
+            ['s'] = "select_horizontal",
       },
       i = {
-        ['C-t'] = "select_tab",
-        ['C-v'] = "select_vertical",
-        ['C-s'] = "select_horizontal",
+            ['C-t'] = "select_tab",
+            ['C-v'] = "select_vertical",
+            ['C-s'] = "select_horizontal",
       },
     }
   }

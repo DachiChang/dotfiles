@@ -39,6 +39,7 @@ local on_attach = function(client, bufnr)
   keymap.set('n', 'gr', buf.references, bufopts)
   keymap.set('n', '<F2>', buf.rename, bufopts)
 
+  -- don't bind formatter
   local without_formatter = {
     'pyright', -- use vim-autopep8 instead, because pyright not support buffer formatter
   }
@@ -47,6 +48,15 @@ local on_attach = function(client, bufnr)
       keymap.set('n', '<F12>', function() buf.format { async = true } end, bufopts)
     end
   end
+
+  -- binding lsp auto sigature
+  require('lsp_signature').on_attach({
+    bind = true, -- This is mandatory, otherwise border config won't get registered.
+    hint_enable = false,
+    handler_opts = {
+      border = 'rounded',
+    }
+  }, bufnr)
 end
 local lsp_flags = {
   -- This is the default in Nvim 0.7+
@@ -65,8 +75,8 @@ end
 local lsp = vim.lsp
 lsp.handlers['textDocument/hover'] = lsp.with(
   lsp.handlers.hover, {
-  border = 'rounded',
-})
+    border = 'rounded',
+  })
 
 -- diagnostics
 local diagnostic = vim.diagnostic
@@ -82,3 +92,4 @@ keymap.set('n', 'ge', diagnostic.open_float, opts)
 local api = vim.api
 api.nvim_set_hl(0, "NormalFloat", { ctermbg = 234 })
 api.nvim_set_hl(0, "FloatBorder", { ctermbg = 234 })
+api.nvim_set_hl(0, "LspSignatureActiveParameter", { bold = true, ctermbg = 1 })
