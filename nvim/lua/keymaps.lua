@@ -6,6 +6,10 @@ local expr_opts = { noremap = true, expr = true }
 -- Quit
 keymap("n", "<C-q>", ":q!<CR>", default_opts)
 
+-- Jump
+keymap("n", "<C-i>", "<C-i>zz", default_opts)
+keymap("n", "<C-o>", "<C-o>zz", default_opts)
+
 -- Tab
 keymap("n", "<", ":tabm -1<CR>", default_opts)
 keymap("n", ">", ":tabm +1<CR>", default_opts)
@@ -18,6 +22,7 @@ keymap("n", "<F5>", ":e!<CR>", default_opts)
 
 -- Panes
 keymap("n", "=", "<C-w>=", default_opts)
+keymap("n", "s", "<C-w>x", default_opts)
 keymap("n", "<C-h>", "<C-w>h", default_opts)
 keymap("n", "<C-j>", "<C-w>j", default_opts)
 keymap("n", "<C-k>", "<C-w>k", default_opts)

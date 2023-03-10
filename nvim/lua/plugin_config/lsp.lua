@@ -87,6 +87,8 @@ diagnostic.config {
   }
 }
 keymap.set('n', 'ge', diagnostic.open_float, opts)
+keymap.set('n', 'ep', diagnostic.goto_prev, opts)
+keymap.set('n', 'en', diagnostic.goto_next, opts)
 
 -- color
 local api = vim.api
