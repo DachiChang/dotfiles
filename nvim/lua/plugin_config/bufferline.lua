@@ -7,6 +7,7 @@ require("bufferline").setup {
     indicator = {
       style = 'none',
     },
+    show_duplicate_prefix = false,
     always_show_bufferline = false,
   },
   highlights = {
@@ -25,14 +26,6 @@ require("bufferline").setup {
     indicator_selected = {
       ctermfg = 198,
       ctermbg = 239,
-    },
-    duplicate_selected = {
-      ctermfg = 255,
-      ctermbg = 239,
-    },
-    duplicate = {
-      ctermfg = 255,
-      ctermbg = 236,
     },
     modified_selected = {
       ctermfg = 196,
