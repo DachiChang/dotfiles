@@ -1,6 +1,7 @@
 -- plugins manager setup
 require('plugins')
-require('basic')
+require('theme')
+require('options')
 require('keymaps')
 require('plugin_config.lualine')
 require('plugin_config.nvim-tree')
