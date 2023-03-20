@@ -7,8 +7,13 @@ local expr_opts = { noremap = true, expr = true }
 keymap("n", "<C-q>", ":q!<CR>", default_opts)
 
 -- Jump
-keymap("n", "<C-i>", "<C-i>zz", default_opts)
-keymap("n", "<C-o>", "<C-o>zz", default_opts)
+keymap("n", "<C-i>", "<C-i>", default_opts)
+keymap("n", "<C-o>", "<C-o>", default_opts)
+keymap("n", "gm", "'m", default_opts)
+
+-- Move
+keymap("n", "<C-u>", "20<C-u>", default_opts)
+keymap("n", "<C-d>", "20<C-d>", default_opts)
 
 -- Tab
 keymap("n", "<", ":tabm -1<CR>", default_opts)
