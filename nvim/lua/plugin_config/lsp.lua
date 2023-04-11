@@ -19,6 +19,13 @@ local lsp_servers = {
   "terraformls",
   "tflint",
 }
+local lsp_server_settings = {
+  yamlls = {
+    yaml = {
+      keyOrdering = false,
+    }
+  }
+}
 require('mason-lspconfig').setup { -- mason lspconfig
   ensure_installed = lsp_servers,
 }
@@ -68,6 +75,7 @@ for _, lsp_server in ipairs(lsp_servers) do
     capabilities = capabilities,
     on_attach = on_attach,
     flags = lsp_flags,
+    settings = lsp_server_settings[lsp_server]
   }
 end
 
