@@ -23,8 +23,8 @@ local lsp_server_settings = {
   yamlls = {
     yaml = {
       keyOrdering = false,
-    }
-  }
+    },
+  },
 }
 require('mason-lspconfig').setup { -- mason lspconfig
   ensure_installed = lsp_servers,
