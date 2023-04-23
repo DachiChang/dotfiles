@@ -1,28 +1,35 @@
+local function on_attach(bufnr)
+  local api = require('nvim-tree.api')
+
+  local function opts(desc)
+    return { desc = 'nvim-tree: ' .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
+  end
+
+  api.config.mappings.default_on_attach(bufnr)
+
+  vim.keymap.set('n', 'O', api.tree.expand_all, opts('Expand All'))
+  vim.keymap.set('n', 'v', api.node.open.vertical, opts('Open: Vertical Split'))
+  vim.keymap.set('n', 's', api.node.open.horizontal, opts('Open: Horizontal Split'))
+  vim.keymap.set('n', 't', api.node.open.tab, opts('Open: New Tab'))
+  vim.keymap.set('n', '?',    api.tree.toggle_help, opts('Help'))
+end
+
 require('nvim-tree').setup {
   hijack_netrw = false,
   hijack_cursor = true,
-  view = {
-    mappings = {
-      list = {
-        { key = "O", action = "expand_all" },
-        { key = "v", action = "vsplit" },
-        { key = "s", action = "split" },
-        { key = "t", action = "tabnew" },
-      }
-    }
-  },
-  -- tab = {
-  --   sync = {
-  --     open = true,
-  --     close = true,
-  --     ignore = {},
-  --   },
-  -- },
-  actions = {
-    open_file = {
-      quit_on_open = true,
+  on_attach = on_attach,
+  tab = {
+    sync = {
+      open = true,
+      close = true,
+      ignore = {},
     },
   },
+  -- actions = {
+  --   open_file = {
+  --     quit_on_open = true,
+  --   },
+  -- },
 }
 -- auto close
 local function tab_win_closed(winnr)
@@ -64,7 +71,7 @@ vim.api.nvim_create_autocmd("WinClosed", {
 -- keymap
 local keymap = vim.keymap.set
 local opts = { noremap = true, silent = true }
-keymap("n", "<F1>", ":NvimTreeToggle<CR>", opts)
+keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
 
 -- color
 local api = vim.api
