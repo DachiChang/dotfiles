@@ -3,14 +3,14 @@ require('telescope').setup {
   defaults = {
     mappings = {
       n = {
-            ['t'] = "select_tab",
-            ['v'] = "select_vertical",
-            ['s'] = "select_horizontal",
+        ['t'] = "select_tab",
+        ['v'] = "select_vertical",
+        ['s'] = "select_horizontal",
       },
       i = {
-            ['C-t'] = "select_tab",
-            ['C-v'] = "select_vertical",
-            ['C-s'] = "select_horizontal",
+        ['C-t'] = "select_tab",
+        ['C-v'] = "select_vertical",
+        ['C-s'] = "select_horizontal",
       },
     }
   }
@@ -24,7 +24,9 @@ keymap('n', '<leader>h', builtin.help_tags, {})
 keymap('n', '<leader>b', builtin.buffers, {})
 
 -- search and jump to tabs
-require('telescope-tabs').setup()
+require('telescope-tabs').setup {
+  show_preview = false,
+}
 local tabs = require('telescope-tabs')
 keymap('n', '<leader>t', tabs.list_tabs, {})
 keymap('n', 'tt', tabs.go_to_previous, {})
