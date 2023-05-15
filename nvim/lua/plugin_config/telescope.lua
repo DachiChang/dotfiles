@@ -9,9 +9,9 @@ require('telescope').setup {
         ['s'] = actions.select_horizontal,
       },
       i = {
-        ["<C-t>"] = actions.select_tab_drop,
-        ["<C-v>"] = actions.select_vertical,
-        ["<C-s>"] = actions.select_horizontal,
+        ['<C-t>'] = actions.select_tab_drop,
+        ['<C-v>'] = actions.select_vertical,
+        ['<C-s>'] = actions.select_horizontal,
       },
     }
   }
