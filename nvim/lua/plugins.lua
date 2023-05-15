@@ -12,6 +12,8 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
+  -- helm syntax
+  'towolf/vim-helm',
   -- editorconfig
   'gpanders/editorconfig.nvim',
   -- detecting whitespace
@@ -44,7 +46,7 @@ local plugins = {
   -- REQUIRED: brew install ripgre
   {
     'nvim-telescope/telescope.nvim',
-    version = '0.1.1',
+    -- version = '0.1.1',
     dependencies = {
       'nvim-lua/plenary.nvim',
     },
