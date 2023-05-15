@@ -16,6 +16,9 @@ local lsp_servers = {
   "tsserver",
   "jsonls",
   "yamlls",
+  "helm_ls",
+  "groovyls",
+  "jdtls",
   "terraformls",
   "tflint",
 }
