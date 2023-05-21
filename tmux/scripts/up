@@ -3,6 +3,9 @@
 chdirTo=`pwd`
 tmux split-window -h -c $chdirTo
 tmux split-window -v -c $chdirTo
+tmux resize-pane -D 30
 tmux select-pane -L
 tmux split-window -v -c $chdirTo
 tmux select-pane -U
+tmux resize-pane -L 70
+tmux select-pane -R
