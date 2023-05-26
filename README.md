@@ -22,6 +22,19 @@ Command
  - PluginClean
  - PluginList
 
+ ## NeoVim
+
+ - [Releases · neovim/neovim](https://github.com/neovim/neovim/releases)
+ - Install dependency
+    - golang
+    - unzip
+    - npm
+    - python3
+    - ripgrep
+    - universal-ctags
+    - gotags
+    - lazygit
+
 ## Tmux
 
 ## Screen
