@@ -1,7 +1,5 @@
 local keymap = vim.keymap.set
-local fn = vim.fn
 local default_opts = { noremap = true, silent = true }
-local expr_opts = { noremap = true, expr = true }
 
 -- Quit
 keymap("n", "<C-q>", ":q!<CR>", default_opts)

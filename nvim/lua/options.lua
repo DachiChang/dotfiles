@@ -1,5 +1,4 @@
 local api = vim.api
-local cmd = vim.cmd
 local opt = vim.opt
 
 -- option basic
@@ -7,6 +6,7 @@ opt.swapfile = false
 opt.backspace = "2"
 opt.mouse = "n"
 opt.clipboard = "unnamed"
+-- opt.termguicolors = true
 
 -- option fold
 opt.foldenable = false
