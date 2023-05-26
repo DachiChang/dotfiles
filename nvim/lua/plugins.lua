@@ -47,7 +47,7 @@ local plugins = {
     },
   },
   -- telescope, a fuzzy finder
-  -- REQUIRED: brew install ripgre
+  -- REQUIRED: brew install ripgrep
   {
     'nvim-telescope/telescope.nvim',
     -- version = '0.1.1',
