@@ -15,19 +15,17 @@ local lsp_servers = {
   "pyright",
   "tsserver",
   "jsonls",
-  "yamlls",
+  --  "yamlls",
   "helm_ls",
-  "groovyls",
-  "jdtls",
   "terraformls",
   "tflint",
 }
 local lsp_server_settings = {
-  yamlls = {
-    yaml = {
-      keyOrdering = false,
-    },
-  },
+  --  yamlls = {
+  --    yaml = {
+  --      keyOrdering = false,
+  --    },
+  --  },
 }
 require('mason-lspconfig').setup { -- mason lspconfig
   ensure_installed = lsp_servers,
