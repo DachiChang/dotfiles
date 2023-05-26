@@ -14,6 +14,10 @@ vim.opt.rtp:prepend(lazypath)
 local plugins = {
   -- helm syntax
   'towolf/vim-helm',
+  -- indent block
+  "lukas-reineke/indent-blankline.nvim",
+  -- keyword highlight and jump to reference
+  'RRethy/vim-illuminate',
   -- editorconfig
   'gpanders/editorconfig.nvim',
   -- detecting whitespace
