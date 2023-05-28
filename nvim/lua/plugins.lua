@@ -12,6 +12,13 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
+  -- regex in search/replace for folder
+  {
+    'nvim-pack/nvim-spectre',
+    dependencies = {
+      'nvim-lua/plenary.nvim',
+    },
+  },
   -- helm syntax
   'towolf/vim-helm',
   -- indent block
