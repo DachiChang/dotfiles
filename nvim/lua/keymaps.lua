@@ -36,5 +36,7 @@ keymap("n", "<S-Left>", ":vertical resize -3<CR>", default_opts)
 keymap("n", "<S-Down>", ":resize -3<CR>", default_opts)
 keymap("n", "<S-Up>", ":resize +3<CR>", default_opts)
 
+-- Search for visually selected text
+keymap("v", "//", [[y/\V<C-R>=escape(@",'/\')<CR><CR>]], default_opts)
 -- Temporary disable hightlight
 keymap("n", "<ESC>", ":noh<CR>", default_opts)
