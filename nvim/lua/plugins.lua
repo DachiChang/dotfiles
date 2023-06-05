@@ -38,7 +38,7 @@ local plugins = {
   },
   -- luatab
   {
-    'alvarosevilla95/luatab.nvim',
+    'dachichang/luatab.nvim',
     dependencies = {
       'nvim-tree/nvim-web-devicons',
     }
