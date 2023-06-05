@@ -36,8 +36,15 @@ local plugins = {
       'nvim-tree/nvim-web-devicons',
     },
   },
+  -- luatab
+  {
+    'alvarosevilla95/luatab.nvim',
+    dependencies = {
+      'nvim-tree/nvim-web-devicons',
+    }
+  },
   -- tabulous
-  'webdevel/tabulous',
+  -- 'webdevel/tabulous',
   -- bufferline
   -- {
   --   'akinsho/bufferline.nvim',
