@@ -60,6 +60,13 @@ local plugins = {
       'nvim-tree/nvim-web-devicons',
     },
   },
+  -- quick moving in screen
+  {
+    'ggandor/leap.nvim',
+    dependencies = {
+      'tpope/vim-repeat',
+    },
+  },
   -- telescope, a fuzzy finder
   -- REQUIRED: brew install ripgrep
   {
