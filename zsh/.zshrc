@@ -8,15 +8,27 @@ export LANG=en_US.UTF-8
 # Oh-my-zsh config and activate
 DISABLE_AUTO_TITLE='true'
 CASE_SENSITIVE='true'
-plugins=(git)
+# TODO install
+# brew install kubectl kubectx kube-ps1
+# git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+# curl -L https://raw.githubusercontent.com/ahmetb/kubectx/master/completion/kubens.zsh -o ~/.oh-my-zsh/completions/_kubens.zsh (and kubectx)
+plugins=(zsh-autosuggestions git kubectl kube-ps1)
 source $ZSH/oh-my-zsh.sh
 
 # Zsh prompt setting
-PROMPT='%F{222}(%T)-%F{215}(%n)-%F{173}(%m)-%F{101}(%~)$(git_prompt_info) %F{59}%# %f'
-ZSH_THEME_GIT_PROMPT_PREFIX='%F{101}-%F{59}('
+PROMPT='%F{222}(%T)%F{215}-(%m)$(kube_ps1)%F{101}-(%~)$(git_prompt_info) %F{59}%# %f'
+ZSH_THEME_GIT_PROMPT_PREFIX='%F{59}-('
 ZSH_THEME_GIT_PROMPT_SUFFIX='%f'
 ZSH_THEME_GIT_PROMPT_DIRTY='*%F{59})'
 ZSH_THEME_GIT_PROMPT_CLEAN='%F{59})'
+KUBE_PS1_PREFIX='-('
+KUBE_PS1_SEPARATOR=' '
+KUBE_PS1_DIVIDER='.'
+KUBE_PS1_PREFIX_COLOR=173
+KUBE_PS1_SUFFIX_COLOR=173
+KUBE_PS1_CTX_COLOR=173
+KUBE_PS1_NS_COLOR=173
+KUBE_PS1_SYMBOL_COLOR=173
 
 # Zsh setting
 setopt noautomenu
@@ -24,8 +36,10 @@ setopt noautomenu
 # Key binding
 bindkey '\e\eOC' forward-word   # for tmux
 bindkey '\e\eOD' backward-word  # for tmux
-bindkey '\e\e[C' forward-word
-bindkey '\e\e[D' backward-word
+bindkey '\e\e[C' forward-word   # for original shell
+bindkey '\e\e[D' backward-word  # for original shell
+bindkey '\e[1;3C' forward-word  # for nvim shell
+bindkey '\e[1;3D' backward-word # for nvim shell
 
 # Aliases setting
 alias ll='ls -lhA'
@@ -40,6 +54,7 @@ alias more='less'
 alias python='python3'
 alias pip='pip3'
 alias vim='nvim'
+alias lg='lazygit'
 
 # Python pipenv
 export PIPENV_VENV_IN_PROJECT=1
