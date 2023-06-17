@@ -1,7 +1,7 @@
 # Environment setting
 export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin
 export ZSH=$HOME/.oh-my-zsh
-export EDITOR='vim'
+export EDITOR='nvim'
 export PAGER='less'
 export LANG=en_US.UTF-8
 
