@@ -31,6 +31,9 @@ require('nvim-tree').setup {
       -- quit_on_open = true,
     },
   },
+  git = {
+    ignore = false,
+  },
 }
 -- auto close
 local function tab_win_closed(winnr)
