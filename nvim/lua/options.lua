@@ -38,3 +38,4 @@ opt.fillchars:append { eob = " " }
 -- option highlight cursorline
 opt.cursorline = true
 api.nvim_set_hl(0, "CursorLineNr", { ctermfg = 220, cterm = none })
+-- api.nvim_set_hl(0, "CursorLine", { ctermbg = 237 })
