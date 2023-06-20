@@ -23,6 +23,7 @@ end, {})
 keymap('n', '<leader>g', builtin.live_grep, {})
 keymap('n', '<leader>h', builtin.help_tags, {})
 keymap('n', '<leader>b', builtin.buffers, {})
+keymap('n', '<leader>k', builtin.keymaps, {})
 
 -- search and jump to tabs
 require('telescope-tabs').setup {
