@@ -43,8 +43,6 @@ local plugins = {
       'nvim-tree/nvim-web-devicons',
     }
   },
-  -- tabulous
-  -- 'webdevel/tabulous',
   -- bufferline
   -- {
   --   'akinsho/bufferline.nvim',
