@@ -10,6 +10,6 @@ require('spectre').setup {
 
 local default_opts = { noremap = true, silent = true }
 local keymap = vim.keymap.set
-keymap('n', '<F3>', '<cmd>lua require("spectre").open()<CR>', default_opts)
+keymap('n', '<F6>', '<cmd>lua require("spectre").open()<CR>', default_opts)
 keymap('n', '<leader>s', '<cmd>lua require("spectre").open_visual({select_word=true})<CR>', default_opts)
 keymap('v', '<leader>s', '<esc><cmd>lua require("spectre").open_visual()<CR>', default_opts)
