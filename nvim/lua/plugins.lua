@@ -22,7 +22,7 @@ local plugins = {
   -- helm syntax
   'towolf/vim-helm',
   -- indent block
-  "lukas-reineke/indent-blankline.nvim",
+  'lukas-reineke/indent-blankline.nvim',
   -- keyword highlight and jump to reference
   'RRethy/vim-illuminate',
   -- editorconfig
