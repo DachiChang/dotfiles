@@ -19,6 +19,8 @@ local plugins = {
       'nvim-lua/plenary.nvim',
     },
   },
+  -- yaml folds
+  'pedrohdz/vim-yaml-folds',
   -- helm syntax
   'towolf/vim-helm',
   -- indent block
