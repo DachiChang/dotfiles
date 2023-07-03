@@ -10,6 +10,9 @@ keymap("n", "<C-o>", "<C-o>", default_opts)
 keymap("n", "gm", "'M", default_opts)
 keymap("n", "m", "mM", default_opts)
 
+-- Fold
+keymap("n", "<Space>", "za", default_opts)
+
 -- Move
 keymap("n", "<C-u>", "20<C-u>", default_opts)
 keymap("n", "<C-d>", "20<C-d>", default_opts)
