@@ -9,8 +9,9 @@ opt.clipboard = "unnamed"
 -- opt.termguicolors = true
 
 -- option fold
-opt.foldenable = false
+opt.foldenable = true
 opt.foldmethod = "syntax"
+opt.foldlevelstart = 99
 
 -- option search
 opt.hlsearch = true
