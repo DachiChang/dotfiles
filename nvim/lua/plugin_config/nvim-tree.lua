@@ -10,6 +10,7 @@ local function on_attach(bufnr)
   vim.keymap.set('n', 'O', api.tree.expand_all, opts('Expand All'))
   vim.keymap.set('n', 'v', api.node.open.vertical, opts('Open: Vertical Split'))
   vim.keymap.set('n', 's', api.node.open.horizontal, opts('Open: Horizontal Split'))
+  vim.keymap.set('n', '<C-t>', api.node.open.tab_drop, opts('Open: New Tab or Switch to Tab'))
   vim.keymap.set('n', 't', api.node.open.tab_drop, opts('Open: New Tab or Switch to Tab'))
   vim.keymap.set('n', '?', api.tree.toggle_help, opts('Help'))
 end
