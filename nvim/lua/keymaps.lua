@@ -5,8 +5,6 @@ local default_opts = { noremap = true, silent = true }
 keymap("n", "<C-q>", ":q!<CR>", default_opts)
 
 -- Jump
-keymap("n", "<C-i>", "<C-i>", default_opts)
-keymap("n", "<C-o>", "<C-o>", default_opts)
 keymap("n", "gm", "'M", default_opts)
 keymap("n", "m", "mM", default_opts)
 
