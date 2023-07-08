@@ -34,7 +34,7 @@ require('telescope-tabs').setup {
       "Tagbar",
     }
 
-    local is_exclude = function (filename)
+    local is_exclude = function(filename)
       for _, exclude_file_name in ipairs(exclude_file_names) do
         if filename:find(exclude_file_name) then
           return true
@@ -53,5 +53,5 @@ require('telescope-tabs').setup {
   end,
 }
 local tabs = require('telescope-tabs')
-keymap('n', '<leader>t', tabs.list_tabs, {})
-keymap('n', 'tt', tabs.go_to_previous, {})
+keymap('n', 'tt', tabs.list_tabs, {})
+keymap('n', 'T', tabs.go_to_previous, {})
