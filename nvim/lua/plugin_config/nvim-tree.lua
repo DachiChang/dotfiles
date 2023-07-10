@@ -26,6 +26,9 @@ require('nvim-tree').setup {
       ignore = {},
     },
   },
+  view = {
+    width = 40,
+  },
   actions = {
     open_file = {
       resize_window = false,
