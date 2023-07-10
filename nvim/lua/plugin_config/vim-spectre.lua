@@ -11,5 +11,13 @@ require('spectre').setup {
 local default_opts = { noremap = true, silent = true }
 local keymap = vim.keymap.set
 keymap('n', '<F6>', '<cmd>lua require("spectre").open()<CR>', default_opts)
-keymap('n', '<leader>s', '<cmd>lua require("spectre").open_visual({select_word=true})<CR>', default_opts)
-keymap('v', '<leader>s', '<esc><cmd>lua require("spectre").open_visual()<CR>', default_opts)
+keymap('n', '<leader>r', '<cmd>lua require("spectre").open_visual({select_word=true})<CR>', default_opts)
+keymap('v', '<leader>r', '<esc><cmd>lua require("spectre").open_visual()<CR>', default_opts)
+
+local api = vim.api
+api.nvim_set_hl(0, "SpectreHeader", { ctermfg = 220 })
+api.nvim_set_hl(0, "SpectreFile", { ctermfg = 197 })
+api.nvim_set_hl(0, "SpectreDir", { ctermfg = 81 })
+api.nvim_set_hl(0, "SpectreBorder", { ctermfg = 240 })
+api.nvim_set_hl(0, "SpectreSearch", { ctermfg = 59, ctermbg = 108 })
+api.nvim_set_hl(0, "SpectreReplace", { ctermfg = 59, ctermbg = 203 })
