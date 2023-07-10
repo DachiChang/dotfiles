@@ -52,5 +52,5 @@ require('telescope-tabs').setup {
   end,
 }
 local tabs = require('telescope-tabs')
-keymap('n', 'tt', tabs.list_tabs, {})
-keymap('n', 'T', tabs.go_to_previous, {})
+keymap('n', '<leader>t', tabs.list_tabs, {})
+keymap('n', 'tt', tabs.go_to_previous, {})
