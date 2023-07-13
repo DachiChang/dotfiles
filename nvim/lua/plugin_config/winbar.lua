@@ -1,3 +1,4 @@
+local devicons = require('nvim-web-devicons')
 local winbar_filetype_exclude = {
   "help",
   "lazy",
@@ -15,8 +16,15 @@ api.nvim_create_autocmd("FileType", {
   pattern = '*',
   callback = function()
     if not vim.tbl_contains(winbar_filetype_exclude, vim.bo.filetype) then
-      local relative_path = vim.fn.substitute(vim.fn.expand("%"), vim.fn.getcwd() .. "/", "", "")
-      vim.opt_local.winbar = "%=" .. relative_path:gsub('/', ' ➤ ') .. " %m"
+      local file = vim.fn.expand("%")
+      local relative_path = vim.fn.substitute(file, vim.fn.getcwd() .. "/", "", "")
+      local icon = devicons.get_icon(file)
+      if icon == nil then
+        icon = ""
+      else
+        icon = icon .. " "
+      end
+      vim.opt_local.winbar = "%=" .. icon .. relative_path:gsub('/', ' ➤ ') .. " %m"
     end
   end
 })
