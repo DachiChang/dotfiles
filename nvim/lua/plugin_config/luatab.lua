@@ -1,4 +1,16 @@
-require('luatab').setup()
+require('luatab').setup {
+  filterFileType = {
+    "help",
+    "lazy",
+    "mason",
+    "spectre_panel",
+    "toggleterm",
+    "TelescopePrompt",
+    "TelescopeResults",
+    "NvimTree",
+    "tagbar",
+  },
+}
 
 -- tabline
 local api = vim.api
