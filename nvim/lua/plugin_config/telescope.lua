@@ -4,12 +4,12 @@ require('telescope').setup {
   defaults = {
     mappings = {
       n = {
-        ['t'] = actions.select_tab_drop,
+        ['t'] = actions.select_tab,
         ['v'] = actions.select_vertical,
         ['s'] = actions.select_horizontal,
       },
       i = {
-        ['<C-t>'] = actions.select_tab_drop,
+        ['<C-t>'] = actions.select_tab,
         ['<C-v>'] = actions.select_vertical,
         ['<C-s>'] = actions.select_horizontal,
       },
@@ -23,6 +23,7 @@ end, {})
 keymap('n', '<leader>g', builtin.live_grep, {})
 keymap('n', '<leader>h', builtin.help_tags, {})
 keymap('n', '<leader>k', builtin.keymaps, {})
+keymap('n', '<leader>b', builtin.buffers, {})
 
 -- search and jump to tabs
 require('telescope-tabs').setup {
