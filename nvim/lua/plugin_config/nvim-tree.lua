@@ -29,6 +29,11 @@ require('nvim-tree').setup {
   view = {
     width = 40,
   },
+  renderer = {
+    indent_markers = {
+      enable = true,
+    },
+  },
   actions = {
     open_file = {
       resize_window = false,
