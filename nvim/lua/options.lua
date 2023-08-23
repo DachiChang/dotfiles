@@ -20,7 +20,7 @@ opt.ignorecase = true
 
 -- option programming
 opt.number = true
-opt.relativenumber = true
+opt.relativenumber = false
 opt.wrap = false
 opt.showmatch = true
 
