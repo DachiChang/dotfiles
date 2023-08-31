@@ -1,7 +1,7 @@
 require('leap').opts.safe_labels = {}
 -- enable global search
 local keymap = vim.keymap
-keymap.set({ 'n', 'v' }, '<leader>s', function()
+keymap.set({ 'n', 'v' }, '<leader>\\', function()
   local current_window = vim.fn.win_getid()
   require('leap').leap { target_windows = { current_window } }
 end, { nowait = true, noremap = true, silent = true })
