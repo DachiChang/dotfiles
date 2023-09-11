@@ -31,10 +31,12 @@ api.nvim_create_autocmd("FileType", {
         file_path = relative_path:gsub('^/', ''):gsub('/', ' ➤ ') .. " ➤ "
       end
 
-      vim.opt_local.winbar = " " .. file_path .. icon .. file_name .. " %m"
+      vim.opt_local.winbar = " " .. file_path .. icon .. file_name .. " %m%#WinbarDelete#"
     end
   end
 })
 
-api.nvim_set_hl(0, "WinBar", { cterm = none })
---api.nvim_set_hl(0, "WinBarNC", { ctermfg = 220, cterm = none })
+-- api.nvim_set_hl(0, "WinBar", { cterm = none })
+api.nvim_set_hl(0, "WinbarDelete", { ctermbg = 234 })
+api.nvim_set_hl(0, "Winbar", { ctermbg = 52 })
+-- api.nvim_set_hl(0, "WinBarNC", { ctermbg = 52 })
