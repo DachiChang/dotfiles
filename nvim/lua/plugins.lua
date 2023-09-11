@@ -23,8 +23,6 @@ local plugins = {
   'pedrohdz/vim-yaml-folds',
   -- helm syntax
   'towolf/vim-helm',
-  -- indent block
-  'lukas-reineke/indent-blankline.nvim',
   -- keyword highlight and jump to reference
   'RRethy/vim-illuminate',
   -- editorconfig
