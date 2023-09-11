@@ -29,6 +29,11 @@ local plugins = {
   'gpanders/editorconfig.nvim',
   -- detecting whitespace
   'ntpeters/vim-better-whitespace',
+  -- mini.nvim
+  {
+    'echasnovski/mini.nvim',
+    version = '*'
+  },
   -- lualine
   {
     'nvim-lualine/lualine.nvim',
