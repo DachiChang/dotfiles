@@ -11,7 +11,10 @@ CASE_SENSITIVE='true'
 # TODO install
 # brew install kubectl kubectx kube-ps1
 # git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-# curl -L https://raw.githubusercontent.com/ahmetb/kubectx/master/completion/kubens.zsh -o ~/.oh-my-zsh/completions/_kubens.zsh (and kubectx)
+#
+## kubectx zsh plugin
+# curl -L https://raw.githubusercontent.com/ahmetb/kubectx/master/completion/_kubectx.zsh -o ~/.oh-my-zsh/completions/_kubectx.zsh
+# curl -L https://raw.githubusercontent.com/ahmetb/kubectx/master/completion/_kubens.zsh -o ~/.oh-my-zsh/completions/_kubens.zsh
 plugins=(zsh-autosuggestions git kubectl kube-ps1)
 source $ZSH/oh-my-zsh.sh
 
@@ -55,6 +58,8 @@ alias python='python3'
 alias pip='pip3'
 alias vim='nvim'
 alias lg='lazygit'
+alias kns='kubens'
+alias kcx='kubectx'
 
 # Python pipenv
 export PIPENV_VENV_IN_PROJECT=1
