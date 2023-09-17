@@ -174,8 +174,8 @@ if &t_Co > 255
    hi PreProc         ctermfg=118
    hi Question        ctermfg=81
    hi Repeat          ctermfg=161               cterm=bold
-   hi Search          ctermfg=253 ctermbg=66
-   hi CurSearch       ctermfg=253 ctermbg=167
+   hi Search          ctermfg=253 ctermbg=108
+   hi CurSearch       ctermfg=253 ctermbg=203
 
    " marks column
    hi SignColumn      ctermfg=118 ctermbg=235
