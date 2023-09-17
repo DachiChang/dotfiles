@@ -17,7 +17,7 @@ opt.foldlevelstart = 99
 opt.hlsearch = true
 opt.incsearch = true
 opt.ignorecase = true
-opt.wrapscan = false
+-- opt.wrapscan = false
 
 -- option programming
 opt.number = true
