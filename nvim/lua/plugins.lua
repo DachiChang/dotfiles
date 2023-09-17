@@ -64,12 +64,7 @@ local plugins = {
     },
   },
   -- quick moving in screen
-  {
-    'ggandor/leap.nvim',
-    dependencies = {
-      'tpope/vim-repeat',
-    },
-  },
+  'folke/flash.nvim',
   -- telescope, a fuzzy finder
   -- REQUIRED: brew install ripgrep
   {
