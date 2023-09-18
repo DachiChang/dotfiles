@@ -46,7 +46,7 @@ local on_attach = function(client, bufnr)
   }
   for _, c in ipairs(without_formatter) do
     if c ~= client.name then
-      keymap.set('n', 'fm', function() buf.format { async = true } end, bufopts)
+      keymap.set('n', 'gf', function() buf.format { async = true } end, bufopts) -- go format
     end
   end
 
