@@ -20,13 +20,7 @@ local lsp_servers = {
   "terraformls",
   "tflint",
 }
-local lsp_server_settings = {
-  --  yamlls = {
-  --    yaml = {
-  --      keyOrdering = false,
-  --    },
-  --  },
-}
+
 require('mason-lspconfig').setup { -- mason lspconfig
   ensure_installed = lsp_servers,
 }
@@ -35,7 +29,6 @@ local keymap = vim.keymap
 local buf = vim.lsp.buf
 
 -- for each lsp-server setup
-local lspconfig = require('lspconfig')
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 local on_attach = function(client, bufnr)
   local bufopts = { noremap = true, silent = true, buffer = bufnr }
@@ -70,15 +63,42 @@ local lsp_flags = {
   -- This is the default in Nvim 0.7+
   debounce_text_changes = 150,
 }
+
 -- for each lsp server, assign capabilities for completion
+local lspconfig = require('lspconfig')
 for _, lsp_server in ipairs(lsp_servers) do
   lspconfig[lsp_server].setup {
     capabilities = capabilities,
     on_attach = on_attach,
     flags = lsp_flags,
-    settings = lsp_server_settings[lsp_server]
   }
 end
+-- override html lsp config
+lspconfig.html.setup {
+  --  https://code.visualstudio.com/Docs/languages/html
+  settings = {
+    html = {
+      format = {
+        extraLiners = "",
+        indentInnerHtml = true,
+      },
+    },
+  },
+  capabilities = capabilities,
+  on_attach = on_attach,
+  flags = lsp_flags,
+}
+-- override yamlls lsp config
+-- lspconfig['yamlls'].setup {
+--   settings = {
+--     yaml = {
+--       keyOrdering = false,
+--     },
+--   },
+--   capabilities = capabilities,
+--   on_attach = on_attach,
+--   flags = lsp_flags,
+-- }
 
 -- lsp handler
 local lsp = vim.lsp
