@@ -11,6 +11,7 @@ require('mason').setup { -- Mason installer config
 local lsp_servers = {
   "lua_ls",
   "html",
+  "cssls",
   "gopls",
   "pyright",
   "tsserver",
