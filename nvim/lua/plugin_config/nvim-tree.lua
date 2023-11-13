@@ -36,9 +36,6 @@ require('nvim-tree').setup {
     indent_markers = {
       enable = true,
     },
-    icons = {
-      git_placement = "after",
-    },
   },
   actions = {
     open_file = {
