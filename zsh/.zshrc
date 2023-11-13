@@ -58,8 +58,8 @@ alias python='python3'
 alias pip='pip3'
 alias vim='nvim'
 alias lg='lazygit'
-alias kns='kubens'
-alias kcx='kubectx'
+alias ns='kubens'
+alias ctx='kubectx'
 
 # Python pipenv
 export PIPENV_VENV_IN_PROJECT=1
