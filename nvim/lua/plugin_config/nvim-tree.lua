@@ -26,6 +26,9 @@ require('nvim-tree').setup {
       ignore = {},
     },
   },
+  sort = {
+    files_first = true,
+  },
   view = {
     width = 40,
   },
