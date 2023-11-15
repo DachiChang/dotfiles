@@ -38,7 +38,7 @@ keymap("v", "//", [[y/\V<C-R>=escape(@",'/\')<CR><CR>]], default_opts)
 -- Temporary disable hightlight
 keymap("n", "<ESC>", ":noh<CR>", default_opts)
 -- Use cp shortcut to copy editing file path
-keymap("n", "cp", ":let @+=expand('%:p')<CR>", default_opts)
+keymap("n", "cp", ":let @+=expand('%:p:h')<CR>", default_opts)
 
 -- yank word and paste without override register
 keymap("x", "p", "pgvy", default_opts)
