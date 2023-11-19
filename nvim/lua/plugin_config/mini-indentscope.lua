@@ -1,5 +1,4 @@
-local indentscope = require('mini.indentscope')
-indentscope.setup {
+require('mini.indentscope').setup {
   -- Draw options
   draw = {
     -- Delay (in ms) between event and start of drawing scope indicator
