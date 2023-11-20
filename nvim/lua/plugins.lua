@@ -94,7 +94,7 @@ local plugins = {
   -- terraformls
   'hashivim/vim-terraform',
   -- toggleterm
-  -- 'akinsho/toggleterm.nvim', -- ctrl + \ (trigger)
+  'akinsho/toggleterm.nvim', -- ctrl + \ (trigger)
   -- lsp
   {
     'neovim/nvim-lspconfig',               -- language server protocal client
