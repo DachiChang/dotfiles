@@ -44,4 +44,4 @@ keymap("n", "cp", ":let @+=expand('%:p:h')<CR>", default_opts)
 keymap("x", "p", "pgvy", default_opts)
 
 -- ESC to exist terminal mode to normal mode
-keymap("t", "<ESC>", [[<C-\><C-n>]], default_opts)
+-- keymap("t", "<ESC>", [[<C-\><C-n>]], default_opts)
