@@ -152,7 +152,7 @@ if &t_Co > 255
    hi Function        ctermfg=118
    hi Identifier      ctermfg=208
    hi Ignore          ctermfg=244 ctermbg=232
-   hi IncSearch       ctermfg=193 ctermbg=16
+   hi IncSearch       ctermfg=106 ctermbg=253
 
    hi Keyword         ctermfg=161               cterm=bold
    hi Label           ctermfg=229               cterm=none
@@ -174,8 +174,8 @@ if &t_Co > 255
    hi PreProc         ctermfg=118
    hi Question        ctermfg=81
    hi Repeat          ctermfg=161               cterm=bold
-   hi Search          ctermfg=253 ctermbg=108
-   hi CurSearch       ctermfg=253 ctermbg=203
+   hi Search          ctermfg=253 ctermbg=106
+   hi CurSearch       ctermfg=253 ctermbg=161
 
    " marks column
    hi SignColumn      ctermfg=118 ctermbg=235
