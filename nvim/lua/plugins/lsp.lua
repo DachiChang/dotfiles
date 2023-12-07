@@ -120,6 +120,7 @@ return {
 
     -- lsp handler
     local lsp = vim.lsp
+    lsp.set_log_level('off') -- disable log or debug lsp
     lsp.handlers['textDocument/hover'] = lsp.with(
       lsp.handlers.hover, {
         border = 'rounded',
