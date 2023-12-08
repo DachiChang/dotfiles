@@ -25,12 +25,12 @@ return {
       "jsonls",
       "helm_ls",
       "terraformls",
+      -- "tflint",
     }
 
     local tools = {
       "prettier", -- prettier formatter
       "autopep8", -- python formatter
-      "tflint",   -- terraform formatter
     }
 
     local mason_tool_installer = require("mason-tool-installer")
