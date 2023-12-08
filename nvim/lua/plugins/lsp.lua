@@ -25,7 +25,6 @@ return {
       "jsonls",
       "helm_ls",
       "terraformls",
-      -- "tflint",
     }
 
     local tools = {
