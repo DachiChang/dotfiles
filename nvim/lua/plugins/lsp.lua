@@ -93,7 +93,6 @@ return {
         yaml = { "prettier" },
         markdown = { "prettier" },
         python = { "autopep8" },
-        terraform = { "tflint" },
       },
       -- format_on_save = {
       --   lsp_fallback = true,
