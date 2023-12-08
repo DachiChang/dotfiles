@@ -64,6 +64,7 @@ return {
       keymap.set('n', 'gT', buf.type_definition, bufopts)
       keymap.set('n', 'gr', buf.references, bufopts)
       keymap.set('n', '<F2>', buf.rename, bufopts)
+      -- keymap.set('n', 'gf', buf.format, bufopts)
     end
 
     -- language server config
@@ -73,21 +74,6 @@ return {
       handlers = {
         function(server_name)
           require("lspconfig")[server_name].setup {
-            capabilities = capabilities,
-            on_attach = on_attach,
-          }
-        end,
-        ['html'] = function()
-          local lspconfig = require('lspconfig')
-          lspconfig['html'].setup {
-            settings = {
-              html = {
-                format = {
-                  extraLiners = "",
-                  indentInnerHtml = true,
-                },
-              },
-            },
             capabilities = capabilities,
             on_attach = on_attach,
           }
@@ -106,7 +92,6 @@ return {
         json = { "prettier" },
         yaml = { "prettier" },
         markdown = { "prettier" },
-        graphql = { "prettier" },
         python = { "autopep8" },
         terraform = { "tflint" },
       },
@@ -117,7 +102,6 @@ return {
     keymap.set('n', 'gf', function()
       conform.format({
         lsp_fallback = true,
-        async = false,
       })
     end, opts)
 
