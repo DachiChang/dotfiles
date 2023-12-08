@@ -1,16 +1,19 @@
 return {
-  'neovim/nvim-lspconfig', -- language server protocal client
+  'williamboman/mason.nvim', -- mason lsp and tools manager
   enabled = true,
   dependencies = {
-    'williamboman/mason.nvim',           -- language server installer
-    'williamboman/mason-lspconfig.nvim', -- bridge between client and mason
-    'hrsh7th/nvim-cmp',                  -- completion
-    'hrsh7th/cmp-nvim-lsp',              -- bridge lspconfig
-    'ray-x/lsp_signature.nvim',          -- Show function signature when you type
+    'williamboman/mason-lspconfig.nvim',         -- bridge between client and mason
+    'WhoIsSethDaniel/mason-tool-installer.nvim', -- auto install mason tools
+    'neovim/nvim-lspconfig',                     -- language server protocal client
+    'hrsh7th/cmp-nvim-lsp',                      -- bridge lspconfig
+    'hrsh7th/nvim-cmp',                          -- completion
+    'ray-x/lsp_signature.nvim',                  -- Show function signature when you type
+    'stevearc/conform.nvim',                     -- formatter
   },
   config = function()
     local keymap = vim.keymap
-    local buf = vim.lsp.buf
+    local opts = { noremap = true, silent = true }
+
     local lsp_servers = { -- ensure installed language server
       "lua_ls",
       "html",
@@ -23,8 +26,18 @@ return {
       --  "yamlls",
       "helm_ls",
       "terraformls",
-      "tflint",
       "csharp_ls",
+    }
+
+    local tools = {
+      "prettier", -- prettier formatter
+      "black",    -- python formatter
+      "tflint",   -- terraform formatter
+    }
+
+    local mason_tool_installer = require("mason-tool-installer")
+    mason_tool_installer.setup {
+      ensure_installed = tools,
     }
 
     local mason_installer = require('mason')
@@ -39,22 +52,9 @@ return {
       }
     }
 
-    local mason_lspconfig = require('mason-lspconfig')
-    mason_lspconfig.setup {
-      ensure_installed = lsp_servers,
-    }
-
-    local lsp_signature = require('lsp_signature')
-    lsp_signature.setup {
-      bind = true, -- This is mandatory, otherwise border config won't get registered.
-      hint_enable = false,
-      handler_opts = {
-        border = 'rounded',
-      }
-    }
-
-    -- for each lsp-server setup
+    -- prepare lsp cmp injection
     local capabilities = require('cmp_nvim_lsp').default_capabilities()
+    local buf = vim.lsp.buf
     local on_attach = function(client, bufnr)
       local bufopts = { noremap = true, silent = true, buffer = bufnr }
       keymap.set('n', 'gt', buf.hover, bufopts)
@@ -64,61 +64,74 @@ return {
       keymap.set('n', 'gT', buf.type_definition, bufopts)
       keymap.set('n', 'gr', buf.references, bufopts)
       keymap.set('n', '<F2>', buf.rename, bufopts)
-
-      -- don't bind formatter
-      local without_formatter = {
-        'pyright', -- use vim-autopep8 instead, because pyright not support buffer formatter
-      }
-      for _, c in ipairs(without_formatter) do
-        if c ~= client.name then
-          keymap.set('n', 'gf', buf.format, bufopts) -- go format
-        end
-      end
     end
 
-    local lsp_flags = {
-      -- This is the default in Nvim 0.7+
-      debounce_text_changes = 150,
-    }
-
-    -- for each lsp server, config lsp to assign capabilities for completion
-    local lspconfig = require('lspconfig')
-    for _, lsp_server in ipairs(lsp_servers) do
-      lspconfig[lsp_server].setup {
-        capabilities = capabilities,
-        on_attach = on_attach,
-        flags = lsp_flags,
-      }
-    end
-
-    -- override html lsp config
-    lspconfig['html'].setup {
-      --  https://code.visualstudio.com/Docs/languages/html
-      settings = {
-        html = {
-          format = {
-            extraLiners = "",
-            indentInnerHtml = true,
-          },
-        },
+    -- language server config
+    local mason_lspconfig = require('mason-lspconfig')
+    mason_lspconfig.setup {
+      ensure_installed = lsp_servers,
+      handlers = {
+        function(server_name)
+          require("lspconfig")[server_name].setup {
+            capabilities = capabilities,
+            on_attach = on_attach,
+          }
+        end,
+        ['html'] = function()
+          local lspconfig = require('lspconfig')
+          lspconfig['html'].setup {
+            settings = {
+              html = {
+                format = {
+                  extraLiners = "",
+                  indentInnerHtml = true,
+                },
+              },
+            },
+            capabilities = capabilities,
+            on_attach = on_attach,
+          }
+        end,
       },
-      capabilities = capabilities,
-      on_attach = on_attach,
-      flags = lsp_flags,
     }
-    -- override yamlls lsp config
-    -- lspconfig['yamlls'].setup {
-    --   settings = {
-    --     yaml = {
-    --       keyOrdering = false,
-    --     },
-    --   },
-    --   capabilities = capabilities,
-    --   on_attach = on_attach,
-    --   flags = lsp_flags,
-    -- }
 
-    -- lsp handler
+    -- language formatter
+    local conform = require("conform")
+    conform.setup({
+      formatters_by_ft = {
+        javascript = { "prettier" },
+        typescript = { "prettier" },
+        css = { "prettier" },
+        html = { "prettier" },
+        json = { "prettier" },
+        yaml = { "prettier" },
+        markdown = { "prettier" },
+        graphql = { "prettier" },
+        python = { "autopep8" },
+        terraform = { "tflint" },
+      },
+      format_on_save = {
+        lsp_fallback = true,
+      },
+    })
+    keymap.set('n', 'gf', function()
+      conform.format({
+        lsp_fallback = true,
+        async = false,
+      })
+    end, opts)
+
+    -- Show function signature when you type
+    local lsp_signature = require('lsp_signature')
+    lsp_signature.setup {
+      bind = true, -- This is mandatory, otherwise border config won't get registered.
+      hint_enable = false,
+      handler_opts = {
+        border = 'rounded',
+      }
+    }
+
+    -- nvim lsp style
     local lsp = vim.lsp
     lsp.set_log_level('off') -- disable log or debug lsp
     lsp.handlers['textDocument/hover'] = lsp.with(
@@ -127,9 +140,8 @@ return {
       }
     )
 
-    -- diagnostics
+    -- nvim lsp diagnostics style
     local diagnostic = vim.diagnostic
-    local opts = { noremap = true, silent = true }
     diagnostic.config {
       float = {
         border = 'rounded',
