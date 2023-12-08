@@ -23,10 +23,8 @@ return {
       "pyright",
       "tsserver",
       "jsonls",
-      --  "yamlls",
       "helm_ls",
       "terraformls",
-      "csharp_ls",
     }
 
     local tools = {
