@@ -31,7 +31,7 @@ return {
 
     local tools = {
       "prettier", -- prettier formatter
-      "black",    -- python formatter
+      "autopep8", -- python formatter
       "tflint",   -- terraform formatter
     }
 
