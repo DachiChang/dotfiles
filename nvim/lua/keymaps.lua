@@ -7,6 +7,8 @@ keymap("n", "<C-q>", ":q!<CR>", default_opts)
 -- Jump
 keymap("n", "gm", "'M", default_opts)
 keymap("n", "m", "mM", default_opts)
+keymap("n", "<C-d>", "20j", default_opts)
+keymap("n", "<C-u>", "20k", default_opts)
 
 -- Fold
 keymap("n", "<Space>", "za", default_opts)
@@ -33,8 +35,6 @@ keymap("n", "<S-Left>", ":vertical resize -3<CR>", default_opts)
 keymap("n", "<S-Down>", ":resize -3<CR>", default_opts)
 keymap("n", "<S-Up>", ":resize +3<CR>", default_opts)
 
--- Search for visually selected text
-keymap("v", "//", [[y/\V<C-R>=escape(@",'/\')<CR><CR>]], default_opts)
 -- Temporary disable hightlight
 keymap("n", "<ESC>", ":noh<CR>", default_opts)
 -- Use cp shortcut to copy editing file path
