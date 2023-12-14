@@ -7,8 +7,8 @@ keymap("n", "<C-q>", ":q!<CR>", default_opts)
 -- Jump
 keymap("n", "gm", "'M", default_opts)
 keymap("n", "m", "mM", default_opts)
-keymap("n", "<C-d>", "20jzz", default_opts)
-keymap("n", "<C-u>", "20kzz", default_opts)
+keymap("n", "<C-d>", "20j", default_opts)
+keymap("n", "<C-u>", "20k", default_opts)
 
 -- Fold
 keymap("n", "<Space>", "za", default_opts)
