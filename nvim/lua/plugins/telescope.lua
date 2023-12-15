@@ -33,5 +33,9 @@ return {
     keymap('n', '<leader>h', builtin.help_tags, {})
     keymap('n', '<leader>k', builtin.keymaps, {})
     keymap('n', '<leader>b', builtin.buffers, {})
+
+    -- color style
+    local api = vim.api
+    api.nvim_set_hl(0, "TelescopeSelection", { ctermbg = 238 })
   end,
 }
