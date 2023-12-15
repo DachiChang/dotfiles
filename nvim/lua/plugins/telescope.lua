@@ -23,7 +23,10 @@ return {
             ['<C-v>'] = actions.select_vertical,
             ['<C-s>'] = actions.select_horizontal,
           },
-        }
+        },
+        preview = {
+          treesitter = false,
+        },
       }
     }
     keymap('n', '<leader>f', function()
