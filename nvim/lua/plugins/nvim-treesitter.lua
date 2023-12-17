@@ -27,6 +27,9 @@ return {
       highlight = {
         enable = false,
       },
+      indent = {
+        enable = false,
+      },
       incremental_selection = {
         enable = true,
         keymaps = {
