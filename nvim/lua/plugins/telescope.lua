@@ -7,6 +7,7 @@ return {
   },
   config = function()
     local keymap = vim.keymap.set
+    local default_opts = { noremap = true, silent = true }
     local telescope = require('telescope')
     local actions = require('telescope.actions')
     local builtin = require('telescope.builtin')
@@ -31,11 +32,11 @@ return {
     }
     keymap("n", "<leader>f", function()
       builtin.find_files({ hidden = true })
-    end, {})
-    keymap("n", "<leader>g", builtin.live_grep, {})
-    keymap("n", "<leader>h", builtin.help_tags, {})
-    keymap("n", "<leader>k", builtin.keymaps, {})
-    keymap("n", "<leader>b", builtin.buffers, {})
+    end, default_opts)
+    keymap("n", "<leader>g", builtin.live_grep, default_opts)
+    keymap("n", "<leader>h", builtin.help_tags, default_opts)
+    keymap("n", "<leader>k", builtin.keymaps, default_opts)
+    keymap("n", "<leader>b", builtin.buffers, default_opts)
 
     -- color style
     local api = vim.api

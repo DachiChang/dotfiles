@@ -6,11 +6,11 @@ return {
     local lsp_keyword_mark = require('illuminate')
     local default_opts = { nowait = true, noremap = true, silent = true }
 
-    local keymap = vim.keymap
-    keymap.set('n', ']', function()
+    local keymap = vim.keymap.set
+    keymap("n", "]", function()
       lsp_keyword_mark.goto_next_reference(false)
     end, default_opts)
-    keymap.set('n', '[', function()
+    keymap("n", "[", function()
       lsp_keyword_mark.goto_prev_reference(false)
     end, default_opts)
 

@@ -6,6 +6,7 @@ return {
   },
   config = function()
     local keymap = vim.keymap.set
+    local default_opts = { noremap = true, silent = true }
     local telescope_tab = require('telescope-tabs')
     telescope_tab.setup {
       show_preview = false,
@@ -33,7 +34,7 @@ return {
         return string.format('%d: %s%s', tab_id, table.concat(filter_names, ', '), is_current and ' <' or '')
       end,
     }
-    keymap("n", "<leader>t", telescope_tab.list_tabs, {})
-    keymap("n", "tt", telescope_tab.go_to_previous, {})
+    keymap("n", "<leader>t", telescope_tab.list_tabs, default_opts)
+    keymap("n", "tt", telescope_tab.go_to_previous, default_opts)
   end,
 }

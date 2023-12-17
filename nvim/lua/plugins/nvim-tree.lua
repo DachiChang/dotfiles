@@ -14,12 +14,12 @@ return {
 
       api.config.mappings.default_on_attach(bufnr)
 
-      vim.keymap.set('n', 'O', api.tree.expand_all, opts('Expand All'))
-      vim.keymap.set('n', 'v', api.node.open.vertical, opts('Open: Vertical Split'))
-      vim.keymap.set('n', 's', api.node.open.horizontal, opts('Open: Horizontal Split'))
-      vim.keymap.set('n', '<C-t>', api.node.open.tab, opts('Open: New Tab or Switch to Tab'))
-      vim.keymap.set('n', 't', api.node.open.tab, opts('Open: New Tab or Switch to Tab'))
-      vim.keymap.set('n', '?', api.tree.toggle_help, opts('Help'))
+      vim.keymap.set("n", "O", api.tree.expand_all, opts("Expand All"))
+      vim.keymap.set("n", "v", api.node.open.vertical, opts("Open: Vertical Split"))
+      vim.keymap.set("n", "s", api.node.open.horizontal, opts("Open: Horizontal Split"))
+      vim.keymap.set("n", "<C-t>", api.node.open.tab, opts("Open: New Tab or Switch to Tab"))
+      vim.keymap.set("n", "t", api.node.open.tab, opts("Open: New Tab or Switch to Tab"))
+      vim.keymap.set("n", "?", api.tree.toggle_help, opts("Help"))
     end
 
     local nvim_tree = require('nvim-tree')
@@ -98,8 +98,8 @@ return {
 
     -- keymap
     local keymap = vim.keymap.set
-    local opts = { noremap = true, silent = true }
-    keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
+    local default_opts = { noremap = true, silent = true }
+    keymap("n", "<leader>e", ":NvimTreeToggle<CR>", default_opts)
 
     -- color
     local api = vim.api

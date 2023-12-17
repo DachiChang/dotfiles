@@ -11,7 +11,7 @@ return {
     'stevearc/conform.nvim',                     -- formatter
   },
   config = function()
-    local keymap = vim.keymap
+    local keymap = vim.keymap.set
     local opts = { noremap = true, silent = true }
 
     local lsp_servers = { -- ensure installed language server
@@ -54,14 +54,14 @@ return {
     local buf = vim.lsp.buf
     local on_attach = function(client, bufnr)
       local bufopts = { noremap = true, silent = true, buffer = bufnr }
-      keymap.set('n', 'gt', buf.hover, bufopts)
-      keymap.set('n', 'gd', buf.definition, bufopts)
-      keymap.set('n', 'gD', buf.declaration, bufopts)
-      keymap.set('n', 'gi', buf.implementation, bufopts)
-      keymap.set('n', 'gT', buf.type_definition, bufopts)
-      keymap.set('n', 'gr', buf.references, bufopts)
-      keymap.set('n', '<F2>', buf.rename, bufopts)
-      -- keymap.set('n', 'gf', buf.format, bufopts)
+      keymap("n", "gt", buf.hover, bufopts)
+      keymap("n", "gd", buf.definition, bufopts)
+      keymap("n", "gD", buf.declaration, bufopts)
+      keymap("n", "gi", buf.implementation, bufopts)
+      keymap("n", "gT", buf.type_definition, bufopts)
+      keymap("n", "gr", buf.references, bufopts)
+      keymap("n", "<F2>", buf.rename, bufopts)
+      -- keymap.set("n", "gf", buf.format, bufopts)
     end
 
     -- language server config
@@ -95,7 +95,7 @@ return {
       --   lsp_fallback = true,
       -- },
     })
-    keymap.set('n', 'gf', function()
+    keymap("n", "gf", function()
       conform.format({
         lsp_fallback = true,
       })
@@ -127,9 +127,9 @@ return {
         border = 'rounded',
       }
     }
-    keymap.set('n', 'ge', diagnostic.open_float, opts)
-    keymap.set('n', 'ep', diagnostic.goto_prev, opts)
-    keymap.set('n', 'en', diagnostic.goto_next, opts)
+    keymap("n", "ge", diagnostic.open_float, opts)
+    keymap("n", "ep", diagnostic.goto_prev, opts)
+    keymap("n", "en", diagnostic.goto_next, opts)
 
     -- color
     local api = vim.api
