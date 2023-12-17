@@ -29,13 +29,13 @@ return {
         },
       }
     }
-    keymap('n', '<leader>f', function()
+    keymap("n", "<leader>f", function()
       builtin.find_files({ hidden = true })
     end, {})
-    keymap('n', '<leader>g', builtin.live_grep, {})
-    keymap('n', '<leader>h', builtin.help_tags, {})
-    keymap('n', '<leader>k', builtin.keymaps, {})
-    keymap('n', '<leader>b', builtin.buffers, {})
+    keymap("n", "<leader>g", builtin.live_grep, {})
+    keymap("n", "<leader>h", builtin.help_tags, {})
+    keymap("n", "<leader>k", builtin.keymaps, {})
+    keymap("n", "<leader>b", builtin.buffers, {})
 
     -- color style
     local api = vim.api

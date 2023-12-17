@@ -18,9 +18,9 @@ return {
 
     local default_opts = { noremap = true, silent = true }
     local keymap = vim.keymap.set
-    keymap('n', '<F6>', '<cmd>lua require("spectre").toggle()<CR>', default_opts)
-    keymap('n', '<leader>r', '<cmd>lua require("spectre").open_visual({select_word=true})<CR>', default_opts)
-    keymap('v', '<leader>r', '<esc><cmd>lua require("spectre").open_visual()<CR>', default_opts)
+    keymap("n", "<F6>", "<cmd>lua require('spectre').toggle()<CR>", default_opts)
+    keymap("n", "<leader>r", "<cmd>lua require('spectre').open_visual({select_word=true})<CR>", default_opts)
+    keymap("v", "<leader>r", "<esc><cmd>lua require('spectre').open_visual()<CR>", default_opts)
 
     -- color
     local api = vim.api
