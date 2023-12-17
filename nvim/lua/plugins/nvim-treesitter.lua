@@ -4,21 +4,21 @@ return {
   config = function()
     local tree_parser = {
       "bash",
-      "make",
-      "yaml",
-      "lua",
+      "css",
+      "dockerfile",
       "go",
       "html",
       "javascript",
       "json",
-      "css",
+      "lua",
+      "make",
+      "markdown",
+      "python",
       "scss",
       "sql",
       "terraform",
-      "dockerfile",
-      "markdown",
-      "python",
       "vim",
+      "yaml",
     }
 
     require 'nvim-treesitter.configs'.setup {
