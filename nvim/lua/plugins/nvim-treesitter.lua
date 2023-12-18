@@ -2,28 +2,8 @@ return {
   'nvim-treesitter/nvim-treesitter',
   enabled = true,
   config = function()
-    local tree_parser = {
-      "bash",
-      "css",
-      "dockerfile",
-      "go",
-      "html",
-      "javascript",
-      "json",
-      "lua",
-      "make",
-      "markdown",
-      "python",
-      "scss",
-      "sql",
-      "terraform",
-      "vim",
-      "yaml",
-    }
-
-    require 'nvim-treesitter.configs'.setup {
-      ensure_installed = tree_parser,
-      auto_install = true,
+    require('nvim-treesitter.configs').setup {
+      auto_install = true, -- auto install the missing parse when enter the buffer
       highlight = {
         enable = false,
       },
