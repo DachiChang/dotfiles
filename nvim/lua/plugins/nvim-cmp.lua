@@ -15,7 +15,7 @@ return {
     require('luasnip.loaders.from_vscode').lazy_load() -- load friendly-snippets
 
     local cmp = require('cmp')
-    cmp.setup({
+    cmp.setup {
       snippet = {
         -- REQUIRED - you must specify a snippet engine
         expand = function(args)
@@ -23,9 +23,7 @@ return {
         end,
       },
       window = {
-        completion = cmp.config.window.bordered({
-          winhighlight = "Normal:CmpPmenu,FloatBorder:CmpPmenu,CursorLine:CmpPmenuSel,Search:None",
-        }),
+        completion = cmp.config.window.bordered(),
         documentation = cmp.config.window.bordered(),
       },
       formatting = {
@@ -56,7 +54,7 @@ return {
       }, {
         { name = 'buffer' },
       })
-    })
+    }
 
     -- Use buffer source for `/` and `?`
     -- cmp.setup.cmdline({ '/', '?' }, {
@@ -113,19 +111,5 @@ return {
         { name = 'cmdline' }, -- if not path can complete, use cmdline instead of
       })
     })
-
-    -- cmp menu color
-    local api = vim.api
-    api.nvim_set_hl(0, "CmpPmenu", { ctermbg = 234 })
-    api.nvim_set_hl(0, "CmpPmenuSel", { ctermbg = 238 })
-    api.nvim_set_hl(0, "CmpItemMenu", { ctermfg = 243 })
-    api.nvim_set_hl(0, "CmpItemAbbrMatch", { ctermfg = 81 })
-    api.nvim_set_hl(0, "CmpItemAbbrMatchFuzzy", { ctermfg = 81 })
-    api.nvim_set_hl(0, "CmpItemKindMethod", { ctermfg = 118 })
-    api.nvim_set_hl(0, "CmpItemKindFunction", { ctermfg = 118 })
-    api.nvim_set_hl(0, "CmpItemKindVariable", { ctermfg = 161 })
-    api.nvim_set_hl(0, "CmpItemKindClass", { ctermfg = 81 })
-    api.nvim_set_hl(0, "CmpItemKindModule", { ctermfg = 214 })
-    api.nvim_set_hl(0, "CmpItemKindConstant", { ctermfg = 135 })
   end,
 }

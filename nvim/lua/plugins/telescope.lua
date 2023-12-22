@@ -25,9 +25,6 @@ return {
             ['<C-s>'] = actions.select_horizontal,
           },
         },
-        preview = {
-          treesitter = false,
-        },
       }
     }
     keymap("n", "<leader>f", function()
@@ -37,9 +34,5 @@ return {
     keymap("n", "<leader>h", builtin.help_tags, default_opts)
     keymap("n", "<leader>k", builtin.keymaps, default_opts)
     keymap("n", "<leader>b", builtin.buffers, default_opts)
-
-    -- color style
-    local api = vim.api
-    api.nvim_set_hl(0, "TelescopeSelection", { ctermbg = 238 })
   end,
 }

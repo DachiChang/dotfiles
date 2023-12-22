@@ -80,7 +80,7 @@ return {
 
     -- language formatter
     local conform = require("conform")
-    conform.setup({
+    conform.setup {
       formatters_by_ft = {
         javascript = { "prettier" },
         typescript = { "prettier" },
@@ -94,7 +94,7 @@ return {
       -- format_on_save = {
       --   lsp_fallback = true,
       -- },
-    })
+    }
     keymap("n", "gf", function()
       conform.format({
         lsp_fallback = true,
@@ -130,11 +130,5 @@ return {
     keymap("n", "ge", diagnostic.open_float, opts)
     keymap("n", "ep", diagnostic.goto_prev, opts)
     keymap("n", "en", diagnostic.goto_next, opts)
-
-    -- color
-    local api = vim.api
-    api.nvim_set_hl(0, "NormalFloat", { ctermbg = 234 })
-    api.nvim_set_hl(0, "FloatBorder", { ctermbg = 234 })
-    api.nvim_set_hl(0, "LspSignatureActiveParameter", { bold = true, ctermbg = 52 })
   end,
 }
