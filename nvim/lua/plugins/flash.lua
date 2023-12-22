@@ -4,6 +4,6 @@ return {
   enabled = true,
   config = function()
     local flash = require('flash')
-    flash.setup {}
+    flash.setup()
   end,
 }

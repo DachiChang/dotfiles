@@ -3,6 +3,6 @@ return {
   enabled = true,
   config = function()
     local colorizer = require('colorizer')
-    colorizer.setup {}
+    colorizer.setup()
   end
 }
