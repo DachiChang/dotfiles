@@ -3,30 +3,24 @@ return {
   enabled = true,
   priority = 1000,
   config = function()
-    require("gruvbox").setup({
-      terminal_colors = true, -- add neovim terminal colors
-      undercurl = true,
-      underline = true,
-      bold = true,
-      italic = {
-        strings = true,
-        emphasis = true,
-        comments = true,
-        operators = false,
-        folds = true,
+    require("gruvbox").setup {
+      terminal_colors = false,
+      palette_overrides = {
+        dark0 = "#1c1c1c",
+        light1 = "#cac5b5",
       },
-      strikethrough = true,
-      invert_selection = false,
-      invert_signs = false,
-      invert_tabline = false,
-      invert_intend_guides = false,
-      inverse = true, -- invert background for search, diffs, statuslines and errors
-      contrast = "", -- can be "hard", "soft" or empty string
-      palette_overrides = {},
-      overrides = {},
-      dim_inactive = false,
-      transparent_mode = false,
-    })
+      overrides = {
+        WinBar = { fg = "#cac5b5", bg = "#3c3836" },
+        WinBarNC = { fg = "#cac5b5", bg = "#3c3836" },
+        WinbarDelete = { bg = "#1c1c1c" },
+        TabLineFill = { fg = "#cac5b5", bg = "#282828" },
+        TabLine = { fg = "#cac5b5", bg = "#282828" },
+        CursorLine = { bg = "#444444" },
+        CursorLineNr = { bg = "#444444" },
+        FlashLabel = { bg = "#458588" },
+        NvimTreeWindowPicker = { fg = "#1c1c1c" },
+      },
+    }
     vim.cmd("colorscheme gruvbox")
   end
 }
