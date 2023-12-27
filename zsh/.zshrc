@@ -38,6 +38,7 @@ setopt noautomenu
 
 # LS color setting
 export LSCOLORS=gxfxcxdxbxegedabagacad
+
 # Key binding
 bindkey '\e\eOC' forward-word   # for tmux
 bindkey '\e\eOD' backward-word  # for tmux
