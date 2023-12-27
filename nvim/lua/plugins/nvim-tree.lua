@@ -100,17 +100,5 @@ return {
     local keymap = vim.keymap.set
     local default_opts = { noremap = true, silent = true }
     keymap("n", "<leader>e", ":NvimTreeToggle<CR>", default_opts)
-
-    -- color
-    local api = vim.api
-    api.nvim_set_hl(0, "NvimTreeFolderName", { ctermfg = 81 })
-    api.nvim_set_hl(0, "NvimTreeRootFolder", { ctermfg = 245 })
-    api.nvim_set_hl(0, "NvimTreeFolderIcon", { ctermfg = 110 })
-    api.nvim_set_hl(0, "NvimTreeOpenedFolderName", { ctermfg = 81 })
-    api.nvim_set_hl(0, "NvimTreeEmptyFolderName", { ctermfg = 81 })
-    api.nvim_set_hl(0, "NvimTreeIndentMarker", { ctermfg = 245 })
-    api.nvim_set_hl(0, "NvimTreeExecFile", { ctermfg = 118 })
-    api.nvim_set_hl(0, "NvimTreeImageFile", { ctermfg = 161 })
-    api.nvim_set_hl(0, "NvimTreeSpecialFile", { ctermfg = 208 })
   end,
 }

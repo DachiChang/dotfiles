@@ -5,7 +5,7 @@ return {
     require('nvim-treesitter.configs').setup {
       auto_install = true, -- auto install the missing parse when enter the buffer
       highlight = {
-        enable = false,
+        enable = true,
       },
       indent = {
         enable = false,
@@ -28,7 +28,7 @@ return {
     opt.foldenable = true
     opt.foldlevelstart = 99
 
-    -- enable highlight on F4
+    -- toggle highlight on F4
     local keymap = vim.keymap.set
     local default_opts = { noremap = true, silent = true }
     keymap("n", "<F4>", ":TSBufToggle highlight<CR>", default_opts)

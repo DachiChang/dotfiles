@@ -39,10 +39,5 @@ return {
         end
       end
     })
-
-    -- api.nvim_set_hl(0, "WinBar", { cterm = none })
-    api.nvim_set_hl(0, "WinbarDelete", { ctermbg = 234 })
-    api.nvim_set_hl(0, "Winbar", { ctermbg = 52 })
-    -- api.nvim_set_hl(0, "WinBarNC", { ctermbg = 52 })
   end,
 }

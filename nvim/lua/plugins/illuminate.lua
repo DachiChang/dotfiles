@@ -13,10 +13,5 @@ return {
     keymap("n", "[", function()
       lsp_keyword_mark.goto_prev_reference(false)
     end, default_opts)
-
-    local api = vim.api
-    api.nvim_set_hl(0, "IlluminatedWordText", { underline = true })
-    api.nvim_set_hl(0, "IlluminatedWordRead", { underline = true })
-    api.nvim_set_hl(0, "IlluminatedWordWrite", { underline = true })
   end,
 }

@@ -8,7 +8,7 @@ return {
     local lualine = require('lualine')
     lualine.setup {
       options = {
-        theme = 'gruvbox-material',
+        theme = 'gruvbox_dark',
         globalstatus = true,
       },
       sections = {
