@@ -66,3 +66,15 @@ alias ctx='kubectx'
 
 # Python pipenv
 export PIPENV_VENV_IN_PROJECT=1
+
+# Path append
+export PATH=$HOME/go/bin:/usr/local/go/bin:$PATH # go bin path
+export PATH=$HOME/bin/nvim-macos/bin:$PATH # nvim path
+export PATH=$PATH:/opt/homebrew/bin # brew path
+export PATH=$PATH:/usr/local/share/dotnet # dotent path
+export PATH=$PATH:/opt/homebrew/opt/mysql-client/bin # mysql client path
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/dachichang/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/dachichang/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/dachichang/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/dachichang/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
