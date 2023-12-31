@@ -1,5 +1,4 @@
 # Environment setting
-export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin
 export ZSH=$HOME/.oh-my-zsh
 export EDITOR='nvim'
 export PAGER='less'
@@ -68,9 +67,11 @@ alias ctx='kubectx'
 export PIPENV_VENV_IN_PROJECT=1
 
 # Path append
+export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin # system path
+export PATH=/opt/homebrew/bin:$PATH # brew path
+export PATH=$HOME/bin:$PATH
 export PATH=$HOME/go/bin:/usr/local/go/bin:$PATH # go bin path
 export PATH=$HOME/bin/nvim-macos/bin:$PATH # nvim path
-export PATH=$PATH:/opt/homebrew/bin # brew path
 export PATH=$PATH:/usr/local/share/dotnet # dotent path
 export PATH=$PATH:/opt/homebrew/opt/mysql-client/bin # mysql client path
 
