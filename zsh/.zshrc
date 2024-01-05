@@ -3,7 +3,6 @@ export ZSH=$HOME/.oh-my-zsh
 export EDITOR='nvim'
 export PAGER='less'
 export LANG='en_US.UTF-8'
-export TERM='screen-256color'
 
 # Oh-my-zsh config and activate
 DISABLE_AUTO_TITLE='true'
