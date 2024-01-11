@@ -39,6 +39,7 @@ keymap("n", "<S-Up>", ":resize +3<CR>", default_opts)
 keymap("n", "<ESC>", ":noh<CR>", default_opts)
 -- Use cp shortcut to copy editing file path
 keymap("n", "cp", ":let @+=expand('%:p:h')<CR>", default_opts)
-
 -- yank word and paste without override register
 keymap("x", "p", "pgvy", default_opts)
+-- hightlight, but don't jump
+keymap("n", "*", ":keepjumps normal! mi*`i<CR>", default_opts)
