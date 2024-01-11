@@ -97,6 +97,7 @@ return {
     }
     keymap("n", "gf", function()
       conform.format({
+        timeout_ms = 3000,
         lsp_fallback = true,
       })
     end, opts)
