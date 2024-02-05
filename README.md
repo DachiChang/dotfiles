@@ -1,28 +1,24 @@
 # dotfiles
 
+## Install
+
+1. clone dotfiles to ~/
+2. install stow (brew install stow)
+3. cd dotfiles
+  - stow zsh
+  - stow nvim
+  - stow tmux
+  - stow misc
+
+## Uninstall
+
+1. cd dotfiles
+  - stow -D zsh
+  - stow -D nvim
+  - stow -D tmux
+  - stow -D misc
+
 ## NeoVim
-
-Command
- - PackerSync
-
-Should install
- - Mason
-   - Autopep8 (formatter)
- - Brew
-   - brew install ripgrep
-
-## Vim
-
-Reference
- - https://blog.chh.tw/posts/vim-vundle/
- - http://terrychen.logdown.com/posts/2014/10/05/vundle-installation
-
-Command
- - PluginInstall
- - PluginClean
- - PluginList
-
- ## NeoVim
 
  - [Releases · neovim/neovim](https://github.com/neovim/neovim/releases)
  - Install dependency
@@ -35,13 +31,34 @@ Command
     - gotags
     - lazygit
 
+Command
+  - Lazy
+  - Mason
+  - TSUpdate
+  - checkhealth
+
+## Vim
+
+Reference
+  - https://blog.chh.tw/posts/vim-vundle/
+  - http://terrychen.logdown.com/posts/2014/10/05/vundle-installation
+
+Command
+  - PluginInstall
+  - PluginClean
+  - PluginList
+
 ## Tmux
+
+KeyBind
+  - F11 previous window
+  - F12 next window
 
 ## Screen
 
 KeyBind
- - F11 previous screen
- - F12 next screen
+  - F11 previous screen
+  - F12 next screen
 
 ## Tcsh
 
