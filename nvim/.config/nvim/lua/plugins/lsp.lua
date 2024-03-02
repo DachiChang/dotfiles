@@ -25,6 +25,7 @@ return {
       "jsonls",
       "helm_ls",
       "terraformls",
+      "rust_analyzer",
     }
 
     local tools = {
