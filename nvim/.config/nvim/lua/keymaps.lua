@@ -43,3 +43,15 @@ keymap("n", "cp", ":let @+=expand('%:p:h')<CR>", default_opts)
 keymap("x", "p", "pgvy", default_opts)
 -- hightlight, but don't jump
 keymap("n", "*", ":keepjumps normal! mi*`i<CR>", default_opts)
+
+-- Diff
+function ToggleDiff()
+  if vim.o.diff then
+    vim.cmd('diffoff')
+  else
+    vim.cmd('diffthis')
+  end
+end
+
+keymap("n", "<leader>d", ":lua ToggleDiff()<CR>", default_opts)
+keymap("n", "<leader>D", ":diffoff!<CR>", default_opts)
