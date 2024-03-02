@@ -33,6 +33,7 @@
   "tagbar": { "branch": "master", "commit": "12edcb59449b335555652898f82dd6d5c59d519a" },
   "telescope-tabs": { "branch": "master", "commit": "0a678eefcb71ebe5cb0876aa71dd2e2583d27fd3" },
   "telescope.nvim": { "branch": "master", "commit": "aa83606299c5beeaf80e656efbf07bde258db7be" },
+  "todo-comments.nvim": { "branch": "main", "commit": "833d8dd8b07eeda37a09e99460f72a02616935cb" },
   "toggleterm.nvim": { "branch": "main", "commit": "193786e0371e3286d3bc9aa0079da1cd41beaa62" },
   "vim-better-whitespace": { "branch": "master", "commit": "029f35c783f1b504f9be086b9ea757a36059c846" },
   "vim-helm": { "branch": "master", "commit": "86cc6766db60b8cc5731068d0c2111dee1f2b328" },
