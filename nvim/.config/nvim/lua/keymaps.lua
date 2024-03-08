@@ -11,7 +11,7 @@ keymap("n", "<C-d>", "20j", default_opts)
 keymap("n", "<C-u>", "20k", default_opts)
 
 -- Fold
-keymap("n", "<Space>", "za", default_opts)
+keymap("n", "<CR>", "za", default_opts)
 
 -- Tab
 keymap("n", "<", ":tabm -1<CR>", default_opts)
