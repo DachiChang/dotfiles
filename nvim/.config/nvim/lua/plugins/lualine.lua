@@ -5,6 +5,9 @@ return {
     'nvim-tree/nvim-web-devicons',
   },
   config = function()
+    local function total_lines()
+      return 'Total:' .. vim.api.nvim_buf_line_count(0)
+    end
     local lualine = require('lualine')
     lualine.setup {
       options = {
@@ -18,6 +21,9 @@ return {
             path = 2, -- show full path
           }
         },
+        lualine_z = {
+          { total_lines },
+        }
       },
     }
   end,
