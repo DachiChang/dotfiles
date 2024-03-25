@@ -13,6 +13,16 @@ return {
     local builtin = require('telescope.builtin')
     telescope.setup {
       defaults = {
+        vimgrep_arguments = {
+          'rg',
+          '--color=never',
+          '--no-heading',
+          '--with-filename',
+          '--line-number',
+          '--column',
+          '--smart-case',
+          '-u' -- no-ignore
+        },
         mappings = {
           n = {
             ['t'] = actions.select_tab,
@@ -28,7 +38,10 @@ return {
       }
     }
     keymap("n", "<leader>f", function()
-      builtin.find_files({ hidden = true })
+      builtin.find_files({
+        hidden = true,
+        no_ignore = true,
+      })
     end, default_opts)
     keymap("n", "<leader>g", builtin.live_grep, default_opts)
     keymap("n", "<leader>h", builtin.help_tags, default_opts)
