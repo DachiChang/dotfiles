@@ -32,6 +32,6 @@ return {
     -- toggle highlight on F4
     local keymap = vim.keymap.set
     local default_opts = { noremap = true, silent = true }
-    keymap("n", "<F4>", ":TSBufToggle highlight<CR>", default_opts)
+    keymap("n", "<F1>", ":TSBufToggle highlight<CR>", default_opts)
   end
 }
