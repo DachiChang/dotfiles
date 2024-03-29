@@ -12,7 +12,7 @@ return {
   },
   config = function()
     local keymap = vim.keymap.set
-    local opts = { noremap = true, silent = true }
+    local default_opts = { noremap = true, silent = true }
 
     local lsp_servers = { -- ensure installed language server
       "lua_ls",
@@ -101,7 +101,7 @@ return {
         timeout_ms = 3000,
         lsp_fallback = true,
       })
-    end, opts)
+    end, default_opts)
 
     -- Show function signature when you type
     local lsp_signature = require('lsp_signature')
@@ -129,8 +129,8 @@ return {
         border = 'rounded',
       }
     }
-    keymap("n", "ge", diagnostic.open_float, opts)
-    keymap("n", "ep", diagnostic.goto_prev, opts)
-    keymap("n", "en", diagnostic.goto_next, opts)
+    keymap("n", "ge", diagnostic.open_float, default_opts)
+    keymap("n", "ep", diagnostic.goto_prev, default_opts)
+    keymap("n", "en", diagnostic.goto_next, default_opts)
   end,
 }
