@@ -28,10 +28,5 @@ return {
     opt.foldexpr = "nvim_treesitter#foldexpr()"
     opt.foldenable = true
     opt.foldlevelstart = 99
-
-    -- toggle highlight on F4
-    local keymap = vim.keymap.set
-    local default_opts = { noremap = true, silent = true }
-    keymap("n", "<F1>", ":TSBufToggle highlight<CR>", default_opts)
   end
 }
