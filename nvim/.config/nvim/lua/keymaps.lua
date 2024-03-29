@@ -42,7 +42,7 @@ keymap("n", "cp", ":let @+=expand('%:p:h')<CR>", default_opts)
 -- yank word and paste without override register
 keymap("x", "p", "pgvy", default_opts)
 -- hightlight, but don't jump
-keymap("n", "*", ":keepjumps normal! mi*`i<CR>", default_opts)
+keymap("n", "*", ":keepjumps normal! mi*`izz<CR>", default_opts)
 
 -- Diff
 function ToggleDiff()
