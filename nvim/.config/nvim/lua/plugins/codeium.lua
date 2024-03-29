@@ -9,20 +9,23 @@ return {
 
     g.codeium_disable_bindings = 1
 
-    keymap('i', '<C-y>', function()
-      return fn['codeium#Accept']()
+    keymap("i", "<C-y>", function()
+      return fn["codeium#Accept"]()
     end, default_opts)
 
-    keymap('i', '<C-x>', function()
-      return fn['codeium#Clear']()
+    keymap("i", "<C-x>", function()
+      return fn["codeium#Clear"]()
     end, default_opts)
 
-    keymap('i', "<M-]>", function()
-      return fn['codeium#CycleCompletions'](1)
+    keymap("i", "<M-]>", function()
+      return fn["codeium#CycleCompletions"](1)
     end, default_opts)
 
-    keymap('i', "<M-[", function()
-      return fn['codeium#CycleCompletions'](-1)
+    keymap("i", "<M-[", function()
+      return fn["codeium#CycleCompletions"](-1)
     end, default_opts)
+
+    -- toggle codeium on F1
+    keymap({ "n", "i" }, "<F1>", ":Codeium Toggle<CR>")
   end
 }
