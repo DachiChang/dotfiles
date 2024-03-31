@@ -33,7 +33,7 @@ return {
       "autopep8", -- python formatter
     }
 
-    local mason_tool_installer = require("mason-tool-installer")
+    local mason_tool_installer = require('mason-tool-installer')
     mason_tool_installer.setup {
       ensure_installed = tools,
     }
@@ -71,7 +71,7 @@ return {
       ensure_installed = lsp_servers,
       handlers = {
         function(server_name)
-          require("lspconfig")[server_name].setup {
+          require('lspconfig')[server_name].setup {
             capabilities = capabilities,
             on_attach = on_attach,
           }
@@ -80,7 +80,7 @@ return {
     }
 
     -- language formatter
-    local conform = require("conform")
+    local conform = require('conform')
     conform.setup {
       formatters_by_ft = {
         javascript = { "prettier" },

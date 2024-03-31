@@ -3,7 +3,8 @@ return {
   enabled = true,
   build = ":TSUpdate", -- NOTE: will be updated parsers when this plugin is updated
   config = function()
-    require('nvim-treesitter.configs').setup {
+    local treesitter_config = require('nvim-treesitter.configs')
+    treesitter_config.setup {
       auto_install = true, -- auto install the missing parse when enter the buffer
       highlight = {
         enable = true,

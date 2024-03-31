@@ -3,7 +3,8 @@ return {
   enabled = true,
   priority = 1000,
   config = function()
-    require("gruvbox").setup {
+    local gruvbox_theme = require('gruvbox')
+    gruvbox_theme.setup {
       terminal_colors = false,
       palette_overrides = {
         dark0 = "#1c1c1c",
