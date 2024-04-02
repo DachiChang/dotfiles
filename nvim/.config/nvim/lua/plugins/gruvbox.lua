@@ -21,6 +21,7 @@ return {
         CursorLineNr = { bg = "#444444" },
         FlashLabel = { bg = "#458588" },
         NvimTreeWindowPicker = { fg = "#1c1c1c" },
+        TreesitterContext = { bg = "#504945" },
       },
     }
     vim.cmd("colorscheme gruvbox")
