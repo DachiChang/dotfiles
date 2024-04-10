@@ -39,6 +39,5 @@
   "toggleterm.nvim": { "branch": "main", "commit": "193786e0371e3286d3bc9aa0079da1cd41beaa62" },
   "vim-better-whitespace": { "branch": "master", "commit": "029f35c783f1b504f9be086b9ea757a36059c846" },
   "vim-helm": { "branch": "master", "commit": "86cc6766db60b8cc5731068d0c2111dee1f2b328" },
-  "vim-illuminate": { "branch": "master", "commit": "305bf07b919ac526deb5193280379e2f8b599926" },
-  "vim-maximizer": { "branch": "master", "commit": "2e54952fe91e140a2e69f35f22131219fcd9c5f1" }
+  "vim-illuminate": { "branch": "master", "commit": "305bf07b919ac526deb5193280379e2f8b599926" }
 }
