@@ -56,11 +56,11 @@ return {
     local on_attach = function(client, bufnr)
       local bufopts = { noremap = true, silent = true, buffer = bufnr }
       keymap("n", "gt", buf.hover, bufopts)
-      keymap("n", "gd", buf.definition, bufopts)
       keymap("n", "gD", buf.declaration, bufopts)
-      keymap("n", "gi", buf.implementation, bufopts)
-      keymap("n", "gT", buf.type_definition, bufopts)
-      keymap("n", "gr", buf.references, bufopts)
+      keymap("n", "gd", ":Telescope lsp_definitions<CR>", bufopts)
+      keymap("n", "gi", ":Telescope lsp_implementations<CR>", bufopts)
+      keymap("n", "gT", ":Telescope lsp_type_definitions<CR>", bufopts)
+      keymap("n", "gr", ":Telescope lsp_references<CR>", bufopts)
       keymap("n", "<F2>", buf.rename, bufopts)
       -- keymap.set("n", "gf", buf.format, bufopts)
     end
