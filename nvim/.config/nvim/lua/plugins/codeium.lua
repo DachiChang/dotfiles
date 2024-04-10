@@ -1,6 +1,7 @@
 return {
   'Exafunction/codeium.vim',
   enabled = true,
+  tag = '1.8.10',
   config = function()
     local default_opts = { expr = true, noremap = true, silent = true }
     local keymap = vim.keymap.set
