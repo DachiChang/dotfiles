@@ -33,6 +33,7 @@ return {
             ['<C-t>'] = actions.select_tab,
             ['<C-v>'] = actions.select_vertical,
             ['<C-s>'] = actions.select_horizontal,
+            ['<C-q>'] = actions.send_selected_to_qflist + actions.open_qflist,
           },
         },
       }
@@ -47,5 +48,6 @@ return {
     keymap("n", "<leader>h", builtin.help_tags, default_opts)
     keymap("n", "<leader>k", builtin.keymaps, default_opts)
     keymap("n", "<leader>b", builtin.buffers, default_opts)
+    keymap("n", "<leader>w", builtin.grep_string, default_opts)
   end,
 }
