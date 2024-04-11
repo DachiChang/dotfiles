@@ -10,7 +10,7 @@ return {
 
     local keymap = vim.keymap.set
 
-    keymap("n", "<LEADER>sr", "<CMD>SessionRestore<CR>")
-    keymap("n", "<LEADER>ss", "<CMD>SessionSave<CR>")
+    keymap("n", "<LEADER>sr", ":SessionRestore<CR>")
+    keymap("n", "<LEADER>ss", ":SessionSave<CR>")
   end,
 }

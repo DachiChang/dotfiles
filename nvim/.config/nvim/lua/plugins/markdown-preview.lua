@@ -13,6 +13,6 @@ return {
   config = function()
     local keymap = vim.keymap.set
 
-    keymap("n", "<F10>", "<CMD>MarkdownPreview<CR>")
+    keymap("n", "<F10>", ":MarkdownPreview<CR>")
   end,
 }
