@@ -38,16 +38,16 @@ return {
         },
       }
     }
-    keymap("n", "<leader>f", function()
+    keymap("n", "<LEADER>f", function()
       builtin.find_files({
         hidden = true,
         no_ignore = true,
       })
     end, default_opts)
-    keymap("n", "<leader>g", builtin.live_grep, default_opts)
-    keymap("n", "<leader>h", builtin.help_tags, default_opts)
-    keymap("n", "<leader>k", builtin.keymaps, default_opts)
-    keymap("n", "<leader>b", builtin.buffers, default_opts)
-    keymap("n", "<leader>w", builtin.grep_string, default_opts)
+    keymap("n", "<LEADER>g", builtin.live_grep, default_opts)
+    keymap("n", "<LEADER>h", builtin.help_tags, default_opts)
+    keymap("n", "<LEADER>k", builtin.keymaps, default_opts)
+    keymap("n", "<LEADER>b", builtin.buffers, default_opts)
+    keymap("n", "<LEADER>w", builtin.grep_string, default_opts)
   end,
 }

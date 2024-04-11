@@ -9,16 +9,16 @@ return {
     spectre.setup {
       mapping = {
         ['run_current_replace'] = {
-          map = "<leader>r", -- default is <leader>rc
-          cmd = "<cmd>lua require('spectre.actions').run_current_replace()<CR>",
+          map = "<LEADER>r", -- default is <LEADER>rc
+          cmd = "<CMD>lua require('spectre.actions').run_current_replace()<CR>",
           desc = "replace current line"
         },
       },
     }
 
     local keymap = vim.keymap.set
-    keymap("n", "<F6>", "<cmd>lua require('spectre').toggle()<CR>")
-    keymap("n", "<leader>r", "<cmd>lua require('spectre').open_visual({select_word=true})<CR>")
-    keymap("v", "<leader>r", "<esc><cmd>lua require('spectre').open_visual()<CR>")
+    keymap("n", "<F6>", "<CMD>lua require('spectre').toggle()<CR>")
+    keymap("n", "<LEADER>r", "<CMD>lua require('spectre').open_visual({select_word=true})<CR>")
+    keymap("v", "<LEADER>r", "<esc><CMD>lua require('spectre').open_visual()<CR>")
   end,
 }

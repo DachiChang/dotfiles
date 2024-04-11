@@ -14,6 +14,6 @@ return {
     local keymap = vim.keymap.set
     local default_opts = { noremap = true, silent = true }
     -- ESC to exist terminal mode to normal mode
-    keymap("t", "<leader><ESC>", [[<C-\><C-n>]], default_opts)
+    keymap("t", "<LEADER><ESC>", [[<C-\><C-n>]], default_opts)
   end,
 }

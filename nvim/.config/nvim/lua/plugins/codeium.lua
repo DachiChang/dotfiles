@@ -32,6 +32,6 @@ return {
     end, default_opts)
 
     -- toggle codeium on F1
-    keymap("n", "<F1>", ":Codeium Toggle<CR>")
+    keymap("n", "<F1>", "<CMD>Codeium Toggle<CR>")
   end
 }

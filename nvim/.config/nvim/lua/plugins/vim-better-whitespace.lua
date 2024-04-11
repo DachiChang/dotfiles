@@ -12,6 +12,6 @@ return {
   config = function()
     local keymap = vim.keymap.set
 
-    keymap("n", "tm", ":StripWhitespace<CR>")
+    keymap("n", "tm", "<CMD>StripWhitespace<CR>")
   end,
 }

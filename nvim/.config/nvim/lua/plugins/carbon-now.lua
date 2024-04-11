@@ -27,6 +27,6 @@ return {
 
     -- toggle Code snapshoot on F4
     local keymap = vim.keymap.set
-    keymap({"n", "v"}, "<F4>", ":CarbonNow<CR>")
+    keymap({"n", "v"}, "<F4>", "<CMD>CarbonNow<CR>")
   end
 }

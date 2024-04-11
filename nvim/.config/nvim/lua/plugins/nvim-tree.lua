@@ -116,6 +116,6 @@ return {
 
     -- keymap
     local keymap = vim.keymap.set
-    keymap("n", "<leader>e", ":NvimTreeToggle<CR>")
+    keymap("n", "<LEADER>e", "<CMD>NvimTreeToggle<CR>")
   end,
 }

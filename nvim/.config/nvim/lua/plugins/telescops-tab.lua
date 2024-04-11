@@ -34,7 +34,7 @@ return {
         return string.format('%d: %s%s', tab_id, table.concat(filter_names, ', '), is_current and ' <' or '')
       end,
     }
-    keymap("n", "<leader>t", telescope_tab.list_tabs, default_opts)
+    keymap("n", "<LEADER>t", telescope_tab.list_tabs, default_opts)
     keymap("n", "tt", telescope_tab.go_to_previous, default_opts)
   end,
 }
