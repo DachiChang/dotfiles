@@ -5,11 +5,14 @@ return {
   build = function()
     vim.fn["mkdp#util#install"]()
   end,
-  config = function()
+  init = function()
     local g = vim.g
-    g.mkdp_theme = 'light'
 
+    g.mkdp_theme = 'light'
+  end,
+  config = function()
     local keymap = vim.keymap.set
+
     keymap("n", "<F10>", ":MarkdownPreview<CR>")
   end,
 }
