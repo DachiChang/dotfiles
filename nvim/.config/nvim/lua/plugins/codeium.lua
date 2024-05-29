@@ -1,7 +1,7 @@
 return {
   'Exafunction/codeium.vim',
   enabled = true,
-  tag = '1.8.16',
+  tag = '1.8.30',
   init = function()
     local g = vim.g
 
