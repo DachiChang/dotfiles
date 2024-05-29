@@ -14,7 +14,7 @@ CASE_SENSITIVE='true'
 ## kubectx zsh plugin
 # curl -L https://raw.githubusercontent.com/ahmetb/kubectx/master/completion/_kubectx.zsh -o ~/.oh-my-zsh/completions/_kubectx.zsh
 # curl -L https://raw.githubusercontent.com/ahmetb/kubectx/master/completion/_kubens.zsh -o ~/.oh-my-zsh/completions/_kubens.zsh
-plugins=(zsh-autosuggestions git kubectl kube-ps1)
+plugins=(zsh-autosuggestions git kubectl kube-ps1 fzf)
 source $ZSH/oh-my-zsh.sh
 
 # Zsh prompt setting
@@ -45,6 +45,7 @@ bindkey '\e\e[C' forward-word   # for original shell
 bindkey '\e\e[D' backward-word  # for original shell
 bindkey '\e[1;3C' forward-word  # for nvim shell
 bindkey '\e[1;3D' backward-word # for nvim shell
+bindkey '^f' fzf-file-widget # for FZF find file
 
 # Aliases setting
 alias ll='ls -lhA'
