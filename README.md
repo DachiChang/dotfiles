@@ -9,6 +9,7 @@
   - stow nvim
   - stow tmux
   - stow misc
+  - stow alacritty
 
 ## Uninstall
 
@@ -17,6 +18,7 @@
   - stow -D nvim
   - stow -D tmux
   - stow -D misc
+  - stow -D alacritty
 
 ## NeoVim
 

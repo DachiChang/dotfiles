@@ -1,0 +1,20 @@
+[env]
+TERM = "xterm-256color"
+
+[window]
+padding.x = 5
+padding.y = 5
+decorations = "Buttonless"
+opacity = 0.8
+blur = true
+option_as_alt = "Both"
+
+[font]
+# brew tap homebrew/cask-fonts
+# brew install font-meslo-lg-nerd-font
+normal.family = "MesloLGS Nerd Font Mono"
+size = 14
+
+[colors.primary]
+foreground = "#cac5b5"
+background = "#1c1c1c"
