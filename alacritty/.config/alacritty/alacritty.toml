@@ -11,7 +11,8 @@ option_as_alt = "Both"
 
 [font]
 # brew tap homebrew/cask-fonts
-# brew install font-meslo-lg-nerd-font
+# brew install font-meslo-lg-nerd-font font-jetbrains-mono-nerd-font
+# normal.family = "JetBrainsMono Nerd Font Mono"
 normal.family = "MesloLGS Nerd Font Mono"
 size = 14
 
