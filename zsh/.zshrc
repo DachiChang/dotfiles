@@ -45,7 +45,7 @@ bindkey '\e\e[C' forward-word   # for original shell
 bindkey '\e\e[D' backward-word  # for original shell
 bindkey '\e[1;3C' forward-word  # for nvim shell
 bindkey '\e[1;3D' backward-word # for nvim shell
-bindkey '^f' fzf-file-widget # for FZF find file
+bindkey '^s' fzf-file-widget    # for FZF find file
 
 # Aliases setting
 alias ll='ls -lhA'
