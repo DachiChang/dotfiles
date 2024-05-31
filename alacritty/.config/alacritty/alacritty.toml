@@ -8,6 +8,7 @@ decorations = "Buttonless"
 opacity = 0.8
 blur = true
 option_as_alt = "Both"
+startup_mode = "Maximized"
 
 [font]
 # brew tap homebrew/cask-fonts
