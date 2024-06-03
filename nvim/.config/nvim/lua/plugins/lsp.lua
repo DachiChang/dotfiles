@@ -26,6 +26,7 @@ return {
       "helm_ls",
       "terraformls",
       "rust_analyzer",
+      "clangd",
       "csharp_ls",
     }
 
