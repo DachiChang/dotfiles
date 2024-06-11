@@ -1,3 +1,4 @@
+-- REQUIRED: brew install pngpaste
 return {
   "HakonHarnes/img-clip.nvim",
   enabled = true,
