@@ -1,5 +1,6 @@
 local keymap = vim.keymap.set
 local default_opts = { noremap = true, silent = true }
+local remap_opts = { remap = true, silent = true }
 
 -- Quit
 keymap("n", "<C-q>", ":q!<CR>", default_opts)
@@ -32,12 +33,19 @@ keymap("n", "<S-Left>", ":vertical resize -3<CR>", default_opts)
 keymap("n", "<S-Down>", ":resize -3<CR>", default_opts)
 keymap("n", "<S-Up>", ":resize +3<CR>", default_opts)
 
+-- Comment
+keymap("n", "cc", "gcc", remap_opts)
+keymap("v", "cc", "gc", remap_opts)
+
 -- Temporary disable hightlight
 keymap("n", "<ESC>", ":noh<CR>", default_opts)
+
 -- Use cp shortcut to copy editing file path
 keymap("n", "cp", ":let @+=expand('%:p:h')<CR>", default_opts)
+
 -- yank word and paste without override register
 keymap("x", "p", "pgvy", default_opts)
+
 -- hightlight, but don't jump
 keymap("n", "*", ":keepjumps normal! mi*`izz<CR>", default_opts)
 
