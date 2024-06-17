@@ -10,7 +10,7 @@ return {
 
     local keymap = vim.keymap.set
     local default_opts = { noremap = true, silent = true }
-    keymap("n", "gc", function()
+    keymap("n", "g[", function()
       treesitter_context.go_to_context(vim.v.count1)
     end, default_opts)
   end
