@@ -18,7 +18,7 @@ return {
       "lua_ls",
       "html",
       "cssls",
-      "emmet_ls",
+      "emmet_ls", -- ul.products>li.product*3>img[src="http://placehold.it/150x150"]+h2{Product $}+p{Description of product $}+span.price{Price $}  "[]" is attribute, "{}" is content
       "gopls",
       "pyright",
       "tsserver",
