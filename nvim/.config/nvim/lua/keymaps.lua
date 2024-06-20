@@ -2,6 +2,14 @@ local keymap = vim.keymap.set
 local default_opts = { noremap = true, silent = true }
 local remap_opts = { remap = true, silent = true }
 
+-- NOTE: keymap mode short-name
+-- n: normal
+-- v: visual
+-- i: insert
+-- t: terminal
+-- c: command
+-- o: operator (like d, y, c, etc.)
+
 -- Quit
 keymap("n", "<C-q>", ":q!<CR>", default_opts)
 
@@ -44,7 +52,7 @@ keymap("n", "<ESC>", ":noh<CR>", default_opts)
 keymap("n", "cp", ":let @+=expand('%:p:h')<CR>", default_opts)
 
 -- yank word and paste without override register
-keymap("x", "p", "pgvy", default_opts)
+keymap("v", "p", "pgvy", default_opts)
 
 -- hightlight, but don't jump
 keymap("n", "*", ":keepjumps normal! mi*`i<CR>", default_opts)

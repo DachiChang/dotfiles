@@ -13,6 +13,6 @@ return {
         },
       },
     }
-    keymap({ "n", "x", "o" }, "<LEADER>\\", flash.jump, default_opts)
+    keymap({ "n", "v", "o" }, "<LEADER>\\", flash.jump, default_opts)
   end,
 }
