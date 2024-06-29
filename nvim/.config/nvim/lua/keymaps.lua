@@ -29,9 +29,9 @@ keymap("n", "<C-t>", ":tabnew<CR>", default_opts)
 -- Functional
 keymap("n", "<F5>", ":e!<CR>", default_opts)
 
--- Panes
+-- Window
 keymap("n", "=", "<C-w>=", default_opts)
-keymap("n", "-", "<C-w>x", default_opts)
+keymap("n", "s", "<C-w>x", default_opts)
 keymap("n", "<C-h>", "<C-w>h", default_opts)
 keymap("n", "<C-j>", "<C-w>j", default_opts)
 keymap("n", "<C-k>", "<C-w>k", default_opts)
