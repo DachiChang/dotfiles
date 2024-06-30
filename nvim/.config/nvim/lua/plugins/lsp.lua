@@ -15,19 +15,19 @@ return {
     local default_opts = { noremap = true, silent = true }
 
     local lsp_servers = { -- ensure installed language server
-      "lua_ls",
-      "html",
+      "clangd",
+      "csharp_ls",
       "cssls",
       "emmet_ls", -- ul.products>li.product*3>img[src="http://placehold.it/150x150"]+h2{Product $}+p{Description of product $}+span.price{Price $}  "[]" is attribute, "{}" is content
       "gopls",
-      "pyright",
-      "tsserver",
-      "jsonls",
       "helm_ls",
-      "terraformls",
+      "html",
+      "jsonls",
+      "lua_ls",
+      "pyright",
       "rust_analyzer",
-      "clangd",
-      "csharp_ls",
+      "terraformls",
+      "tsserver",
     }
 
     local tools = {
