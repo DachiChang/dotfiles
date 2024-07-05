@@ -7,6 +7,9 @@ return {
     local default_opts = { noremap = true, silent = true }
     local flash = require('flash')
     flash.setup {
+      highlight = {
+        backdrop = false,
+      },
       label = {
         rainbow = {
           enabled = true,
