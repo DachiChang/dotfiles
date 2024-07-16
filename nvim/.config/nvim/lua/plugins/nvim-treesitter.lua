@@ -26,8 +26,7 @@ return {
     -- use treesitter to provider fold functional
     local opt = vim.opt
     opt.foldmethod = "expr"
-    opt.foldexpr = "nvim_treesitter#foldexpr()"
-    -- opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+    opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
     opt.foldtext = ""
     opt.foldenable = true
     opt.foldlevelstart = 99
