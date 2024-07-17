@@ -23,6 +23,7 @@ return {
       keymap("n", "F", api.live_filter.clear, opts("Live Filter: Clear"))
       keymap("n", "H", api.tree.toggle_hidden_filter, opts("Toggle Filter: Dotfiles"))
       keymap("n", "O", api.tree.expand_all, opts("Expand All"))
+      keymap("n", "W", api.tree.collapse_all, opts("Collapse All"))
       keymap("n", "R", api.tree.reload, opts("Refresh"))
       keymap("n", "Y", api.fs.copy.absolute_path, opts("Copy Absolute Path"))
       keymap("n", "a", api.fs.create, opts("Create File Or Directory"))
@@ -61,6 +62,11 @@ return {
       renderer = {
         indent_markers = {
           enable = true,
+        },
+        icons = {
+          show = {
+            git = false,
+          },
         },
       },
       actions = {
