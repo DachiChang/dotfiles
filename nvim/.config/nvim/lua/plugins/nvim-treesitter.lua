@@ -24,11 +24,20 @@ return {
     }
 
     -- use treesitter to provider fold functional
-    local opt = vim.opt
-    opt.foldmethod = "expr"
-    opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
-    opt.foldtext = ""
-    opt.foldenable = true
-    opt.foldlevelstart = 99
+    vim.opt.foldmethod = "expr"
+    vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+    vim.opt.foldtext = ""
+    vim.opt.foldenable = true
+    vim.opt.foldlevelstart = 99
+
+    -- disable fold for certain filetypes
+    vim.api.nvim_create_autocmd("FileType", {
+      pattern = {
+        "toggleterm",
+      },
+      callback = function()
+        vim.opt.foldmethod = "manual"
+      end,
+    })
   end
 }
