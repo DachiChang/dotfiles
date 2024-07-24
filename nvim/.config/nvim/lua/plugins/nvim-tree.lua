@@ -21,7 +21,7 @@ return {
       keymap("n", "<CR>", api.node.open.edit, opts("Open"))
       keymap("n", "?", api.tree.toggle_help, opts("Help"))
       keymap("n", "F", api.live_filter.clear, opts("Live Filter: Clear"))
-      keymap("n", "H", api.tree.toggle_hidden_filter, opts("Toggle Filter: Dotfiles"))
+      keymap("n", "h", api.tree.toggle_hidden_filter, opts("Toggle Filter: Dotfiles"))
       keymap("n", "O", api.tree.expand_all, opts("Expand All"))
       keymap("n", "W", api.tree.collapse_all, opts("Collapse All"))
       keymap("n", "R", api.tree.reload, opts("Refresh"))
