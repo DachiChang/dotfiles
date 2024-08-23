@@ -15,7 +15,11 @@ return {
           enabled = true,
         },
       },
+      modes = {
+        search = {
+          enabled = true,
+        },
+      },
     }
-    keymap({ "n", "v", "o" }, "<Space>", flash.jump, default_opts)
   end,
 }
