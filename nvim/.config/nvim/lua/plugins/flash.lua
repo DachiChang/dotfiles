@@ -16,6 +16,6 @@ return {
         },
       },
     }
-    keymap({ "n", "v", "o" }, "|", flash.jump, default_opts)
+    keymap({ "n", "v", "o" }, "<Space>", flash.jump, default_opts)
   end,
 }
