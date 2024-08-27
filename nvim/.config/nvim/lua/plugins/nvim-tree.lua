@@ -19,6 +19,7 @@ return {
 
       keymap("n", ".", api.tree.change_root_to_node, opts("CD"))
       keymap("n", "<CR>", api.node.open.edit, opts("Open"))
+      keymap('n', '<2-LeftMouse>', api.node.open.edit, opts('Open'))
       keymap("n", "?", api.tree.toggle_help, opts("Help"))
       keymap("n", "F", api.live_filter.clear, opts("Live Filter: Clear"))
       keymap("n", "h", api.tree.toggle_hidden_filter, opts("Toggle Filter: Dotfiles"))
