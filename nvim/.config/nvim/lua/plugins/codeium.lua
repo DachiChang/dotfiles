@@ -8,11 +8,17 @@ return {
     g.codeium_filetypes = {
       TelescopePrompt = false,
     }
+    g.codeium_manual = true
+    -- g.codeium_render = false
   end,
   config = function()
     local default_opts = { expr = true, noremap = true, silent = true }
     local keymap = vim.keymap.set
     local fn = vim.fn
+
+    keymap("i", "<C-i>", function()
+      return fn["codeium#CycleOrComplete"]()
+    end, default_opts)
 
     keymap("i", "<C-y>", function()
       return fn["codeium#Accept"]()
@@ -20,14 +26,6 @@ return {
 
     keymap("i", "<C-x>", function()
       return fn["codeium#Clear"]()
-    end, default_opts)
-
-    keymap("i", "<M-]>", function()
-      return fn["codeium#CycleCompletions"](1)
-    end, default_opts)
-
-    keymap("i", "<M-[", function()
-      return fn["codeium#CycleCompletions"](-1)
     end, default_opts)
 
     -- toggle codeium on F1
