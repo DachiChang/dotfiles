@@ -5,6 +5,7 @@ local remap_opts = { remap = true, silent = true }
 -- NOTE: keymap mode short-name
 -- n: normal
 -- v: visual
+-- x: visual line
 -- i: insert
 -- t: terminal
 -- c: command
