@@ -28,7 +28,7 @@ return {
       "pyright",
       "rust_analyzer",
       "terraformls",
-      "tsserver",
+      "ts_ls",
     }
 
     local tools = {
@@ -96,7 +96,8 @@ return {
         python = { "autopep8" },
       },
       -- format_on_save = {
-      --   lsp_fallback = true,
+      --   timeout_ms = 3000,
+      --   lsp_format = "fallback",
       -- },
     }
     keymap("n", "gf", function()
