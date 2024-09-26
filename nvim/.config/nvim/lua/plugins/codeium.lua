@@ -22,12 +22,8 @@ return {
       return fn["codeium#Clear"]()
     end, default_opts)
 
-    keymap("i", "<M-]>", function()
-      return fn["codeium#CycleCompletions"](1)
-    end, default_opts)
-
-    keymap("i", "<M-[", function()
-      return fn["codeium#CycleCompletions"](-1)
+    keymap("i", "<C-]>", function()
+      return fn["codeium#CycleOrComplete"]()
     end, default_opts)
 
     -- toggle codeium on F1
