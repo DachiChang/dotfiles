@@ -5,6 +5,7 @@ return {
   config = function()
     local gruvbox_theme = require('gruvbox')
     gruvbox_theme.setup {
+      transparent_mode = false,
       terminal_colors = false,
       palette_overrides = {
         dark0 = "#1c1c1c",
@@ -12,9 +13,9 @@ return {
       },
       overrides = {
         Directory = { link = "GruvboxBlueBold" },
-        WinBar = { fg = "#cac5b5", bg = "#1c1c1c" },
-        WinBarNC = { fg = "#cac5b5", bg = "#1c1c1c" },
-        WinbarDelete = { bg = "#1c1c1c" },
+        WinBar = { fg = "#cac5b5", bg = "none" },
+        WinBarNC = { fg = "#cac5b5", bg = "none" },
+        WinbarDelete = { bg = "none" },
         TabLineFill = { fg = "#cac5b5", bg = "#282828" },
         TabLine = { fg = "#cac5b5", bg = "#282828" },
         TabLineSel = { fg = "#b8bb26", bg = "#3c3836" },
