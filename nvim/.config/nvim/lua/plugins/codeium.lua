@@ -5,6 +5,7 @@ return {
     local g = vim.g
 
     g.codeium_disable_bindings = 1
+    g.codeium_manual = true
     g.codeium_filetypes = {
       TelescopePrompt = false,
     }
@@ -22,7 +23,7 @@ return {
       return fn["codeium#Clear"]()
     end, default_opts)
 
-    keymap("i", "<C-]>", function()
+    keymap("i", "<C-o>", function()
       return fn["codeium#CycleOrComplete"]()
     end, default_opts)
 
