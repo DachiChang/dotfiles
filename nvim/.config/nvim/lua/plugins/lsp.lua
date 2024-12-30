@@ -70,7 +70,7 @@ return {
     -- prepare lsp cmp injection
     local capabilities = require('cmp_nvim_lsp').default_capabilities()
     local buf = vim.lsp.buf
-    local on_attach = function(client, bufnr)
+    local on_attach = function(_, bufnr) -- NOTE: client, bufnr
       local bufopts = { noremap = true, silent = true, buffer = bufnr }
       keymap("n", "gt", buf.hover, bufopts)
       keymap("n", "gD", buf.declaration, bufopts)

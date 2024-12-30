@@ -10,7 +10,7 @@ return {
     local telescope_tab = require('telescope-tabs')
     telescope_tab.setup {
       show_preview = false,
-      entry_formatter = function(tab_id, buffer_ids, file_names, file_paths, is_current)
+      entry_formatter = function(tab_id, _, file_names, _, is_current) -- NOTE: tab_id, buffer_ids, file_names, file_paths, is_current
         local exclude_file_names = {
           "NvimTree",
           "Tagbar",
