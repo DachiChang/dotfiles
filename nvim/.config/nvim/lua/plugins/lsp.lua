@@ -94,6 +94,7 @@ return {
         yaml = { "prettier" },
         markdown = { "prettier" },
         python = { "autopep8" },
+        templ = { "templ" },
       },
       -- format_on_save = {
       --   timeout_ms = 3000,
