@@ -14,22 +14,28 @@ return {
     local keymap = vim.keymap.set
     local default_opts = { noremap = true, silent = true }
 
-    local lsp_servers = { -- ensure installed language server
-      "clangd",
-      "csharp_ls",
-      "cssls",
-      "emmet_ls", -- ul.products>li.product*3>img[src="http://placehold.it/150x150"]+h2{Product $}+p{Description of product $}+span.price{Price $}  "[]" is attribute, "{}" is content
-      "intelephense",
-      "gopls",
-      "helm_ls",
-      "html",
-      "jsonls",
-      "lua_ls",
-      "pyright",
-      "rust_analyzer",
-      "terraformls",
-      "ts_ls",
+    local lsp_server_configs = { -- ensure installed language server
+      clangd = {},
+      csharp_ls = {},
+      cssls = {},
+      emmet_ls = { -- ul.products>li.product*3>img[src="http://placehold.it/150x150"]+h2{Product $}+p{Description of product $}+span.price{Price $}  "[]" is attribute, "{}" is content
+        filetypes = { "html", "css", "templ" },
+      },
+      intelephense = {},
+      gopls = {},
+      helm_ls = {},
+      html = {},
+      jsonls = {},
+      lua_ls = {},
+      pyright = {},
+      rust_analyzer = {},
+      terraformls = {},
+      ts_ls = {},
     }
+    local lsp_servers = {}
+    for lsp_server, _ in pairs(lsp_server_configs) do
+      table.insert(lsp_servers, lsp_server)
+    end
 
     local tools = {
       "prettier", -- prettier formatter
@@ -74,10 +80,13 @@ return {
       ensure_installed = lsp_servers,
       handlers = {
         function(server_name)
-          require('lspconfig')[server_name].setup {
+          local lsp_server_config = lsp_server_configs[server_name] -- get lsp server configs
+          local lsp_configs = {
             capabilities = capabilities,
             on_attach = on_attach,
           }
+          lsp_server_config = vim.tbl_deep_extend("force", lsp_configs, lsp_server_config) -- merge lsp server configs
+          require('lspconfig')[server_name].setup(lsp_server_config)
         end,
       },
     }
