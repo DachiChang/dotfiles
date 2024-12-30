@@ -26,7 +26,15 @@ return {
       helm_ls = {},
       html = {},
       jsonls = {},
-      lua_ls = {},
+      lua_ls = {
+        settings = {
+          Lua = {
+            diagnostics = {
+              globals = { 'vim' }, -- Get the language server to recognize the `vim` global
+            },
+          }
+        }
+      },
       pyright = {},
       rust_analyzer = {},
       terraformls = {},
