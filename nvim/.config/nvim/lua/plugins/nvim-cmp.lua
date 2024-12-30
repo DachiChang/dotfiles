@@ -57,33 +57,6 @@ return {
       })
     }
 
-    -- Use buffer source for `/` and `?`
-    -- cmp.setup.cmdline({ '/', '?' }, {
-    --   mapping = cmp.mapping.preset.cmdline({
-    --     ['<Down>'] = {
-    --       c = function(fallback)
-    --         if cmp.visible() then
-    --           cmp.select_next_item()
-    --         else
-    --           fallback()
-    --         end
-    --       end,
-    --     },
-    --     ['<Up>'] = {
-    --       c = function(fallback)
-    --         if cmp.visible() then
-    --           cmp.select_prev_item()
-    --         else
-    --           fallback()
-    --         end
-    --       end,
-    --     },
-    --   }),
-    --   sources = {
-    --     { name = 'buffer' }
-    --   }
-    -- })
-
     -- Use cmdline & path source for ':'
     cmp.setup.cmdline(':', {
       mapping = cmp.mapping.preset.cmdline({
