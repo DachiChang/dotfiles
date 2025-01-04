@@ -39,6 +39,7 @@ return {
       rust_analyzer = {},
       terraformls = {},
       ts_ls = {},
+      templ = {},
     }
     local lsp_servers = {}
     for lsp_server, _ in pairs(lsp_server_configs) do
