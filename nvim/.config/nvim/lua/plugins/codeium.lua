@@ -27,7 +27,16 @@ return {
       return fn["codeium#CycleOrComplete"]()
     end, default_opts)
 
-    -- toggle codeium on F1
-    keymap("n", "<F1>", ":Codeium Toggle<CR>")
+    -- codeium manual/auto switcher
+    keymap("n", "<F1>", function()
+      local manual_mode = vim.g.codeium_manual or false
+      if manual_mode then
+        vim.g.codeium_manual = false -- switch to auto
+        print("Codeium: Auto Mode")
+      else
+        vim.g.codeium_manual = true -- switch to manual
+        print("Codeium: Manual Mode")
+      end
+    end, default_opts)
   end
 }

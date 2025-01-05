@@ -59,13 +59,11 @@ keymap("v", "p", "pgvy", default_opts)
 keymap("n", "*", ":keepjumps normal! mi*`i<CR>", default_opts)
 
 -- Diff
-function ToggleDiff()
+keymap("n", "<LEADER>d", function ()
   if vim.o.diff then
     vim.cmd('diffoff')
   else
     vim.cmd('diffthis')
   end
-end
-
-keymap("n", "<LEADER>d", ":lua ToggleDiff()<CR>", default_opts)
+end, default_opts)
 keymap("n", "<LEADER>D", ":diffoff!<CR>", default_opts)
