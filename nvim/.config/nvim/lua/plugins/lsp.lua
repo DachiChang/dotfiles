@@ -116,6 +116,7 @@ return {
         markdown = { "prettier" },
         python = { "autopep8" },
         templ = { "templ" }, -- NOTE: 由於 html, templ 都具有 formating 功能，因此由 conform 來指定，避免 fallback lsp formating 會有交錯 formating 的問題
+        proto = { "buf" },   -- NOTE: 由於 buf beta lsp 會過 lint 導致格式化失敗，因此由 conform 來指定，避刷 lsp format 錯誤
       },
       -- format_on_save = {
       --   timeout_ms = 3000,
