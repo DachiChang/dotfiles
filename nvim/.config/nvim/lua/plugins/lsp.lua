@@ -15,7 +15,9 @@ return {
     local default_opts = { noremap = true, silent = true }
 
     local lsp_server_configs = { -- ensure installed language server
-      clangd = {},
+      clangd = {
+        filetypes = { "c", "cpp", "objc", "objcpp", "cuda" },
+      },
       csharp_ls = {},
       cssls = {},
       emmet_ls = { -- ul.products>li.product*3>img[src="http://placehold.it/150x150"]+h2{Product $}+p{Description of product $}+span.price{Price $}  "[]" is attribute, "{}" is content
@@ -23,6 +25,7 @@ return {
       },
       intelephense = {},
       gopls = {},
+      buf_ls = {},
       helm_ls = {},
       html = {},
       jsonls = {},
