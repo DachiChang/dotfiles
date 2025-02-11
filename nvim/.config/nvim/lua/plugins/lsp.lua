@@ -52,6 +52,7 @@ return {
     local tools = {
       "prettier", -- prettier formatter
       "autopep8", -- python formatter
+      "buf",      -- proto formatter
     }
 
     local mason_tool_installer = require('mason-tool-installer')
