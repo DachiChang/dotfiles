@@ -61,6 +61,7 @@ return {
         width = 40,
       },
       renderer = {
+        root_folder_label = ':t',
         indent_markers = {
           enable = true,
         },
