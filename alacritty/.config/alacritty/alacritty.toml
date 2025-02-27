@@ -16,11 +16,11 @@ startup_mode = "Maximized"
 # normal.family = "JetBrainsMono Nerd Font Mono"
 # normal.family = "Hack Nerd Font Mono"
 normal.family = "MesloLGS Nerd Font Mono"
-size = 16
-# offset.x = 0
-# offset.y = 2
-# glyph_offset.x = 0
-# glyph_offset.y = 1
+size = 14
+offset.x = 0
+offset.y = 2
+glyph_offset.x = 0
+glyph_offset.y = 2
 
 [colors.primary]
 foreground = "#cac5b5"
