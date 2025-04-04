@@ -79,8 +79,8 @@ return {
       keymap("n", "gi", ":Telescope lsp_implementations<CR>", bufopts)
       keymap("n", "gT", ":Telescope lsp_type_definitions<CR>", bufopts)
       keymap("n", "gr", ":Telescope lsp_references<CR>", bufopts)
-      keymap("n", "<F2>", buf.rename, bufopts)
-      -- keymap.set("n", "gf", buf.format, bufopts)
+      keymap("n", "gn", buf.rename, bufopts)
+      keymap("n", "ga", buf.code_action, bufopts)
     end
 
     -- language server config
