@@ -44,12 +44,8 @@ return {
       ts_ls = {},
       templ = {},
     }
-    local lsp_servers = {}
-    for lsp_server, _ in pairs(lsp_server_configs) do
-      table.insert(lsp_servers, lsp_server)
-    end
 
-    local tools = {
+    local mason_install_tools = {
       "prettier", -- prettier formatter
       "autopep8", -- python formatter
       "buf",      -- proto formatter
@@ -57,7 +53,7 @@ return {
 
     local mason_tool_installer = require('mason-tool-installer')
     mason_tool_installer.setup {
-      ensure_installed = tools,
+      ensure_installed = mason_install_tools,
     }
 
     local mason_installer = require('mason')
@@ -77,7 +73,7 @@ return {
     local buf = vim.lsp.buf
     local on_attach = function(_, bufnr) -- NOTE: client, bufnr
       local bufopts = { noremap = true, silent = true, buffer = bufnr }
-      keymap("n", "gt", buf.hover, bufopts)
+      keymap("n", "gt", function() buf.hover { border = 'rounded' } end, bufopts)
       keymap("n", "gD", buf.declaration, bufopts)
       keymap("n", "gd", ":Telescope lsp_definitions<CR>", bufopts)
       keymap("n", "gi", ":Telescope lsp_implementations<CR>", bufopts)
@@ -88,9 +84,13 @@ return {
     end
 
     -- language server config
+    local ensured_installed_lsp_servers = {}
+    for lsp_server, _ in pairs(lsp_server_configs) do         -- parse key, table
+      table.insert(ensured_installed_lsp_servers, lsp_server) -- collect key to ensured_installed_lsp_servers
+    end
     local mason_lspconfig = require('mason-lspconfig')
     mason_lspconfig.setup {
-      ensure_installed = lsp_servers,
+      ensure_installed = ensured_installed_lsp_servers,
       handlers = {
         function(server_name)
           local lsp_server_config = lsp_server_configs[server_name] -- get lsp server configs
@@ -141,18 +141,19 @@ return {
       }
     }
 
-    -- nvim lsp style
+    -- nvim lsp config
     local lsp = vim.lsp
     lsp.set_log_level('off') -- disable log or debug lsp
-    lsp.handlers['textDocument/hover'] = lsp.with(
-      lsp.handlers.hover, {
-        border = 'rounded',
-      }
-    )
 
-    -- nvim lsp diagnostics style
+    -- nvim lsp diagnostics config
     local diagnostic = vim.diagnostic
     diagnostic.config {
+      virtual_lines = {
+        current_line = true,
+      },
+      -- virtual_text = {
+      --   current_line = true,
+      -- },
       float = {
         border = 'rounded',
       }
