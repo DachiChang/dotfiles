@@ -4,15 +4,16 @@ return {
   config = function()
     local devicons = require('nvim-web-devicons')
     local winbar_filetype_exclude = {
-      "help",
-      "lazy",
-      "mason",
-      "spectre_panel",
-      "toggleterm",
+      "NvimTree",
       "TelescopePrompt",
       "TelescopeResults",
-      "NvimTree",
+      "help",
+      "lazy",
+      "markdown",
+      "mason",
+      "spectre_panel",
       "tagbar",
+      "toggleterm",
     }
 
     local api = vim.api
