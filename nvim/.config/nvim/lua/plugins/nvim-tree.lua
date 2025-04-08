@@ -62,7 +62,7 @@ return {
         width = 40,
       },
       renderer = {
-        root_folder_label = function (path)
+        root_folder_label = function(path)
           local folder_name = vim.fn.fnamemodify(path, ":t")
           return "  " .. string.upper(folder_name)
         end,
