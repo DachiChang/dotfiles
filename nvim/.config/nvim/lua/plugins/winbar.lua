@@ -15,7 +15,7 @@ return {
       "toggleterm",
     }
 
-    vim.api.nvim_create_autocmd("BufWinEnter", {
+    vim.api.nvim_create_autocmd("FileType", {
       pattern = '*',
       callback = function()
         local win_config = vim.api.nvim_win_get_config(vim.api.nvim_get_current_win())
