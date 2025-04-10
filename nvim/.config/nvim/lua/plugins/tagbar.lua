@@ -6,7 +6,7 @@ return {
     local keymap = vim.keymap.set
     local opt = vim.opt
 
-    keymap("n", "<F8>", ":TagbarOpen fj<CR>") -- always jump to the Tagbar window, opening it first if necessary
+    keymap("n", "<LEADER>8", ":TagbarOpen fj<CR>") -- always jump to the Tagbar window, opening it first if necessary
     opt.updatetime = 250
   end,
 }
