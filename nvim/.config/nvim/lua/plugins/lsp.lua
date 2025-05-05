@@ -93,7 +93,7 @@ return {
       ensure_installed = ensured_installed_lsp_servers,
       handlers = {
         function(server_name)
-          local lsp_server_config = lsp_server_configs[server_name] -- get lsp server configs
+          local lsp_server_config = lsp_server_configs[server_name] or {} -- get lsp server configs
           local lsp_configs = {
             capabilities = capabilities,
             on_attach = on_attach,
