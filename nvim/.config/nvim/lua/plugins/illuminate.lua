@@ -1,5 +1,5 @@
 return {
-  'RRethy/vim-illuminate',
+  'RRethy/vim-illuminate', -- automatically highlighting other uses of the word under the cursor
   enabled = true,
   config = function()
     local lsp_keyword_mark = require('illuminate')
