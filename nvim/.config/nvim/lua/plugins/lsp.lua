@@ -55,7 +55,7 @@ return {
       }
     }
 
-    -- Mason-tool-installer install all
+    -- Mason install language servers
     local ensured_installed_lsp = {}
     for lsp_server, _ in pairs(lsp_server_configs) do -- parse key, table
       table.insert(ensured_installed_lsp, lsp_server) -- collect server to ensured_installed_lsp_servers
@@ -69,6 +69,12 @@ return {
     -- global language server config
     local lsp = vim.lsp
     lsp.set_log_level('off') -- disable log or debug lsp
+
+    -- For each language server config and enable
+    for server, config in pairs(lsp_server_configs) do
+      lsp.config(server, config)
+      lsp.enable(server)
+    end
 
     -- global language server attach event
     local lsp_attach_group = vim.api.nvim_create_augroup("NvimLspAttach", { clear = true })
@@ -87,12 +93,6 @@ return {
         keymap("n", "ga", buf.code_action, bufopts)
       end,
     })
-
-    -- For each language server config
-    for server, config in pairs(lsp_server_configs) do
-      lsp.config(server, config)
-      lsp.enable(server)
-    end
 
     -- Diagnostics config
     local diagnostic = vim.diagnostic
