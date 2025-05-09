@@ -2,10 +2,9 @@ return {
   'mason-org/mason.nvim', -- mason lsp and tools manager
   enabled = true,
   dependencies = {
-    'WhoIsSethDaniel/mason-tool-installer.nvim', -- auto install mason tools
-    'mason-org/mason-lspconfig.nvim',            -- bridge between mason package name and nvim-lspconfig required by mason-tool-installer
-    'neovim/nvim-lspconfig',                     -- language server default config
-    'ray-x/lsp_signature.nvim',                  -- Show function signature when you type
+    'mason-org/mason-lspconfig.nvim', -- bridge between mason package name and nvim-lspconfig required by mason-tool-installer
+    'neovim/nvim-lspconfig',          -- language server default config
+    'ray-x/lsp_signature.nvim',       -- Show function signature when you type
   },
   config = function()
     local keymap = vim.keymap.set
@@ -43,12 +42,6 @@ return {
       templ = {},
     }
 
-    -- tools configmap
-    local tools = {
-      "prettier", -- prettier formatter
-      "autopep8", -- python formatter
-    }
-
     -- Mason UI config
     local mason_installer = require('mason')
     mason_installer.setup {
@@ -63,16 +56,14 @@ return {
     }
 
     -- Mason-tool-installer install all
-    local ensured_installed_all = {}
+    local ensured_installed_lsp = {}
     for lsp_server, _ in pairs(lsp_server_configs) do -- parse key, table
-      table.insert(ensured_installed_all, lsp_server) -- collect server to ensured_installed_lsp_servers
+      table.insert(ensured_installed_lsp, lsp_server) -- collect server to ensured_installed_lsp_servers
     end
-    for _, tool in ipairs(tools) do
-      table.insert(ensured_installed_all, tool) -- collect tool to ensured_installed_lsp_servers
-    end
-    local mason_tool_installer = require('mason-tool-installer')
-    mason_tool_installer.setup {
-      ensure_installed = ensured_installed_all,
+    local mason_lspconfig = require('mason-lspconfig')
+    mason_lspconfig.setup {
+      ensure_installed = ensured_installed_lsp,
+      automatic_enable = false, -- enable by loop config language server below
     }
 
     -- global language server config
@@ -99,8 +90,8 @@ return {
 
     -- For each language server config
     for server, config in pairs(lsp_server_configs) do
-      vim.lsp.enable(server)
-      vim.lsp.config(server, config)
+      lsp.config(server, config)
+      lsp.enable(server)
     end
 
     -- Diagnostics config
