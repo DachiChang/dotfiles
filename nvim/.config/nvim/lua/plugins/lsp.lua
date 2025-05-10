@@ -69,13 +69,11 @@ return {
     -- global language server config
     local lsp = vim.lsp
     lsp.set_log_level('off') -- disable log or debug lsp
-
     -- For each language server config and enable
     for server, config in pairs(lsp_server_configs) do
       lsp.config(server, config)
       lsp.enable(server)
     end
-
     -- global language server attach event
     local lsp_attach_group = vim.api.nvim_create_augroup("NvimLspAttach", { clear = true })
     vim.api.nvim_create_autocmd('LspAttach', {
