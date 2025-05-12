@@ -1,6 +1,6 @@
 return {
   'hrsh7th/nvim-cmp', -- completion
-  enabled = true,
+  enabled = false,
   dependencies = {
     'hrsh7th/cmp-nvim-lsp',         -- bridge lspconfig
     'hrsh7th/cmp-buffer',           -- source from buffer
