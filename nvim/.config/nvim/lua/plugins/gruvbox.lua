@@ -24,6 +24,9 @@ return {
         FlashLabel = { bg = "#458588" },
         NvimTreeWindowPicker = { fg = "#1c1c1c" },
         TreesitterContext = { bg = "#504945" },
+        BlinkCmpMenu = { bg = "#3B3837" },
+        BlinkCmpMenuBorder = { bg = "#3B3837" },
+        BlinkCmpMenuSelection = { bg = "#665C54", fg = "none" },
       },
     }
     vim.cmd("colorscheme gruvbox")
