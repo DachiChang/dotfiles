@@ -12,14 +12,14 @@ return {
       keymap = {
         preset = 'enter',
       },
-      completion = {
+      completion = { -- main completion
         list = {
           selection = {
             preselect = false,
             auto_insert = false,
           },
         },
-        menu = {
+        menu = { -- completion menu layout
           max_height = 12,
           border = 'rounded',
           draw = {
@@ -37,7 +37,7 @@ return {
           auto_show = true,
         },
       },
-      sources = {
+      sources = { -- completion sources
         default = { 'lsp', 'path', 'snippets', 'buffer' },
         providers = {
           lsp = {
@@ -63,7 +63,7 @@ return {
           }
         },
       },
-      cmdline = {
+      cmdline = { -- command line completion
         keymap = {
           preset = 'inherit' },
         completion = {
@@ -78,7 +78,7 @@ return {
           },
         },
       },
-      signature = {
+      signature = { -- signature help, trigger by "( or ."
         enabled = true,
         window = {
           border = 'rounded',
