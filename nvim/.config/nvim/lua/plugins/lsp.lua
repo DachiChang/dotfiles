@@ -4,7 +4,6 @@ return {
   dependencies = {
     'mason-org/mason-lspconfig.nvim', -- bridge between mason package name and nvim-lspconfig required by mason-tool-installer
     'neovim/nvim-lspconfig',          -- language server default config
-    'ray-x/lsp_signature.nvim',       -- Show function signature when you type
   },
   config = function()
     local keymap = vim.keymap.set
@@ -108,15 +107,5 @@ return {
     keymap("n", "ge", diagnostic.open_float, default_opts)
     keymap("n", "ep", diagnostic.goto_prev, default_opts)
     keymap("n", "en", diagnostic.goto_next, default_opts)
-
-    -- Show function signature when you type
-    local lsp_signature = require('lsp_signature')
-    lsp_signature.setup {
-      bind = true, -- This is mandatory, otherwise border config won't get registered.
-      hint_enable = false,
-      handler_opts = {
-        border = 'rounded',
-      }
-    }
   end,
 }
