@@ -66,7 +66,8 @@ return {
       },
       cmdline = { -- command line completion
         keymap = {
-          preset = 'inherit' },
+          preset = 'default' -- C-y to select and accept, <CR> to fire command
+        },
         completion = {
           list = {
             selection = {
