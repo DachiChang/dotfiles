@@ -10,12 +10,13 @@ return {
     local cmp = require('blink-cmp')
     cmp.setup {
       keymap = {
-        preset = 'enter',
+        preset = 'default',
+        ['<CR>'] = { 'accept', 'fallback' }, -- support enter
       },
-      completion = { -- main completion
+      completion = {                         -- main completion
         list = {
           selection = {
-            preselect = false,
+            preselect = true,
             auto_insert = false,
           },
         },
