@@ -10,13 +10,13 @@ return {
     local cmp = require('blink-cmp')
     cmp.setup {
       keymap = {
-        preset = 'default',
-        ['<CR>'] = { 'accept', 'fallback' }, -- support enter
+        -- NOTE: due to <C-y> has been binded by codium auto code generator, use enter to accept
+        preset = 'enter',
       },
-      completion = {                         -- main completion
+      completion = { -- main completion
         list = {
           selection = {
-            preselect = true,
+            preselect = false,
             auto_insert = false,
           },
         },
@@ -64,7 +64,7 @@ return {
           }
         },
       },
-      cmdline = { -- command line completion
+      cmdline = {            -- command line completion
         keymap = {
           preset = 'default' -- C-y to select and accept, <CR> to fire command
         },
@@ -72,7 +72,7 @@ return {
           list = {
             selection = {
               preselect = false,
-              auto_insert = true,
+              auto_insert = true, -- easy for auto insert to command when select_next / select_prev
             }
           },
           menu = {
