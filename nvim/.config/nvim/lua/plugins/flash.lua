@@ -18,6 +18,6 @@ return {
     local keymap = vim.keymap.set
     local default_opts = { noremap = true, silent = true }
 
-    keymap("n", "s", flash.jump, default_opts)
+    keymap("n", "<LEADER>\\", flash.jump, default_opts)
   end,
 }
