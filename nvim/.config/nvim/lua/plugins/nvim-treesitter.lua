@@ -15,10 +15,10 @@ return {
       incremental_selection = {
         enable = true,
         keymaps = {
-          init_selection = '<Space>',
-          node_incremental = '<Space>',
+          init_selection = '+',
+          node_incremental = '+',
           scope_incremental = false,
-          node_decremental = '<BS>',
+          node_decremental = '_',
         },
       },
     }
