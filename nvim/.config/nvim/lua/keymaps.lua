@@ -32,7 +32,7 @@ keymap.set("n", "<F5>", ":e!<CR>", default_opts)
 
 -- Window
 keymap.set("n", "=", "<C-w>=", default_opts)
-keymap.set("n", "-", "<C-w>x", default_opts)
+keymap.set("n", "<C-x>", "<C-w>x", default_opts)
 keymap.set("n", "<C-h>", "<C-w>h", default_opts)
 keymap.set("n", "<C-j>", "<C-w>j", default_opts)
 keymap.set("n", "<C-k>", "<C-w>k", default_opts)
