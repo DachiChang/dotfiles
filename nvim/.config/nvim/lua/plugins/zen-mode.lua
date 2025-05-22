@@ -5,7 +5,7 @@ return {
     local zen_mode = require('zen-mode')
     zen_mode.setup {
       window = {
-        width = 0.6,
+        width = 0.75,
       },
     }
 
