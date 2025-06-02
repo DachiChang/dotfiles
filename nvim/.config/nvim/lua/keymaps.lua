@@ -15,8 +15,6 @@ local remap_opts = { remap = true, silent = true }
 keymap.set("n", "<C-q>", ":q!<CR>", default_opts)
 
 -- Jump
-keymap.set("n", "gm", "'M", default_opts)
-keymap.set("n", "m", "mM", default_opts)
 keymap.set({ "n", "v" }, "<C-d>", "10j", default_opts)
 keymap.set({ "n", "v" }, "<C-u>", "10k", default_opts)
 
