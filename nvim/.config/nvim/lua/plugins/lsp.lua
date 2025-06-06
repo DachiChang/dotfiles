@@ -39,9 +39,7 @@ return {
       terraformls = {},
       ts_ls = {},
       templ = {},
-      tailwindcss = {
-        root_markers = { 'tailwind.css' },
-      },
+      tailwindcss = {},
     }
 
     -- Mason UI config
