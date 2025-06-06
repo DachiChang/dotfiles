@@ -39,9 +39,7 @@ return {
       terraformls = {},
       ts_ls = {},
       templ = {},
-      tailwindcss = {
-        workspace_required = false, -- don't need to check tailwind.config.js in the root_markers to start LSP
-      },
+      tailwindcss = {},
     }
 
     -- Mason UI config
