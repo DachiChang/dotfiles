@@ -74,3 +74,11 @@ keymap.del("n", "grr")
 keymap.del("n", "gri")
 keymap.del("n", "grn")
 keymap.del("i", "<C-S>")
+
+-- Cheat Sheet
+-- <C-^> Switch between current and alternate buffer
+-- z=    Spelling suggestions for word under cursor
+-- gF    Jump to file path under cursor
+-- gx    Open URL under cursor in browser
+-- J     (Visual mode) Join selected lines
+-- O     (Visual mode) Move cursor to other end of selection
