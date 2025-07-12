@@ -5,10 +5,16 @@ return {
   -- build = 'cargo build --release',
   dependencies = {
     'rafamadriz/friendly-snippets', -- source snippets
+    { 'L3MON4D3/LuaSnip', version = 'v2.*' }
   },
   config = function()
+    require('luasnip.loaders.from_vscode').lazy_load() -- load friendly-snippets
+
     local cmp = require('blink-cmp')
     cmp.setup {
+      snippets = {
+        preset = 'luasnip'
+      },
       keymap = {
         -- NOTE: due to <C-y> has been binded by codium auto code generator, use enter to accept
         preset = 'enter',
