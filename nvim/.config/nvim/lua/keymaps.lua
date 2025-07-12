@@ -17,6 +17,7 @@ keymap.set("n", "<C-q>", ":q!<CR>", default_opts)
 -- Jump
 keymap.set({ "n", "v" }, "<C-d>", "10j", default_opts)
 keymap.set({ "n", "v" }, "<C-u>", "10k", default_opts)
+keymap.set("n", "<leader>\\", ":e#<CR>", default_opts)
 
 -- Tab
 keymap.set("n", "<", ":tabm -1<CR>", default_opts)
