@@ -9,6 +9,9 @@ return {
   },
   config = function()
     require('luasnip.loaders.from_vscode').lazy_load() -- load friendly-snippets
+    -- require("luasnip.loaders.from_vscode").lazy_load { -- load custom snippets from .config/nvim/snippets
+    --   paths = { vim.fn.stdpath("config") .. "/snippets" }
+    -- }
 
     local cmp = require('blink-cmp')
     cmp.setup {
