@@ -46,6 +46,12 @@ keymap.set("n", "<S-Up>", ":resize +5<CR>", default_opts)
 keymap.set("n", "cc", "gcc", remap_opts)
 keymap.set("v", "cc", "gc", remap_opts)
 
+-- Snippet disable session
+vim.keymap.set({ "i", "s" }, "<Esc>", function()
+  vim.snippet.stop()
+  return "<Esc>"
+end, { expr = true }) -- expr 會執行一個 function 把回傳的結果當成一個 command 執行
+
 -- Temporary disable hightlight
 keymap.set("n", "<ESC>", ":noh<CR>", default_opts)
 
