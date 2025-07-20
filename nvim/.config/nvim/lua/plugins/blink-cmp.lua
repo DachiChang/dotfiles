@@ -5,19 +5,12 @@ return {
   -- build = 'cargo build --release',
   dependencies = {
     'rafamadriz/friendly-snippets', -- source snippets
-    { 'L3MON4D3/LuaSnip', version = 'v2.*' }
   },
   config = function()
-    require('luasnip.loaders.from_vscode').lazy_load() -- load friendly-snippets
-    -- require("luasnip.loaders.from_vscode").lazy_load { -- load custom snippets from .config/nvim/snippets
-    --   paths = { vim.fn.stdpath("config") .. "/snippets" }
-    -- }
-
+    -- friendly-snippets will be autoload
+    -- customize snippets in ~/.config/nvim/snippets will be autoload
     local cmp = require('blink-cmp')
     cmp.setup {
-      snippets = {
-        preset = 'luasnip'
-      },
       keymap = {
         -- NOTE: due to <C-y> has been binded by codium auto code generator, use enter to accept
         preset = 'enter',
