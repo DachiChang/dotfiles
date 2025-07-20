@@ -1,10 +1,11 @@
 local keymap = vim.keymap
-local default_opts = { noremap = true, silent = true }
-local remap_opts = { remap = true, silent = true }
+local default_opts = { noremap = true, silent = true } -- nomap (default) 映射後直接執行 cmd
+local remap_opts = { remap = true, silent = true }     -- remap 映射後會再遞回解析結果
 
 -- NOTE: keymap mode short-name
 -- n: normal
 -- v: visual
+-- s: select
 -- x: visual line
 -- i: insert
 -- t: terminal
