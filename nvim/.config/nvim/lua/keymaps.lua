@@ -16,8 +16,6 @@ local remap_opts = { remap = true, silent = true }     -- remap 映射後會再�
 keymap.set("n", "<C-q>", ":q!<CR>", default_opts)
 
 -- Jump
-keymap.set({ "n", "v" }, "<C-d>", "10j", default_opts)
-keymap.set({ "n", "v" }, "<C-u>", "10k", default_opts)
 keymap.set("n", "<leader>\\", ":e#<CR>", default_opts)
 
 -- Tab
