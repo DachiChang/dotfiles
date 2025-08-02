@@ -6,7 +6,7 @@ return {
   },
   config = function()
     local spectre = require('spectre')
-    spectre.setup {
+    spectre.setup({
       live_update = true,
       replace_engine = {
         ['sed'] = {
@@ -24,7 +24,7 @@ return {
           desc = "replace current line"
         },
       },
-    }
+    })
 
     local keymap = vim.keymap.set
     keymap("n", "<F6>", "<CMD>lua require('spectre').toggle()<CR>")

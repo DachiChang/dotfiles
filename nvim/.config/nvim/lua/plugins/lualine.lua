@@ -9,7 +9,7 @@ return {
       return 'Total:' .. vim.api.nvim_buf_line_count(0)
     end
     local lualine = require('lualine')
-    lualine.setup {
+    lualine.setup({
       options = {
         theme = 'gruvbox_dark',
         globalstatus = true,
@@ -25,6 +25,6 @@ return {
           { total_lines },
         }
       },
-    }
+    })
   end,
 }

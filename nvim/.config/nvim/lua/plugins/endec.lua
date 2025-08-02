@@ -3,7 +3,7 @@ return {
   "ovk/endec.nvim",
   enabled = true,
   config = function()
-    require("endec").setup {
+    require("endec").setup({
       keymaps = {
         -- b64 b64URL URL encode/decode
         decode_base64_popup = "gs",   -- base64 show
@@ -20,6 +20,6 @@ return {
         decode_url_inplace = "", -- url decode
         encode_url_inplace = "", -- url encode
       },
-    }
+    })
   end,
 }

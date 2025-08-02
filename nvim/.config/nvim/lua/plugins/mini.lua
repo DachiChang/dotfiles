@@ -4,7 +4,7 @@ return {
   version = '*',
   config = function()
     local mini_indentscope = require('mini.indentscope')
-    mini_indentscope.setup {
+    mini_indentscope.setup({
       draw = {
         animation = mini_indentscope.gen_animation.none(),
         delay = 100,
@@ -22,7 +22,7 @@ return {
         try_as_border = true,
       },
       symbol = '╎',
-    }
+    })
 
     -- disable indentscope for certain filetypes
     vim.api.nvim_create_autocmd("FileType", {

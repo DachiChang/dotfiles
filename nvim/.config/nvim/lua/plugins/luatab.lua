@@ -7,7 +7,7 @@ return {
   config = function()
     local luatab = require('luatab')
 
-    luatab.setup {
+    luatab.setup({
       filterFileType = {
         "help",
         "lazy",
@@ -19,6 +19,6 @@ return {
         "NvimTree",
         "tagbar",
       },
-    }
+    })
   end,
 }

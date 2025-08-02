@@ -4,7 +4,7 @@ return {
   enabled = true,
   config = function()
     local flash = require('flash')
-    flash.setup {
+    flash.setup({
       highlight = {
         backdrop = false,
       },
@@ -13,7 +13,7 @@ return {
           enabled = true,
         },
       },
-    }
+    })
 
     local keymap = vim.keymap.set
     local default_opts = { noremap = true, silent = true }

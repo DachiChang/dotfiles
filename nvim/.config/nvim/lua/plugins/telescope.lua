@@ -11,7 +11,7 @@ return {
     local telescope = require('telescope')
     local actions = require('telescope.actions')
     local builtin = require('telescope.builtin')
-    telescope.setup {
+    telescope.setup({
       defaults = {
         vimgrep_arguments = {
           'rg',
@@ -37,7 +37,7 @@ return {
           },
         },
       }
-    }
+    })
     keymap("n", "<LEADER>f", function()
       builtin.find_files({
         hidden = true,

@@ -44,7 +44,7 @@ return {
 
     -- Mason UI config
     local mason_installer = require('mason')
-    mason_installer.setup {
+    mason_installer.setup({
       ui = {
         border = "rounded",
         icons = {
@@ -53,7 +53,7 @@ return {
           package_uninstalled = "✗"
         }
       }
-    }
+    })
 
     -- Mason install language servers
     local ensured_installed_lsp = {}
@@ -61,10 +61,10 @@ return {
       table.insert(ensured_installed_lsp, lsp_server) -- collect server to ensured_installed_lsp_servers
     end
     local mason_lspconfig = require('mason-lspconfig')
-    mason_lspconfig.setup {
+    mason_lspconfig.setup({
       ensure_installed = ensured_installed_lsp,
       automatic_enable = false, -- enable by loop config language server below
-    }
+    })
 
     -- global language server config
     local lsp = vim.lsp

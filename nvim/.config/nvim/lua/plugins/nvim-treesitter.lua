@@ -4,7 +4,7 @@ return {
   build = ":TSUpdate", -- NOTE: will be updated parsers when this plugin is updated
   config = function()
     local treesitter_config = require('nvim-treesitter.configs')
-    treesitter_config.setup {
+    treesitter_config.setup({
       auto_install = true, -- auto install the missing parse when enter the buffer
       highlight = {
         enable = true,
@@ -21,7 +21,7 @@ return {
           node_decremental = '<BS>',
         },
       },
-    }
+    })
 
     -- use treesitter to provider fold functional
     vim.opt.foldmethod = "expr"

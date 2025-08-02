@@ -42,7 +42,7 @@ return {
     end
 
     local nvim_tree = require('nvim-tree')
-    nvim_tree.setup {
+    nvim_tree.setup({
       hijack_netrw = false,
       hijack_cursor = true,
       on_attach = on_attach,
@@ -86,7 +86,7 @@ return {
       filters = {
         dotfiles = true,
       },
-    }
+    })
 
     -- sync cursor between tab
     local position = { 1, 0 }

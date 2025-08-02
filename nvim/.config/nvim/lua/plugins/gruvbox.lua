@@ -4,7 +4,7 @@ return {
   priority = 1000,
   config = function()
     local gruvbox_theme = require('gruvbox')
-    gruvbox_theme.setup {
+    gruvbox_theme.setup({
       transparent_mode = false,
       terminal_colors = false,
       palette_overrides = {
@@ -28,7 +28,7 @@ return {
         BlinkCmpMenuBorder = { bg = "#3B3837" },
         BlinkCmpMenuSelection = { bg = "#665C54", fg = "none" },
       },
-    }
+    })
     vim.cmd("colorscheme gruvbox")
   end
 }

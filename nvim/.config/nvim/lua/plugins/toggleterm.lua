@@ -3,13 +3,13 @@ return {
   enabled = true,
   config = function()
     local toggleterm = require('toggleterm')
-    toggleterm.setup {
+    toggleterm.setup({
       open_mapping = [[<c-\>]],
       direction = "float",
       float_opts = {
         border = 'curved',
       },
-    }
+    })
 
     local keymap = vim.keymap.set
     local default_opts = { noremap = true, silent = true }
