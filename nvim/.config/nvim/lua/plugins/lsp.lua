@@ -11,19 +11,7 @@ return {
 
     -- Language Server configmap
     local lsp_server_configs = {
-      clangd = {
-        filetypes = { "c", "cpp", "objc", "objcpp", "cuda" },
-      },
-      csharp_ls = {},
-      cssls = {},
-      emmet_ls = { -- ul.products>li.product*3>img[src="http://placehold.it/150x150"]+h2{Product $}+p{Description of product $}+span.price{Price $}  "[]" is attribute, "{}" is content
-        filetypes = { "html", "css", "templ" },
-      },
-      intelephense = {},
-      gopls = {},
-      buf_ls = {},
-      helm_ls = {},
-      html = {},
+      -- NOTE: common
       jsonls = {},
       lua_ls = {
         settings = {
@@ -34,12 +22,27 @@ return {
           }
         }
       },
-      pyright = {},
-      rust_analyzer = {},
-      terraformls = {},
-      ts_ls = {},
-      templ = {},
+      -- NOTE: web
+      html = {},
+      cssls = {},
+      emmet_ls = { -- ul.products>li.product*3>img[src="http://placehold.it/150x150"]+h2{Product $}+p{Description of product $}+span.price{Price $}  "[]" is attribute, "{}" is content
+        filetypes = { "html", "css", "templ" },
+      },
       tailwindcss = {},
+      ts_ls = {},
+      -- NOTE: go
+      gopls = {},
+      buf_ls = {},
+      templ = {},
+      -- NOTE: python
+      pyright = {},
+      -- NOTE: devops
+      helm_ls = {},
+      terraformls = {},
+      -- clangd = {},
+      -- csharp_ls = {},
+      -- intelephense = {},
+      -- rust_analyzer = {},
     }
 
     -- Mason UI config
