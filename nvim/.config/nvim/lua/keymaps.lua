@@ -14,6 +14,7 @@ local remap_opts = { remap = true, silent = true }     -- remap 映射後會再�
 
 -- Quit
 keymap.set("n", "<C-q>", ":q!<CR>", default_opts)
+keymap.set("n", "<leader>q", ":qa!<CR>", default_opts)
 
 -- Jump
 keymap.set("n", "<leader>\\", ":e#<CR>", default_opts)
