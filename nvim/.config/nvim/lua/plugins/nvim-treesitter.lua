@@ -29,15 +29,5 @@ return {
     vim.opt.foldtext = ""
     vim.opt.foldenable = true
     vim.opt.foldlevelstart = 99
-
-    -- disable fold for certain filetypes
-    vim.api.nvim_create_autocmd("FileType", {
-      pattern = {
-        "toggleterm",
-      },
-      callback = function()
-        vim.opt.foldmethod = "manual"
-      end,
-    })
   end
 }
