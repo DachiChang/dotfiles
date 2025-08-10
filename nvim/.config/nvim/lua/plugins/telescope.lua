@@ -46,6 +46,11 @@ return {
     end, default_opts)
     keymap("n", "<LEADER>g", builtin.live_grep, default_opts)
     keymap("n", "<LEADER>h", builtin.help_tags, default_opts)
+    keymap("n", "<LEADER>s", function()
+      builtin.lsp_document_symbols({
+        symbol_width = 50,
+      })
+    end, default_opts)
     keymap("n", "<LEADER>k", builtin.keymaps, default_opts)
     keymap("n", "<LEADER>w", builtin.grep_string, default_opts)
   end,
