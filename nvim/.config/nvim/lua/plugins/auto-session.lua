@@ -10,6 +10,5 @@ return {
     local keymap = vim.keymap.set
 
     keymap("n", "<LEADER>b", ":SessionRestore<CR>") -- back
-    keymap("n", "<LEADER>s", ":SessionSave<CR>")    -- save
   end,
 }
