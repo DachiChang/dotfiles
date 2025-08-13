@@ -12,7 +12,6 @@ return {
         light1 = "#cac5b5",
       },
       overrides = {
-        Directory = { link = "GruvboxBlueBold" },
         WinBar = { fg = "#A89984", bg = "none" },
         WinBarNC = { fg = "#A89984", bg = "none" },
         WinbarDelete = { bg = "none" },
@@ -22,11 +21,14 @@ return {
         CursorLine = { bg = "#444444" },
         CursorLineNr = { bg = "#444444" },
         FlashLabel = { bg = "#458588" },
-        NvimTreeWindowPicker = { fg = "#1c1c1c" },
         TreesitterContext = { bg = "#504945" },
         BlinkCmpMenu = { bg = "#3B3837" },
         BlinkCmpMenuBorder = { bg = "#3B3837" },
         BlinkCmpMenuSelection = { bg = "#665C54", fg = "none" },
+        WindowPickerStatusLineNC = { bg = "#8ec07c", fg = "#1c1c1c" },
+        NeoTreeDirectoryIcon = { fg = "#458588" },
+        NeoTreeDirectoryName = { fg = "#83a598" },
+        NeoTreeDimText = { fg = "#928374" },
       },
     })
     vim.cmd("colorscheme gruvbox")
