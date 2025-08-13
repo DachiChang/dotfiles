@@ -23,19 +23,5 @@ return {
       },
       symbol = '╎',
     })
-
-    -- disable indentscope for certain filetypes
-    vim.api.nvim_create_autocmd("FileType", {
-      pattern = {
-        "lazy",
-        "mason",
-        "toggleterm",
-        "NvimTree",
-        "tagbar",
-      },
-      callback = function()
-        vim.b.miniindentscope_disable = true
-      end,
-    })
   end,
 }
