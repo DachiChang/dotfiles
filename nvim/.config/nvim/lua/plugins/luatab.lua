@@ -9,15 +9,14 @@ return {
 
     luatab.setup({
       filterFileType = {
+        "TelescopePrompt",
+        "TelescopeResults",
         "help",
         "lazy",
         "mason",
+        "neo-tree",
         "spectre_panel",
         "toggleterm",
-        "TelescopePrompt",
-        "TelescopeResults",
-        "NvimTree",
-        "tagbar",
       },
     })
   end,
