@@ -33,7 +33,9 @@ return {
       -- NOTE: go
       gopls = {},
       buf_ls = {},
-      templ = {},
+      templ = {
+        cmd = { 'go', 'tool', 'templ', 'lsp' }, -- go 1.24 support tool dependencies
+      },
       -- NOTE: python
       pyright = {},
       -- NOTE: devops
