@@ -30,8 +30,8 @@ return {
       auto_clean_after_session_restore = true,
       close_if_last_window = true,
       enable_git_status = false,
-      log_level = "info",
-      log_to_file = false,
+      log_level = "debug",
+      log_to_file = false, -- "/tmp/neo-tree.log"
       popup_border_style = "rounded",
       use_default_mappings = false,
       default_component_configs = {
@@ -41,6 +41,15 @@ return {
         modified = {
           symbol = "[+]",
         },
+        file_size = {
+          enabled = false,
+        },
+        type = {
+          enabled = false,
+        },
+        last_modified = {
+          enabled = false,
+        },
       },
       window = {
         mappings = {
@@ -49,7 +58,14 @@ return {
           ["W"] = "close_all_nodes",
           ["O"] = "expand_all_subnodes",
           ["R"] = "refresh",
-          ["e"] = "toggle_auto_expand_width",
+          ["e"] = {
+            function(state)
+              require("neo-tree.sources.filesystem.commands").toggle_auto_expand_width(state)
+              local expand_status = state.window.auto_expand_width and "ON" or "Off"
+              print("Auto expand width: " .. expand_status)
+            end,
+            desc = "toggle auto expand width",
+          },
           ["s"] = "split_with_window_picker",
           ["v"] = "vsplit_with_window_picker",
           ["t"] = "open_tabnew",
@@ -99,7 +115,6 @@ return {
             },
             ["oc"] = "order_by_created",
             ["oe"] = "order_by_diagnostics",
-            ["og"] = "order_by_git_status",
             ["om"] = "order_by_modified",
             ["on"] = "order_by_name",
             ["os"] = "order_by_size",
