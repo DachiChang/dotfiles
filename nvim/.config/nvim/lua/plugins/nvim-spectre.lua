@@ -28,7 +28,7 @@ return {
 
     local keymap = vim.keymap.set
     keymap("n", "<F6>", "<CMD>lua require('spectre').toggle()<CR>")
-    keymap("n", "<LEADER>r", "<CMD>lua require('spectre').open_file_search({select_word=true})<CR>")
-    keymap("v", "<LEADER>r", "<esc><CMD>lua require('spectre').open_file_search()<CR>")
+    keymap("n", "<LEADER>S", "<CMD>lua require('spectre').open_file_search({select_word=true})<CR>")
+    keymap("v", "<LEADER>S", "<esc><CMD>lua require('spectre').open_file_search()<CR>")
   end,
 }

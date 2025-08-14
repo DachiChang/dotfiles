@@ -114,6 +114,25 @@ return {
               end,
               desc = "Copy file path",
             },
+            ["S"] = {
+              function(state)
+                local node = state.tree:get_node()
+                local relative_path = vim.fn.substitute(node.path, state.path .. "/", "", "")
+                local search_path = ""
+
+                if node.type == "directory" then
+                  search_path = relative_path .. "/**"
+                elseif node.type == "file" then
+                  search_path = relative_path
+                else
+                  print("Not support search/replace file type")
+                  return
+                end
+
+                require('spectre').open({ path = search_path })
+              end,
+              desc = "Search and replace",
+            },
             ["oc"] = "order_by_created",
             ["oe"] = "order_by_diagnostics",
             ["om"] = "order_by_modified",
