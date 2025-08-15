@@ -61,7 +61,7 @@ return {
           ["e"] = {
             function(state)
               require("neo-tree.sources.filesystem.commands").toggle_auto_expand_width(state)
-              local expand_status = state.window.auto_expand_width and "ON" or "Off"
+              local expand_status = state.window.auto_expand_width and "On" or "Off"
               print("Auto expand width: " .. expand_status)
             end,
             desc = "toggle auto expand width",
