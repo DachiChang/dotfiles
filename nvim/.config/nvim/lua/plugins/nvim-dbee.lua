@@ -80,9 +80,5 @@ return {
       -- window layout
       window_layout = require("dbee.layouts").Default:new(),
     })
-
-    local keymap = vim.keymap.set
-    local default_opts = { noremap = true, silent = true }
-    keymap("n", "<F10>", dbee.toggle, default_opts)
   end,
 }
