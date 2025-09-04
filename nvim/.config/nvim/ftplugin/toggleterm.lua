@@ -1,2 +1,0 @@
-vim.opt_local.foldmethod = "manual"
-vim.b.miniindentscope_disable = true
