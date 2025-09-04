@@ -8,12 +8,14 @@ return {
     'DBUIToggle',
   },
   init = function()
-    vim.g.db_ui_use_nerd_fonts = 1
-    vim.g.db_ui_show_help = 0
-    vim.g.db_ui_auto_execute_table_helpers = 1
-    vim.g.db_ui_disable_mappings = 1
-    vim.g.db_ui_execute_on_save = 0
-    vim.g.db_ui_force_echo_notifications = 1
+    local g = vim.g
+
+    g.db_ui_use_nerd_fonts = 1
+    g.db_ui_show_help = 0
+    g.db_ui_auto_execute_table_helpers = 1
+    g.db_ui_disable_mappings = 1
+    g.db_ui_execute_on_save = 0
+    g.db_ui_force_echo_notifications = 1
 
     local keymap = vim.keymap.set
     keymap("n", "<F6>", ":DBUIToggle<CR>")
