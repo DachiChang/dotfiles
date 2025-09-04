@@ -11,6 +11,8 @@ return {
       "mason",
       "spectre_panel",
       "toggleterm",
+      "dbui",
+      "dbout",
     }
 
     vim.api.nvim_create_autocmd("FileType", {

@@ -17,6 +17,8 @@ return {
         "neo-tree",
         "spectre_panel",
         "toggleterm",
+        "dbui",
+        "dbout",
       },
     })
   end,
