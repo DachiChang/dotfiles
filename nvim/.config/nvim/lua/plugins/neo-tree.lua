@@ -53,7 +53,7 @@ return {
       },
       window = {
         mappings = {
-          ["<cr>"] = "open_with_window_picker",
+          ["<CR>"] = "open_with_window_picker",
           ["C"] = "close_all_subnodes",
           ["W"] = "close_all_nodes",
           ["O"] = "expand_all_subnodes",
@@ -94,7 +94,7 @@ return {
         use_libuv_file_watcher = true,
         window = {
           mappings = {
-            ["<tab>"] = "toggle_hidden",
+            ["<Tab>"] = "toggle_hidden",
             ["a"] = "add",
             ["d"] = "delete",
             ["r"] = "rename",
@@ -103,7 +103,7 @@ return {
             ["p"] = "paste_from_clipboard",
             ["f"] = "filter_on_submit",
             ["q"] = "clear_filter",
-            ["<bs>"] = "navigate_up",
+            ["<BS>"] = "navigate_up",
             ["."] = "set_root",
             ["i"] = "show_file_details",
             ["Y"] = {
