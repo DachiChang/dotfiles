@@ -7,11 +7,10 @@ return {
     g.better_whitespace_operator = ''
     g.better_whitespace_filetypes_blacklist = {
       "toggleterm",
+      "dbout",
     }
-  end,
-  config = function()
-    local keymap = vim.keymap.set
 
+    local keymap = vim.keymap.set
     keymap("n", "tm", ":StripWhitespace<CR>")
   end,
 }
