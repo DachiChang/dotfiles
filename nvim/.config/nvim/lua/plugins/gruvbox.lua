@@ -27,7 +27,7 @@ return {
         BlinkCmpMenuSelection = { bg = "#665C54", fg = "none" },
         WindowPickerStatusLineNC = { bg = "#8ec07c", fg = "#1c1c1c" },
         NeoTreeDirectoryIcon = { fg = "#fabd2f" },
-        NeoTreeDirectoryName = { fg = "#ebdbb2" },
+        NeoTreeDirectoryName = { fg = "#fbf1c7" },
         NeoTreeDimText = { fg = "#928374" },
       },
     })
