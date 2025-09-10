@@ -17,7 +17,7 @@ return {
         WinbarDelete = { bg = "none" },
         TabLineFill = { fg = "#cac5b5", bg = "#282828" },
         TabLine = { fg = "#cac5b5", bg = "#282828" },
-        TabLineSel = { fg = "#ebdbb2", bg = "#504945" },
+        TabLineSel = { fg = "#f2e5bc", bg = "#504945" },
         CursorLine = { bg = "#444444" },
         CursorLineNr = { bg = "#444444" },
         FlashLabel = { bg = "#458588" },
@@ -27,7 +27,7 @@ return {
         BlinkCmpMenuSelection = { bg = "#665C54", fg = "none" },
         WindowPickerStatusLineNC = { bg = "#8ec07c", fg = "#1c1c1c" },
         NeoTreeDirectoryIcon = { fg = "#fabd2f" },
-        NeoTreeDirectoryName = { fg = "#fbf1c7" },
+        NeoTreeDirectoryName = { fg = "#ebdbb2" },
         NeoTreeDimText = { fg = "#928374" },
       },
     })
