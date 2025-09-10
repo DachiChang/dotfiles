@@ -57,8 +57,8 @@ return {
           ["C"] = "close_all_subnodes",
           ["W"] = "close_all_nodes",
           ["O"] = "expand_all_subnodes",
-          ["R"] = "refresh",
-          ["e"] = {
+          ["r"] = "refresh",
+          ["w"] = {
             function(state)
               require("neo-tree.sources.filesystem.commands").toggle_auto_expand_width(state)
               local expand_status = state.window.auto_expand_width and "On" or "Off"
@@ -97,7 +97,7 @@ return {
             ["<Tab>"] = "toggle_hidden",
             ["a"] = "add",
             ["d"] = "delete",
-            ["r"] = "rename",
+            ["e"] = "rename",
             ["c"] = "copy_to_clipboard",
             ["x"] = "cut_to_clipboard",
             ["p"] = "paste_from_clipboard",
