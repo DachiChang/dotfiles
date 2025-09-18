@@ -10,6 +10,7 @@
   - stow tmux
   - stow misc
   - stow alacritty
+  - stow htop
 
 ## Uninstall
 
@@ -19,6 +20,7 @@
   - stow -D tmux
   - stow -D misc
   - stow -D alacritty
+  - stow -D htop
 
 ## NeoVim
 
