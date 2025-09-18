@@ -58,7 +58,7 @@ return {
           ["W"] = "close_all_nodes",
           ["O"] = "expand_all_subnodes",
           ["r"] = "refresh",
-          ["<Space>"] = {
+          ["+"] = {
             function(state)
               require("neo-tree.sources.filesystem.commands").toggle_auto_expand_width(state)
               local expand_status = state.window.auto_expand_width and "On" or "Off"
