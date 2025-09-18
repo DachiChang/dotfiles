@@ -3,6 +3,7 @@ return {
   enabled = true,
   dependencies = {
     'tpope/vim-dadbod',
+    'davesavic/dadbod-ui-yank',
   },
   cmd = {
     'DBUIToggle',
@@ -24,6 +25,13 @@ return {
     local keymap = vim.keymap.set
     local default_opts = { noremap = true, silent = true, buffer = true, nowait = true }
 
+    -- dadbod-ui-yank setup
+    local dadbod_ui_yank = require('dadbod-ui-yank')
+    dadbod_ui_yank.setup({
+      with_headers = true,
+    })
+
+    -- dadbod-ui setup
     vim.api.nvim_create_autocmd("FileType", {
       pattern = "dbui",
       callback = function()
@@ -40,6 +48,8 @@ return {
       pattern = "dbout",
       callback = function()
         keymap("n", "<Tab>", "<Plug>(DBUI_ToggleResultLayout)", default_opts)
+        keymap({ "n", "v" }, "yc", ":DBUIYankAsCSV<CR>", default_opts)
+        keymap({ "n", "v" }, "yj", ":DBUIYankAsJSON<CR>", default_opts)
       end,
     })
 
