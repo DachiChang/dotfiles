@@ -61,6 +61,7 @@ alias python='python3'
 alias pip='pip3'
 alias vim='nvim'
 alias lg='lazygit'
+alias dk='lazydocker'
 alias ns='kubens'
 alias ctx='kubectx'
 
