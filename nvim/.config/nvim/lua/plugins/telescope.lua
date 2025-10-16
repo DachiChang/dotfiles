@@ -21,7 +21,7 @@ return {
           '--line-number',
           '--column',
           '--smart-case',
-          '-u' -- no-ignore
+          '--hidden', -- include hidden
         },
         mappings = {
           n = {
