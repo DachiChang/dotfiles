@@ -17,6 +17,17 @@ return {
     g.db_ui_disable_mappings = 1
     g.db_ui_execute_on_save = 0
     g.db_ui_force_echo_notifications = 1
+    -- custom table helpers
+    g.db_ui_table_helpers = {
+      postgresql = {
+        Count = 'SELECT COUNT(*) FROM "{table}"',
+        List = 'SELECT * FROM {optional_schema}"{table}" LIMIT 10',
+      },
+      sqlite = {
+        List = 'SELECT * FROM "{table}" LIMIT 10',
+        Count = 'SELECT COUNT(*) FROM "{table}"',
+      }
+    }
 
     local keymap = vim.keymap.set
     keymap("n", "<F6>", ":DBUIToggle<CR>")
