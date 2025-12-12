@@ -9,6 +9,6 @@ return {
 
     local keymap = vim.keymap.set
 
-    keymap("n", "<LEADER>b", ":AutoSession restore<CR>") -- back
+    keymap("n", "<LEADER>b", "<CMD>AutoSession restore<CR>") -- back
   end,
 }

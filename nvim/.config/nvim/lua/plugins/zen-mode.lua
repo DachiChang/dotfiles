@@ -12,6 +12,6 @@ return {
 
     local keymap = vim.keymap.set
 
-    keymap("n", "m", ":ZenMode<CR>")
+    keymap("n", "m", "<CMD>ZenMode<CR>")
   end
 }

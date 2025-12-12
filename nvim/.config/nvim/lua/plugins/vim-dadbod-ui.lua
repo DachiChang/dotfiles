@@ -30,7 +30,7 @@ return {
     }
 
     local keymap = vim.keymap.set
-    keymap("n", "<F6>", ":DBUIToggle<CR>")
+    keymap("n", "<F6>", "<CMD>DBUIToggle<CR>")
   end,
   config = function()
     local keymap = vim.keymap.set
@@ -59,8 +59,8 @@ return {
       pattern = "dbout",
       callback = function()
         keymap("n", "<Tab>", "<Plug>(DBUI_ToggleResultLayout)", default_opts)
-        keymap({ "n", "v" }, "yc", ":DBUIYankAsCSV<CR>", default_opts)
-        keymap({ "n", "v" }, "yj", ":DBUIYankAsJSON<CR>", default_opts)
+        keymap({ "n", "v" }, "yc", "<CMD>DBUIYankAsCSV<CR>", default_opts)
+        keymap({ "n", "v" }, "yj", "<CMD>DBUIYankAsJSON<CR>", default_opts)
       end,
     })
 

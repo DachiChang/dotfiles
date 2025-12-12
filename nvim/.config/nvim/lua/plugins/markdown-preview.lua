@@ -11,6 +11,6 @@ return {
     g.mkdp_theme = 'light'
 
     local keymap = vim.keymap.set
-    keymap("n", "<F2>", ":MarkdownPreview<CR>")
+    keymap("n", "<F2>", "<CMD>MarkdownPreview<CR>")
   end,
 }

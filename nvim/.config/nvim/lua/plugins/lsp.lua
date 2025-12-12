@@ -41,6 +41,7 @@ return {
       -- NOTE: devops
       helm_ls = {},
       terraformls = {},
+      lemminx = {}, -- xml lsp
       -- clangd = {},
       -- csharp_ls = {},
       -- intelephense = {},
@@ -88,10 +89,10 @@ return {
         local bufopts = { noremap = true, silent = true, buffer = event.buf }
         keymap("n", "gt", function() buf.hover { border = 'rounded' } end, bufopts)
         keymap("n", "gD", buf.declaration, bufopts)
-        keymap("n", "gd", ":Telescope lsp_definitions<CR>", bufopts)
-        keymap("n", "gi", ":Telescope lsp_implementations<CR>", bufopts)
-        keymap("n", "gT", ":Telescope lsp_type_definitions<CR>", bufopts)
-        keymap("n", "gr", ":Telescope lsp_references<CR>", bufopts)
+        keymap("n", "gd", "<CMD>Telescope lsp_definitions<CR>", bufopts)
+        keymap("n", "gi", "<CMD>Telescope lsp_implementations<CR>", bufopts)
+        keymap("n", "gT", "<CMD>Telescope lsp_type_definitions<CR>", bufopts)
+        keymap("n", "gr", "<CMD>Telescope lsp_references<CR>", bufopts)
         keymap("n", "gn", buf.rename, bufopts)
         keymap("n", "ga", buf.code_action, bufopts)
       end,

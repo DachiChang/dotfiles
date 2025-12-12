@@ -114,7 +114,7 @@ return {
               end,
               desc = "Copy file path",
             },
-            ["<leader>S"] = {
+            ["<LEADER>S"] = {
               function(state)
                 local node = state.tree:get_node()
                 local relative_path = vim.fn.substitute(node.path, state.path .. "/", "", "")
@@ -152,6 +152,6 @@ return {
     })
     -- keymap
     local keymap = vim.keymap.set
-    keymap("n", "<LEADER>e", ":Neotree toggle<CR>")
+    keymap("n", "<LEADER>e", "<CMD>Neotree toggle<CR>")
   end,
 }

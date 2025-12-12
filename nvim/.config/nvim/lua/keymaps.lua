@@ -13,21 +13,21 @@ local remap_opts = { remap = true, silent = true }     -- remap 映射後會再�
 -- o: operator (like d, y, c, etc.)
 
 -- Quit
-keymap.set("n", "<C-q>", ":q!<CR>", default_opts)
-keymap.set("n", "<leader>q", ":qa!<CR>", default_opts)
+keymap.set("n", "<C-q>", "<CMD>q!<CR>", default_opts)
+keymap.set("n", "<LEADER>q", "<CMD>qa!<CR>", default_opts)
 
 -- Jump
-keymap.set("n", "<leader>\\", ":e#<CR>", default_opts)
+keymap.set("n", "<LEADER>\\", "<CMD>e#<CR>", default_opts)
 
 -- Tab
-keymap.set("n", "<", ":tabm -1<CR>", default_opts)
-keymap.set("n", ">", ":tabm +1<CR>", default_opts)
-keymap.set("n", "<C-n>", ":tabnext<CR>", default_opts)
-keymap.set("n", "<C-p>", ":tabprev<CR>", default_opts)
-keymap.set("n", "<C-t>", ":tabnew<CR>", default_opts)
+keymap.set("n", "<", "<CMD>tabm -1<CR>", default_opts)
+keymap.set("n", ">", "<CMD>tabm +1<CR>", default_opts)
+keymap.set("n", "<C-n>", "<CMD>tabnext<CR>", default_opts)
+keymap.set("n", "<C-p>", "<CMD>tabprev<CR>", default_opts)
+keymap.set("n", "<C-t>", "<CMD>tabnew<CR>", default_opts)
 
 -- Functional
-keymap.set("n", "<F5>", ":e!<CR>", default_opts)
+keymap.set("n", "<F5>", "<CMD>e!<CR>", default_opts)
 
 -- Window
 keymap.set("n", "=", "<C-w>=", default_opts)
@@ -36,10 +36,10 @@ keymap.set("n", "<C-h>", "<C-w>h", default_opts)
 keymap.set("n", "<C-j>", "<C-w>j", default_opts)
 keymap.set("n", "<C-k>", "<C-w>k", default_opts)
 keymap.set("n", "<C-l>", "<C-w>l", default_opts)
-keymap.set("n", "<S-Right>", ":vertical resize +5<CR>", default_opts)
-keymap.set("n", "<S-Left>", ":vertical resize -5<CR>", default_opts)
-keymap.set("n", "<S-Down>", ":resize -5<CR>", default_opts)
-keymap.set("n", "<S-Up>", ":resize +5<CR>", default_opts)
+keymap.set("n", "<S-Right>", "<CMD>vertical resize +5<CR>", default_opts)
+keymap.set("n", "<S-Left>", "<CMD>vertical resize -5<CR>", default_opts)
+keymap.set("n", "<S-Down>", "<CMD>resize -5<CR>", default_opts)
+keymap.set("n", "<S-Up>", "<CMD>resize +5<CR>", default_opts)
 
 -- Comment
 keymap.set("n", "cc", "gcc", remap_opts)
@@ -52,16 +52,16 @@ vim.keymap.set({ "i", "s" }, "<Esc>", function()
 end, { expr = true }) -- expr 會執行一個 function 把回傳的結果當成一個 command 執行
 
 -- Temporary disable hightlight
-keymap.set("n", "<ESC>", ":noh<CR>", default_opts)
+keymap.set("n", "<ESC>", "<CMD>noh<CR>", default_opts)
 
 -- Use cp shortcut to copy editing file path
-keymap.set("n", "cp", ":let @+=expand('%:p:h')<CR>", default_opts)
+keymap.set("n", "cp", "<CMD>let @+=expand('%:p:h')<CR>", default_opts)
 
 -- yank word and paste without override register
 keymap.set("v", "p", "pgvy", default_opts)
 
 -- hightlight, but don't jump
-keymap.set("n", "*", ":keepjumps normal! mi*`i<CR>", default_opts)
+keymap.set("n", "*", "<CMD>keepjumps normal! mi*`i<CR>", default_opts)
 
 -- Diff
 keymap.set("n", "<LEADER>d", function()
@@ -71,7 +71,7 @@ keymap.set("n", "<LEADER>d", function()
     vim.cmd('diffthis')
   end
 end, default_opts)
-keymap.set("n", "<LEADER>D", ":diffoff!<CR>", default_opts)
+keymap.set("n", "<LEADER>D", "<CMD>diffoff!<CR>", default_opts)
 
 -- Disable default LSP keymap
 -- https://neovim.io/doc/user/lsp.html#_global-defaults

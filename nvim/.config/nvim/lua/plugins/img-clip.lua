@@ -8,6 +8,6 @@ return {
 
     -- toggle Image Paste on F3
     local keymap = vim.keymap.set
-    keymap("n", "<F3>", ":PasteImage<CR>")
+    keymap("n", "<F3>", "<CMD>PasteImage<CR>")
   end
 }
