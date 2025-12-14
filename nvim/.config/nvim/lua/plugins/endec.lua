@@ -6,7 +6,7 @@ return {
     require("endec").setup({
       keymaps = {
         -- b64 b64URL URL encode/decode
-        decode_base64_popup = "gs",   -- base64 show
+        decode_base64_popup = "gbs",   -- base64 show
         decode_base64_inplace = "gbd", -- base64 decode
         encode_base64_inplace = "gbe", -- base64 encode
 
