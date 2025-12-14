@@ -1,5 +1,5 @@
 return {
-  'Exafunction/codeium.vim',
+  'Exafunction/windsurf.vim',
   enabled = true,
   init = function()
     local g = vim.g
