@@ -114,7 +114,7 @@ return {
               end,
               desc = "Copy file path",
             },
-            ["<LEADER>S"] = {
+            ["<LEADER>r"] = {
               function(state)
                 local node = state.tree:get_node()
                 local relative_path = vim.fn.substitute(node.path, state.path .. "/", "", "")
