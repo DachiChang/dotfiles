@@ -1,9 +1,10 @@
 return {
-  'akinsho/toggleterm.nvim', -- ctrl + \ (trigger)
+  'akinsho/toggleterm.nvim',
   enabled = true,
   config = function()
     local toggleterm = require('toggleterm')
     toggleterm.setup({
+      open_mapping = "<LEADER><ESC>", -- \ + ESC to toggleTerm
       direction = "float",
       float_opts = {
         border = 'curved',
@@ -17,7 +18,5 @@ return {
       -- <C-\><C-n> to exist terminal mode to normal mode
       keymap({ "n", "t" }, "<LEADER>" .. i, "<CMD>ToggleTerm" .. i .. "<CR>", default_opts)
     end
-    -- ESC to close ToggleTerm window
-    keymap("t", "<LEADER><ESC>", "<CMD>ToggleTerm<CR>", default_opts)
   end,
 }
