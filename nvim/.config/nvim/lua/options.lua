@@ -30,6 +30,10 @@ opt.relativenumber = false
 opt.wrap = false
 opt.showmatch = true
 
+-- option fold
+opt.foldlevelstart = 99
+opt.foldtext = ""
+
 -- option tab
 opt.shiftwidth = 4
 opt.tabstop = 4
