@@ -53,5 +53,6 @@ return {
     end, default_opts)
     keymap("n", "<LEADER>k", builtin.keymaps, default_opts)
     keymap("n", "<LEADER>w", builtin.grep_string, default_opts)
+    keymap("n", "<LEADER>b", builtin.buffers, default_opts)
   end,
 }
