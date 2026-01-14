@@ -11,12 +11,11 @@ return {
       performance_mode = false,    -- 效能模式，用於大檔案與 syntax hightlight
     })
     local keymap = vim.keymap.set
-    local default_opts = { noremap = true, silent = true }
     keymap({ "n", "v", "x" }, "<C-u>", function()
       neoscroll.scroll(-10, { move_cursor = true, duration = 200 })
-    end, default_opts)
+    end)
     keymap({ "n", "v", "x" }, "<C-d>", function()
       neoscroll.scroll(10, { move_cursor = true, duration = 200 })
-    end, default_opts)
+    end)
   end,
 }

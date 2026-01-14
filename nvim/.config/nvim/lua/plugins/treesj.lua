@@ -12,9 +12,7 @@ return {
       langs = {
         templ = {
           tag_start = lang_utils.set_default_preset({ -- <div attr1="" attr2=""></div>
-            both = {
-              omit = { 'element_identifier' },
-            },
+            both = { omit = { 'element_identifier' } },
           }),
           element = lang_utils.set_default_preset({ -- <table>element1 element2</table>
             join = {
@@ -37,12 +35,19 @@ return {
     })
 
     local keymap = vim.keymap.set
-    local default_opts = { noremap = true, silent = true }
-    keymap('n', 'gs', treesj.split, default_opts)
-    keymap('n', 'gj', treesj.join, default_opts)
+    keymap('n', 'gs', function ()
+      treesj.split()
+    end)
+    keymap('n', 'gj', function ()
+      treesj.join()
+    end)
     keymap('n', 'gS', function()
-      treesj.split({ split = { recursive = true } })
-    end, default_opts)
+      treesj.split({
+        split = {
+          recursive = true,
+        },
+      })
+    end)
   end
 
 }

@@ -8,8 +8,7 @@ return {
     })
 
     local keymap = vim.keymap.set
-    local default_opts = { noremap = true, silent = true }
 
-    keymap("n", "<LEADER><BS>", "<CMD>AutoSession restore<CR>", default_opts) -- back
+    keymap("n", "<LEADER><BS>", "<CMD>AutoSession restore<CR>") -- back
   end,
 }

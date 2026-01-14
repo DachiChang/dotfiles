@@ -62,7 +62,7 @@ return {
             function(state)
               require("neo-tree.sources.filesystem.commands").toggle_auto_expand_width(state)
               local expand_status = state.window.auto_expand_width and "On" or "Off"
-              print("Auto expand width: " .. expand_status)
+              vim.notify("Auto expand width: " .. expand_status)
             end,
             desc = "toggle auto expand width",
           },
@@ -73,7 +73,7 @@ return {
             function(state)
               local node = state.tree:get_node()
               vim.cmd(("let @+=%q"):format(node.name))
-              print("Copy file name: " .. node.name)
+              vim.notify("Copy file name: " .. node.name)
             end,
             desc = "copy file name",
           },
@@ -110,7 +110,7 @@ return {
               function(state)
                 local node = state.tree:get_node()
                 vim.cmd(("let @+=%q"):format(node.path))
-                print("Copy file path: " .. node.path)
+                vim.notify("Copy file path: " .. node.path)
               end,
               desc = "Copy file path",
             },
@@ -125,7 +125,7 @@ return {
                 elseif node.type == "file" then
                   search_path = relative_path
                 else
-                  print("Not support search/replace file type")
+                  vim.notify("Not support search/replace file type")
                   return
                 end
 

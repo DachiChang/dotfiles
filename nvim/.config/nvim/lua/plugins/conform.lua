@@ -3,7 +3,6 @@ return {
   enabled = true,
   config = function()
     local keymap = vim.keymap.set
-    local default_opts = { noremap = true, silent = true }
 
     -- NOTE: 定義的 formatter 有最高優先權，若該 filetype 沒有指定那就看起來的 lsp server 有沒有支援 format
     local conform = require('conform')
@@ -30,6 +29,6 @@ return {
         timeout_ms = 3000,
         lsp_format = "fallback",
       })
-    end, default_opts)
+    end)
   end
 }

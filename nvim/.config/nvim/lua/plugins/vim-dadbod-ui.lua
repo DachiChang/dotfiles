@@ -34,7 +34,6 @@ return {
   end,
   config = function()
     local keymap = vim.keymap.set
-    local default_opts = { noremap = true, silent = true, buffer = true, nowait = true }
 
     -- dadbod-ui-yank setup
     local dadbod_ui_yank = require('dadbod-ui-yank')
@@ -45,30 +44,33 @@ return {
     -- dadbod-ui setup
     vim.api.nvim_create_autocmd("FileType", {
       pattern = "dbui",
-      callback = function()
-        keymap("n", "<CR>", "<Plug>(DBUI_SelectLine)", default_opts)
-        keymap("n", "d", "<Plug>(DBUI_DeleteLine)", default_opts)
-        keymap("n", "r", "<Plug>(DBUI_Redraw)", default_opts)
-        keymap("n", "e", "<Plug>(DBUI_RenameLine)", default_opts)
-        keymap("n", "a", "<Plug>(DBUI_AddConnection)", default_opts)
-        keymap("n", "<Tab>", "<Plug>(DBUI_ToggleDetails)", default_opts)
+      callback = function(event)
+        local bufopts = { buffer = event.buf, nowait = true } -- 有一些鍵會等其它的 keymap 要設 nowait
+        keymap("n", "<CR>", "<Plug>(DBUI_SelectLine)", bufopts)
+        keymap("n", "d", "<Plug>(DBUI_DeleteLine)", bufopts)
+        keymap("n", "r", "<Plug>(DBUI_Redraw)", bufopts)
+        keymap("n", "e", "<Plug>(DBUI_RenameLine)", bufopts)
+        keymap("n", "a", "<Plug>(DBUI_AddConnection)", bufopts)
+        keymap("n", "<Tab>", "<Plug>(DBUI_ToggleDetails)", bufopts)
       end,
     })
 
     vim.api.nvim_create_autocmd("FileType", {
       pattern = "dbout",
-      callback = function()
-        keymap("n", "<Tab>", "<Plug>(DBUI_ToggleResultLayout)", default_opts)
-        keymap({ "n", "v" }, "yc", "<CMD>DBUIYankAsCSV<CR>", default_opts)
-        keymap({ "n", "v" }, "yj", "<CMD>DBUIYankAsJSON<CR>", default_opts)
+      callback = function(event)
+        local bufopts = { buffer = event.buf }
+        keymap("n", "<Tab>", "<Plug>(DBUI_ToggleResultLayout)", bufopts)
+        keymap({ "n", "v" }, "yc", ":DBUIYankAsCSV<CR>", bufopts) -- 因為需要傳 range 進去，所以不能用 <CMD> 直接執行
+        keymap({ "n", "v" }, "yj", ":DBUIYankAsJSON<CR>", bufopts)
       end,
     })
 
     vim.api.nvim_create_autocmd("FileType", {
       pattern = "sql",
-      callback = function()
-        keymap("v", "<CR>", "<Plug>(DBUI_ExecuteQuery)", default_opts)
-        keymap("n", "s", "<Plug>(DBUI_SaveQuery)", default_opts)
+      callback = function(event)
+        local bufopts = { buffer = event.buf }
+        keymap("v", "<CR>", "<Plug>(DBUI_ExecuteQuery)", bufopts)
+        keymap("n", "s", "<Plug>(DBUI_SaveQuery)", bufopts)
       end,
     })
   end

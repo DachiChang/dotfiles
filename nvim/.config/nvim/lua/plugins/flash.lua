@@ -16,8 +16,7 @@ return {
     })
 
     local keymap = vim.keymap.set
-    local default_opts = { noremap = true, silent = true }
 
-    keymap("n", "|", flash.jump, default_opts)
+    keymap("n", "|", flash.jump)
   end,
 }
