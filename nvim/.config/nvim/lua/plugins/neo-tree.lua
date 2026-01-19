@@ -117,14 +117,18 @@ return {
             ["<LEADER>r"] = {
               function(state)
                 local node = state.tree:get_node()
-                local relative_path = vim.fn.substitute(node.path, state.path .. "/", "", "")
-                local search_path = ""
 
-                if node.type == "directory" then
-                  search_path = relative_path .. "/**"
-                elseif node.type == "file" then
-                  search_path = relative_path
-                else
+                local relative_path = ""
+                if node.path ~= state.path then
+                  relative_path = node.path:sub(#state.path + 2)
+                end
+
+                local search_path = ({
+                  directory = relative_path == "" and "**" or (relative_path .. "/**"),
+                  file      = relative_path,
+                })[node.type]
+
+                if not search_path then
                   vim.notify("Not support search/replace file type")
                   return
                 end
