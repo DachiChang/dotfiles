@@ -30,7 +30,7 @@ return {
     }
 
     local keymap = vim.keymap.set
-    keymap("n", "<F6>", "<CMD>DBUIToggle<CR>")
+    keymap("n", "<F1>", "<CMD>DBUIToggle<CR>")
   end,
   config = function()
     local keymap = vim.keymap.set
