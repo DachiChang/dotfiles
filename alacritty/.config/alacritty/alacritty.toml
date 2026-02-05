@@ -25,3 +25,7 @@ glyph_offset.y = 1
 [colors.primary]
 foreground = "#cac5b5"
 background = "#1c1c1c"
+
+[keyboard]
+# Shift+Return sends ESC+Enter (same as Option+Enter) to work in tmux
+bindings = [{ key = "Return", mods = "Shift", chars = "\u001b\r" }]
