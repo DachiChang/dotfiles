@@ -11,6 +11,7 @@
   - stow misc
   - stow alacritty
   - stow htop
+  - stow opencode
 
 ## Uninstall
 
@@ -21,6 +22,7 @@
   - stow -D misc
   - stow -D alacritty
   - stow -D htop
+  - stow -D opencode
 
 ## NeoVim
 
@@ -31,9 +33,6 @@
     - npm
     - python3
     - ripgrep
-    - universal-ctags
-    - gotags
-    - lazygit
 
 Command
   - Lazy
