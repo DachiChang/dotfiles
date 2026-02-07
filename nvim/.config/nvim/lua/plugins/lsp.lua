@@ -73,7 +73,7 @@ return {
 
     -- global language server config
     local lsp = vim.lsp
-    lsp.set_log_level('off') -- disable log or debug lsp ex: off | debug | info
+    lsp.log.set_level(vim.log.levels.OFF) -- log levels ex: DEBUG | ERROR | INFO | TRACE | WARN | OFF
     -- For each language server config and enable
     for server, config in pairs(lsp_server_configs) do
       lsp.config(server, config)
