@@ -29,7 +29,6 @@ return {
       },
       auto_clean_after_session_restore = true,
       close_if_last_window = true,
-      enable_git_status = false,
       log_level = "debug",
       log_to_file = false, -- "/tmp/neo-tree.log"
       popup_border_style = "rounded",
@@ -40,6 +39,19 @@ return {
         },
         modified = {
           symbol = "[+]",
+        },
+        name = {
+          use_git_status_colors = false,
+        },
+        git_status = {
+          symbols = {
+            untracked = "",
+            ignored   = "",
+            unstaged  = "",
+            staged    = "",
+            conflict  = "",
+          },
+          align = "right",
         },
         file_size = {
           enabled = false,
