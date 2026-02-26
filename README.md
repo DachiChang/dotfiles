@@ -57,6 +57,15 @@ KeyBind
   - F11 previous window
   - F12 next window
 
+PluginManager
+  - prefix + I, to install plugins
+  - prefix + U, to update plugins
+  - prefix + alt + u, to clean plugins
+
+SessionManagement
+  - prefix + ctrl + s, to save session environment
+  - prefix + ctrl + r, to restore session environment
+
 ## Screen
 
 KeyBind
