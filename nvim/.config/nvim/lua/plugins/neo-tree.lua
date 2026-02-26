@@ -88,16 +88,6 @@ return {
             end,
             desc = "copy file name",
           },
-          ["P"] = {
-            "toggle_preview",
-            config = {
-              use_float = true,
-              use_image_nvim = false,
-              title = "Neo-tree Preview",
-            }
-          },
-          ["<"] = "prev_source",
-          [">"] = "next_source",
           ["?"] = "show_help",
         },
       },
