@@ -25,7 +25,6 @@ return {
     neo_tree.setup({
       sources = {
         "filesystem",
-        "buffers",
       },
       auto_clean_after_session_restore = true,
       close_if_last_window = true,
@@ -155,13 +154,6 @@ return {
             ["on"] = "order_by_name",
             ["os"] = "order_by_size",
             ["ot"] = "order_by_type",
-          },
-        },
-      },
-      buffers = {
-        window = {
-          mappings = {
-            ["d"] = "buffer_delete",
           },
         },
       },
