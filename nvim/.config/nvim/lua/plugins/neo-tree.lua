@@ -27,6 +27,9 @@ return {
         "filesystem",
       },
       auto_clean_after_session_restore = true,
+      clipboard = {
+        sync = "universal", -- or "global"/"universal" to share a clipboard for each/all Neovim instance(s), respectively
+      },
       close_if_last_window = true,
       log_level = "debug",
       log_to_file = false, -- "/tmp/neo-tree.log"
@@ -102,6 +105,7 @@ return {
             ["c"] = "copy_to_clipboard",
             ["x"] = "cut_to_clipboard",
             ["p"] = "paste_from_clipboard",
+            ["<Esc>"] = "clear_clipboard",
             ["f"] = "filter_on_submit",
             ["q"] = "clear_filter",
             ["<BS>"] = "navigate_up",
@@ -151,5 +155,6 @@ return {
     -- keymap
     local keymap = vim.keymap.set
     keymap("n", "<LEADER>e", "<CMD>Neotree toggle<CR>")
+    keymap("n", "<LEADER>R", "<CMD>Neotree reveal<CR>")
   end,
 }
