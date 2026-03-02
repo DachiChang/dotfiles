@@ -71,6 +71,12 @@ keymap.set("n", "<LEADER>d", function()
 end)
 keymap.set("n", "<LEADER>D", "<CMD>diffoff!<CR>")
 
+-- Diagnostics
+local diagnostic = vim.diagnostic
+keymap.set("n", "ge", diagnostic.open_float)
+keymap.set("n", "ep", diagnostic.goto_prev)
+keymap.set("n", "en", diagnostic.goto_next)
+
 -- Disable default LSP keymap
 -- https://neovim.io/doc/user/lsp.html#_global-defaults
 keymap.del({ "n", "x" }, "gra")

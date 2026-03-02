@@ -97,22 +97,5 @@ return {
         keymap("n", "ga", buf.code_action, bufopts)
       end,
     })
-
-    -- Diagnostics config
-    local diagnostic = vim.diagnostic
-    diagnostic.config {
-      virtual_lines = {
-        current_line = true,
-      },
-      -- virtual_text = {
-      --   current_line = true,
-      -- },
-      float = {
-        border = 'rounded',
-      }
-    }
-    keymap("n", "ge", diagnostic.open_float)
-    keymap("n", "ep", diagnostic.goto_prev)
-    keymap("n", "en", diagnostic.goto_next)
   end,
 }
