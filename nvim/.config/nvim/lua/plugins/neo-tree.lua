@@ -35,6 +35,14 @@ return {
       log_to_file = false, -- "/tmp/neo-tree.log"
       popup_border_style = "rounded",
       use_default_mappings = false,
+      event_handlers = {
+        {
+          event = "neo_tree_window_after_open",
+          handler = function(_)
+            vim.cmd("wincmd =")
+          end
+        },
+      },
       default_component_configs = {
         container = {
           right_padding = 1,
