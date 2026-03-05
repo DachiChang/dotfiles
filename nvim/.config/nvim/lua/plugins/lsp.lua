@@ -44,7 +44,7 @@ return {
       -- clangd = {},
       -- csharp_ls = {},
       -- intelephense = {},
-      -- rust_analyzer = {},
+      rust_analyzer = {},
     }
 
     -- Mason UI config
