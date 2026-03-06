@@ -104,6 +104,11 @@ return {
       },
       filesystem = {
         use_libuv_file_watcher = true,
+        filtered_items = {
+          hide_by_pattern = {
+            "*_templ.go", -- _templ.go 是由 templ 產生的檔案，不需要在 Neo-Tree 中顯示
+          },
+        },
         window = {
           mappings = {
             ["<Tab>"] = "toggle_hidden",
