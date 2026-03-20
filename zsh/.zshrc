@@ -48,8 +48,10 @@ bindkey '\e[1;3D' backward-word # for nvim shell
 bindkey '^f' fzf-file-widget    # for FZF find file
 
 # Aliases setting
-alias ll='ls -lhA'
-alias la='ls -A'
+alias ls='eza --icons --grid --group-directories-first'
+alias ll='eza -lhA --icons --grid --group-directories-first'
+alias la='eza -A --icons --grid --group-directories-first'
+alias lt='eza -lT --icons --group-directories-first'
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
@@ -65,9 +67,6 @@ alias dk='lazydocker'
 alias ns='kubens'
 alias ctx='kubectx'
 
-# Python pipenv
-export PIPENV_VENV_IN_PROJECT=1
-
 # Path append
 export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin # system path
 export PATH=/opt/homebrew/bin:$PATH # brew path
@@ -78,7 +77,28 @@ export PATH=$HOME/bin/nvim-macos/bin:$PATH # nvim path
 export PATH=$PATH:/usr/local/share/dotnet # dotent path
 export PATH=$PATH:/opt/homebrew/opt/mysql-client/bin # mysql client path
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/dachichang/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/dachichang/Downloads/google-cloud-sdk/path.zsh.inc'; fi
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/dachichang/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/dachichang/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+# pyenv usage
+# brew install pyenv
+# pyenv install 3.14.3
+# pyenv install --list (list all python version)
+# pyenv versions (list installed python version)
+# pyenv global 3.14.3
+# pyenv local 3.10.20 (will generate .python-version)
+# pyenv shell 3.10.20 (will switch in used shell the python version)
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init - zsh)"
+
+# nvm usage
+# nvm (node version manager)
+#   -> node version & npm version
+#     -> pnpm (npm install -g pnpm)
+#       -> pnpm add package
+#     -> yarn (npm install -g yarn)
+#       -> yarn add package
+# nvm ls-remote
+# nvm install 25 (will install the latest version of v25)
+# nvm use v25.8.1
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
