@@ -1,3 +1,4 @@
+-- REQUIRED: brew install tree-sitter-cli
 return {
   'MeanderingProgrammer/treesitter-modules.nvim',
   enabled = true,
