@@ -1,5 +1,5 @@
 # Environment setting
-export ZSH=$HOME/.oh-my-zsh
+export ZSH="$HOME/.oh-my-zsh"
 export EDITOR='nvim'
 export PAGER='less'
 export LANG='en_US.UTF-8'
@@ -35,9 +35,6 @@ KUBE_PS1_SYMBOL_COLOR=173
 # Zsh setting
 setopt noautomenu
 
-# LS color setting
-export LSCOLORS=gxfxcxdxbxegedabagacad
-
 # Key binding
 bindkey '\e\eOC' forward-word   # for tmux
 bindkey '\e\eOD' backward-word  # for tmux
@@ -48,9 +45,9 @@ bindkey '\e[1;3D' backward-word # for nvim shell
 bindkey '^f' fzf-file-widget    # for FZF find file
 
 # Aliases setting
-alias ls='eza --icons --grid --group-directories-first'
-alias ll='eza -lhA --icons --grid --group-directories-first'
-alias la='eza -A --icons --grid --group-directories-first'
+alias ls='eza --icons --group-directories-first'
+alias ll='eza -lhA --icons --group-directories-first'
+alias la='eza -A --icons --group-directories-first'
 alias lt='eza -lT --icons --group-directories-first'
 alias rm='rm -i'
 alias cp='cp -i'
@@ -68,14 +65,14 @@ alias ns='kubens'
 alias ctx='kubectx'
 
 # Path append
-export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin # system path
-export PATH=/opt/homebrew/bin:$PATH # brew path
-export PATH=$HOME/bin:$PATH
-export PATH=$HOME/go/bin:/usr/local/go/bin:$PATH # go bin path
-export PATH=$HOME/.cargo/bin:$PATH # rust bin path
-export PATH=$HOME/bin/nvim-macos/bin:$PATH # nvim path
-export PATH=$PATH:/usr/local/share/dotnet # dotent path
-export PATH=$PATH:/opt/homebrew/opt/mysql-client/bin # mysql client path
+export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin" # system path
+export PATH="/opt/homebrew/bin:$PATH" # brew path
+export PATH="$HOME/bin:$PATH"
+export PATH="$HOME/go/bin:/usr/local/go/bin:$PATH" # go bin path
+export PATH="$HOME/.cargo/bin:$PATH" # rust bin path
+export PATH="$HOME/bin/nvim-macos/bin:$PATH" # nvim path
+export PATH="$PATH:/usr/local/share/dotnet" # dotent path
+export PATH="$PATH:/opt/homebrew/opt/mysql-client/bin" # mysql client path
 
 # pyenv usage
 # brew install pyenv
@@ -102,3 +99,6 @@ eval "$(pyenv init - zsh)"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# opencode
+export OPENCODE_ENABLE_EXA=1
