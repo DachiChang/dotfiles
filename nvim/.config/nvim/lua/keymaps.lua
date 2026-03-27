@@ -15,7 +15,7 @@ keymap.set("n", "<C-q>", "<CMD>q!<CR>")
 keymap.set("n", "<LEADER>q", "<CMD>qa!<CR>")
 
 -- Jump
-keymap.set("n", "<LEADER>\\", "<CMD>e#<CR>")
+keymap.set("n", "<LEADER><Tab>", "<CMD>e#<CR>")
 
 -- Tab
 keymap.set("n", "<", "<CMD>tabm -1<CR>")
