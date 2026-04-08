@@ -82,6 +82,7 @@ return {
     -- global language server attach event
     local lsp_attach_augroup = vim.api.nvim_create_augroup("NvimLspAttach", { clear = true })
     vim.api.nvim_create_autocmd('LspAttach', {
+      pattern = '*',
       group = lsp_attach_augroup,
       callback = function(event)
         local buf = vim.lsp.buf
