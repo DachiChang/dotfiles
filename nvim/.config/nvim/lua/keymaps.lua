@@ -73,9 +73,15 @@ keymap.set("n", "<LEADER>D", "<CMD>diffoff!<CR>")
 
 -- Diagnostics
 local diagnostic = vim.diagnostic
-keymap.set("n", "ge", diagnostic.open_float)
-keymap.set("n", "ep", diagnostic.goto_prev)
-keymap.set("n", "en", diagnostic.goto_next)
+keymap.set("n", "ge", function()
+  diagnostic.open_float()
+end)
+keymap.set("n", "ep", function()
+  diagnostic.jump({ count = -1 })
+end)
+keymap.set("n", "en", function()
+  diagnostic.jump({ count = 1 })
+end)
 
 -- Disable default LSP keymap
 -- https://neovim.io/doc/user/lsp.html#_global-defaults
@@ -83,6 +89,8 @@ keymap.del({ "n", "x" }, "gra")
 keymap.del("n", "gri")
 keymap.del("n", "grn")
 keymap.del("n", "grr")
+keymap.del("n", "grt")
+keymap.del("n", "grx")
 keymap.del("n", "gO")
 keymap.del("i", "<C-S>")
 
