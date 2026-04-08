@@ -39,6 +39,11 @@ keymap.set("n", "<S-Left>", "<CMD>vertical resize -5<CR>")
 keymap.set("n", "<S-Down>", "<CMD>resize -5<CR>")
 keymap.set("n", "<S-Up>", "<CMD>resize +5<CR>")
 
+-- Incremental Selection
+keymap.set("n", "<Space>", "van", { remap = true })
+keymap.set("v", "<Space>", "an", { remap = true })
+keymap.set("v", "<BS>", "in", { remap = true })
+
 -- Comment
 keymap.set("n", "cc", "gcc", { remap = true })
 keymap.set("v", "cc", "gc", { remap = true })
