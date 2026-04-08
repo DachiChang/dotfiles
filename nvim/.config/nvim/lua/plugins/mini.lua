@@ -25,6 +25,7 @@ return {
     })
 
     -- disable indentscope for certain filetypes
+    local mini_indentscope_augroup = vim.api.nvim_create_augroup("MiniIndentscopeDisable", { clear = true })
     vim.api.nvim_create_autocmd("FileType", {
       pattern = {
         "help",
@@ -34,6 +35,7 @@ return {
         "neo-tree",
         "dbui",
       },
+      group = mini_indentscope_augroup,
       callback = function()
         vim.b.miniindentscope_disable = true
       end,

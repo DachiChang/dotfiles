@@ -42,8 +42,10 @@ return {
     })
 
     -- dadbod-ui setup
+    local dadbod_ui_augroup = vim.api.nvim_create_augroup("DadbodUIKeymap", { clear = true })
     vim.api.nvim_create_autocmd("FileType", {
       pattern = "dbui",
+      group = dadbod_ui_augroup,
       callback = function(event)
         local bufopts = { buffer = event.buf, nowait = true } -- 有一些鍵會等其它的 keymap 要設 nowait
         keymap("n", "<CR>", "<Plug>(DBUI_SelectLine)", bufopts)
@@ -57,6 +59,7 @@ return {
 
     vim.api.nvim_create_autocmd("FileType", {
       pattern = "dbout",
+      group = dadbod_ui_augroup,
       callback = function(event)
         local bufopts = { buffer = event.buf }
         keymap("n", "<Tab>", "<Plug>(DBUI_ToggleResultLayout)", bufopts)
@@ -67,6 +70,7 @@ return {
 
     vim.api.nvim_create_autocmd("FileType", {
       pattern = "sql",
+      group = dadbod_ui_augroup,
       callback = function(event)
         local bufopts = { buffer = event.buf }
         keymap("v", "<CR>", "<Plug>(DBUI_ExecuteQuery)", bufopts)

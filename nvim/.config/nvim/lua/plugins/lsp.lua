@@ -80,9 +80,9 @@ return {
       lsp.enable(server)
     end
     -- global language server attach event
-    local lsp_attach_group = vim.api.nvim_create_augroup("NvimLspAttach", { clear = true })
+    local lsp_attach_augroup = vim.api.nvim_create_augroup("NvimLspAttach", { clear = true })
     vim.api.nvim_create_autocmd('LspAttach', {
-      group = lsp_attach_group,
+      group = lsp_attach_augroup,
       callback = function(event)
         local buf = vim.lsp.buf
         local bufopts = { buffer = event.buf }

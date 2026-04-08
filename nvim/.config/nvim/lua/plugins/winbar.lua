@@ -15,8 +15,10 @@ return {
       "dbout",
     }
 
+    local winbar_augroup = vim.api.nvim_create_augroup("WinbarTitle", { clear = true })
     vim.api.nvim_create_autocmd("FileType", {
       pattern = '*',
+      group = winbar_augroup,
       callback = function()
         local win_config = vim.api.nvim_win_get_config(vim.api.nvim_get_current_win())
         if not vim.tbl_contains(winbar_filetype_exclude, vim.bo.filetype) and win_config.relative ~= "win" then
