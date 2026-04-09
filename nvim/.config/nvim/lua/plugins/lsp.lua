@@ -72,6 +72,17 @@ return {
     })
 
     -- global language server config
+    --[[
+     NOTE:
+      # vim.lsp 和 language sever 的溝通概念與 autocompletion 的流程
+        - LSP server 提供語言智慧，vim.lsp 是 Neovim 的 LSP client，blink.cmp 是 completion UI。
+        - vim.lsp 會先和 server 建立 session，並在 initialize 階段交換 capabilities。
+        - client capabilities 是 client 告訴 server「我能處理哪些格式 / 功能」。
+        - server capabilities 是 server 告訴 client「我支援哪些 method」。
+        - blink.cmp 會補強 vim.lsp 的 completion-related capabilities，讓 server 可能回更完整的 completion 資料。
+        - textDocument/completion 是 LSP 的補全 request method。
+        - 補全流程是：blink.cmp -> vim.lsp -> lsp server -> vim.lsp callback -> blink.cmp menu。
+    ]]
     local lsp = vim.lsp
     lsp.log.set_level(vim.log.levels.OFF) -- log levels ex: DEBUG | ERROR | INFO | TRACE | WARN | OFF
     -- For each language server config and enable
