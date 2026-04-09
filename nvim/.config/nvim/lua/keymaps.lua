@@ -1,14 +1,17 @@
 local keymap = vim.keymap
 
--- NOTE: keymap mode short-name
--- n: normal
--- v: visual
--- s: select
--- x: visual line
--- i: insert
--- t: terminal
--- c: command
--- o: operator (like d, y, c, etc.)
+--[[
+ NOTE:
+  # keymap mode short-name
+    - n: normal
+    - v: visual
+    - s: select
+    - x: visual line
+    - i: insert
+    - t: terminal
+    - c: command
+    - o: operator (like d, y, c, etc.)
+]]
 
 -- Quit
 keymap.set("n", "<C-q>", "<CMD>q!<CR>")
@@ -99,10 +102,13 @@ keymap.del("n", "grx")
 keymap.del("n", "gO")
 keymap.del("i", "<C-S>")
 
--- Cheat Sheet
--- <C-^> Switch between current and alternate buffer
--- z=    Spelling suggestions for word under cursor
--- gF    Jump to file path under cursor
--- gx    Open URL under cursor in browser
--- J     (Visual mode) Join selected lines
--- O     (Visual mode) Move cursor to other end of selection
+--[[
+ NOTE:
+  # Cheat Sheet
+    - <C-^> Switch between current and alternate buffer
+    - z=    Spelling suggestions for word under cursor
+    - gF    Jump to file path under cursor
+    - gx    Open URL under cursor in browser
+    - J     (Visual mode) Join selected lines
+    - O     (Visual mode) Move cursor to other end of selection
+]]

@@ -1,15 +1,18 @@
 local opt = vim.opt
 
--- NOTE: option scope
--- vim.opt          global-only, buffer global/local, window global/local options
--- vim.opt_global   global-only, buffer global, window global
--- vim.opt_local                 buffer local, window local
--- vim.b            buffer local variable
--- vim.bo           buffer local options (ex: shiftwidth)
--- vim.w            window local variable
--- vim.wo           window local options (ex: foldmethod)
--- vim.g            global variable
--- vim.go           global-only options (ex: encoding)
+--[[
+ NOTE:
+  # option scope
+    - vim.opt          global-only, buffer global/local, window global/local options
+    - vim.opt_global   global-only, buffer global, window global
+    - vim.opt_local                 buffer local, window local
+    - vim.b            buffer local variable
+    - vim.bo           buffer local options (ex: shiftwidth)
+    - vim.w            window local variable
+    - vim.wo           window local options (ex: foldmethod)
+    - vim.g            global variable
+    - vim.go           global-only options (ex: encoding)
+]]
 
 -- option basic
 opt.swapfile = false
