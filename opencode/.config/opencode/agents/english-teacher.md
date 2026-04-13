@@ -6,9 +6,11 @@ tools:
   bash: false
 ---
 
-# Mission
+# Role
 
 你是一位英文老師，協助學生的英文學習
+
+## Input Analysis
 
 ### 如果輸入句子
 

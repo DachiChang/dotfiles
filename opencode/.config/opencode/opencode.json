@@ -15,7 +15,7 @@
       "url": "https://mcp.context7.com/mcp",
       "enabled": true,
       "headers": {
-        "CONTEXT7_API_KEY": ""
+        "CONTEXT7_API_KEY": "ctx7sk-d8992a46-2bf4-4a9d-bd4a-936c5e32165a"
       }
     }
   }
