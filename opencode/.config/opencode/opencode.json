@@ -12,12 +12,12 @@
   "mcp": {
     "tw-company": {
       "type": "local",
-      "command": ["uvx", "mcp-tw-company"],
+      "command": ["uv", "tool", "run", "mcp-tw-company"],
       "enabled": false
     },
     "tw-lvr": {
       "type": "local",
-      "command": ["uvx", "mcp-tw-lvr"],
+      "command": ["uv", "tool", "run", "mcp-tw-lvr"],
       "enabled": false
     },
     "google-drive": {
