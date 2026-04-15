@@ -69,6 +69,7 @@ export PATH="/opt/homebrew/bin:$PATH" # brew path
 export PATH="$HOME/bin:$PATH"
 export PATH="$HOME/go/bin:/usr/local/go/bin:$PATH" # go bin path
 export PATH="$HOME/.cargo/bin:$PATH" # rust bin path
+export PATH="$HOME/.local/bin:$PATH" # local bin path
 export PATH="$HOME/bin/nvim-macos/bin:$PATH" # nvim path
 export PATH="$PATH:/usr/local/share/dotnet" # dotent path
 export PATH="$PATH:/opt/homebrew/opt/mysql-client/bin" # mysql client path
