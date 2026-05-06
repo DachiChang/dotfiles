@@ -1,9 +1,6 @@
 return {
   'nvim-treesitter/nvim-treesitter-context',
   enabled = true,
-  dependencies = {
-    'nvim-treesitter/nvim-treesitter',
-  },
   config = function()
     local treesitter_context = require('treesitter-context')
     treesitter_context.setup()
