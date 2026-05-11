@@ -6,7 +6,7 @@ return {
     local tree_sitter_manager = require('tree-sitter-manager')
     tree_sitter_manager.setup({
       auto_install = true,
-      highlight = false, -- Self active for runtime highlight after parser nstalled.
+      highlight = false, -- Self active for runtime highlight after parser installed.
     })
 
     -- Active treesitter
