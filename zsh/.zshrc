@@ -125,3 +125,4 @@ load-nvmrc
 
 # opencode
 export OPENCODE_ENABLE_EXA=1
+export GOG_KEYRING_PASSWORD=''
