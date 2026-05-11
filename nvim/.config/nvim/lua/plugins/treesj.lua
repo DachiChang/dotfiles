@@ -1,9 +1,6 @@
 return {
   'Wansmer/treesj',
   enabled = true,
-  dependencies = {
-    'nvim-treesitter/nvim-treesitter'
-  },
   config = function()
     local treesj = require('treesj')
     local lang_utils = require('treesj.langs.utils')
@@ -35,10 +32,10 @@ return {
     })
 
     local keymap = vim.keymap.set
-    keymap('n', 'gs', function ()
+    keymap('n', 'gs', function()
       treesj.split()
     end)
-    keymap('n', 'gj', function ()
+    keymap('n', 'gj', function()
       treesj.join()
     end)
     keymap('n', 'gS', function()
