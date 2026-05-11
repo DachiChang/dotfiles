@@ -20,6 +20,7 @@ return {
         TabLineSel = { fg = "#f2e5bc", bg = "#504945" },
         CursorLine = { bg = "#444444" },
         CursorLineNr = { bg = "#444444" },
+        DiffText = { bg = "#f78b7f" },
         FlashLabel = { bg = "#458588" },
         TreesitterContext = { bg = "#504945" },
         BlinkCmpMenu = { bg = "#3B3837" },
