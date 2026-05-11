@@ -36,6 +36,9 @@ opt.showmatch = true
 -- option fold
 opt.foldlevelstart = 99
 opt.foldtext = ""
+opt.foldmethod = 'expr'
+opt.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
+
 -- option indent
 opt.autoindent = true
 
