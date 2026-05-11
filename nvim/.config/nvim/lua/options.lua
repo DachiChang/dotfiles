@@ -36,6 +36,8 @@ opt.showmatch = true
 -- option fold
 opt.foldlevelstart = 99
 opt.foldtext = ""
+-- option indent
+opt.autoindent = true
 
 -- option tab
 opt.shiftwidth = 4
