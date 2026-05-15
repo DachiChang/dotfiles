@@ -16,7 +16,7 @@
       "command": [
         "npx",
         "-y",
-        "@open-pets/cli@2.0.4",
+        "@open-pets/cli@2.0.7",
         "mcp",
         "--pet",
         "cinnamonroll"
@@ -52,7 +52,7 @@
   ],
   "plugin": [
     [
-      "@open-pets/opencode@2.0.4",
+      "@open-pets/opencode@2.0.7",
       {
         "pet": "cinnamonroll"
       }
