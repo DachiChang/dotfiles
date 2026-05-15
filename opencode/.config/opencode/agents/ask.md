@@ -1,7 +1,7 @@
 ---
 description: Ask matter
 mode: primary
-model: openai/gpt-5.4-mini
+model: openai/gpt-5.5-fast
 color: info
 tools:
   bash: false

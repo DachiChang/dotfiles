@@ -1,7 +1,7 @@
 ---
 description: English Teacher
 mode: primary
-model: openai/gpt-5.4-mini
+model: openai/gpt-5.4-mini-fast
 tools:
   bash: false
 ---
