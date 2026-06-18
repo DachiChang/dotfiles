@@ -26,4 +26,4 @@ permission:
 
 ## Use skill
 
-- english-learner
+- english-coach
