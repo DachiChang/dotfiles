@@ -51,12 +51,6 @@ keymap.set("v", "<BS>", "in", { remap = true })
 keymap.set("n", "cc", "gcc", { remap = true })
 keymap.set("v", "cc", "gc", { remap = true })
 
--- Snippet disable session
-vim.keymap.set({ "i", "s" }, "<Esc>", function()
-  vim.snippet.stop()
-  return "<Esc>"
-end, { expr = true }) -- expr 會執行一個 function 把回傳的結果當成一個 command 執行
-
 -- Temporary disable hightlight
 keymap.set("n", "<ESC>", "<CMD>noh<CR>")
 
@@ -92,6 +86,8 @@ keymap.set("n", "en", function()
 end)
 
 -- Disable default LSP keymap
+-- Intentionally fail if any default LSP keymap no longer exists.
+-- This keeps the list aligned with Neovim's documented global defaults.
 -- https://neovim.io/doc/user/lsp.html#_global-defaults
 keymap.del({ "n", "x" }, "gra")
 keymap.del("n", "gri")
