@@ -19,9 +19,13 @@ return {
         local buf = args.buf
         -- Get filetype registered language
         local language = vim.treesitter.language.get_lang(filetype)
+        if not language then
+          return
+        end
 
         -- Try to load treesitter parser
-        if vim.treesitter.language.add(language) then
+        local ok, loaded = pcall(vim.treesitter.language.add, language)
+        if ok and loaded then
           vim.treesitter.start(buf, language)
         end
       end,
