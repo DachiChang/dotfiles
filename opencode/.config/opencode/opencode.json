@@ -33,11 +33,6 @@
       "command": ["uv", "tool", "run", "mcp-tw-company"],
       "enabled": false
     },
-    "tw-lvr": {
-      "type": "local",
-      "command": ["uv", "tool", "run", "mcp-tw-lvr"],
-      "enabled": false
-    },
     "context7": {
       "type": "remote",
       "url": "https://mcp.context7.com/mcp",
