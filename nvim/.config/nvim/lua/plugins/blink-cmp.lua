@@ -10,7 +10,7 @@ return {
   config = function()
     -- friendly-snippets will be autoload
     -- customize snippets in ~/.config/nvim/snippets will be autoload
-    local cmp = require('blink-cmp')
+    local cmp = require('blink.cmp')
     cmp.setup({
       keymap = {
         -- NOTE: due to <C-y> has been binded by codium auto code generator, use enter to accept
