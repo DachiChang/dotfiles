@@ -4,18 +4,30 @@ return {
   config = function()
     local toggleterm = require('toggleterm')
     toggleterm.setup({
-      open_mapping = "<LEADER><ESC>", -- \ + ESC to toggleTerm
       direction = "float",
+      open_mapping = "<LEADER><ESC>",
       float_opts = {
         border = 'curved',
       },
     })
 
+    local Terminal = require('toggleterm.terminal').Terminal
+    local lazygit = Terminal:new({
+      cmd = "lazygit",
+      count = 10,
+      hidden = true,
+      direction = "float",
+    })
+
     local keymap = vim.keymap.set
-    -- Prepare 1 ~ 9 terminal, 0 can't be a terminal count
+    -- toggle lazygit
+    keymap({ "n", "t" }, "<leader>\\", function()
+      lazygit:toggle()
+    end)
+
+    -- toggle 1 ~ 9 terminal
     for i = 1, 9 do
-      -- <C-\><C-n> to exist terminal mode to normal mode
-      keymap({ "n", "t" }, string.format("<LEADER>%d", i), string.format("<CMD>ToggleTerm%d<CR>", i))
+      keymap({ "n", "t" }, string.format("<leader>%d", i), string.format("<cmd>ToggleTerm%d<cr>", i))
     end
   end,
 }
