@@ -1,8 +1,8 @@
 ---
 description: Ask matter
 mode: primary
-model: openai/gpt-5.5-fast
-color: info
+model: opencode-go/deepseek-v4-flash
+color: primary
 permission:
   bash: deny
   write: deny

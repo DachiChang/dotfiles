@@ -2,6 +2,7 @@
 description: English Teacher
 mode: primary
 model: openai/gpt-5.4-mini-fast
+color: info
 permission:
   bash: deny
   task: deny
