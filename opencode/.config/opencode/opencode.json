@@ -52,7 +52,6 @@
   },
   "instructions": ["openpets.md"],
   "plugin": [
-    "@hueyexe/opencode-ensemble@0.15.1",
     "opencode-gpt-imagegen@v0.1.8",
     [
       "@open-pets/opencode@2.0.7",

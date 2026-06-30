@@ -1,6 +1,0 @@
-{
-  "modelsByAgent": {
-    "build": "opencode-go/glm-5.2",
-    "explore": "opencode-go/kimi-k2.6"
-  }
-}
