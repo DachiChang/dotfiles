@@ -5,7 +5,6 @@ model: opencode-go/deepseek-v4-flash
 color: primary
 permission:
   bash: deny
-  write: deny
   edit: deny
   task: deny
 ---
