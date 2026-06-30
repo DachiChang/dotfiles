@@ -8,10 +8,6 @@
 
 - 在 prompt 中加上 `所有回應內容請使用繁體中文`
 
-## 使用 playwright-cli skill
-
-- 使用 command 開啟 playwright-cli ，要開啟 browser 一律使用 `open --headed` 參數開啟，避免無頭視窗
-
 ## 回答
 
 - 始終使用繁體中文
