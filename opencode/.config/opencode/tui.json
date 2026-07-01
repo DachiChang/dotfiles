@@ -8,5 +8,6 @@
     "session_child_cycle": "n",
     "session_child_cycle_reverse": "p",
     "session_parent": "escape"
-  }
+  },
+  "plugin": ["oh-my-opencode-slim"]
 }
