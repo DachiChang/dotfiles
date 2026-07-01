@@ -123,6 +123,9 @@ load-nvmrc() {
 add-zsh-hook chpwd load-nvmrc
 load-nvmrc
 
+# GOG
+export GOG_KEYRING_PASSWORD=''
+
 # opencode
 export OPENCODE_ENABLE_EXA=1
-export GOG_KEYRING_PASSWORD=''
+export OPENCODE_EXPERIMENTAL_BACKGROUND_SUBAGENTS=true
