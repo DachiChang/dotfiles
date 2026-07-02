@@ -7,7 +7,10 @@
     "session_child_first": "ctrl+]",
     "session_child_cycle": "n",
     "session_child_cycle_reverse": "p",
-    "session_parent": "escape"
+    "session_parent": "escape",
+    "session_new": "ctrl+n",
+    "session_list": "ctrl+l",
+    "model_list": "ctrl+s"
   },
   "plugin": ["oh-my-opencode-slim"]
 }
