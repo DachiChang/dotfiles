@@ -3,7 +3,7 @@
   "theme": "custom-gruvbox",
   "keybinds": {
     "command_list": "ctrl+o",
-    "leader": "ctrl+\\",
+    "leader": false,
     "session_child_first": "ctrl+]",
     "session_child_cycle": "]",
     "session_child_cycle_reverse": "[",
@@ -13,6 +13,7 @@
     "session_timeline": "ctrl+g",
     "session_fork": "ctrl+f",
     "model_list": "ctrl+s",
+    "messages_undo": "ctrl+u"
   },
   "plugin": ["oh-my-opencode-slim"]
 }
