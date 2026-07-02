@@ -1,26 +1,37 @@
 {
   "$schema": "https://unpkg.com/oh-my-opencode-slim@latest/oh-my-opencode-slim.schema.json",
   "autoUpdate": true,
-  "disabled_mcps": ["websearch", "context7", "gh_grep"],
+  "disabled_mcps": [ // don't need these mcps carried by oh-my-opencode-slim, had been enabled in opencode.json
+    "websearch",
+    "context7",
+    "gh_grep"
+  ],
   "preset": "a-team",
   "presets": {
     "a-team": {
       "orchestrator": {
         "model": "openai/gpt-5.5",
-        "skills": ["*"],
+        "skills": [
+          "*"
+        ],
         "mcps": []
       },
       "oracle": {
         "model": "openai/gpt-5.5",
         "variant": "xhigh",
-        "skills": ["simplify"],
+        "skills": [
+          "simplify"
+        ],
         "mcps": []
       },
       "librarian": {
         "model": "opencode-go/deepseek-v4-flash",
         "variant": "low",
         "skills": [],
-        "mcps": ["context7", "gh_grep"]
+        "mcps": [
+          "context7",
+          "gh_grep"
+        ]
       },
       "explorer": {
         "model": "opencode-go/kimi-k2.6",
@@ -43,12 +54,17 @@
     }
   },
   "companion": {
-    "enabled": false,
+    "enabled": false, // installed path ~/.local/share/opencode/storage/oh-my-opencode-slim
     "position": "bottom-right",
     "size": "medium",
     "gifPack": "default",
     "loopStyle": "classic",
     "speed": 1,
     "debug": false
+  },
+  "multiplexer": {
+    "type": "none", // set to tmux and start "opencode --port PORT" to expose server, that subagent session can be attached to the server
+    "layout": "main-vertical",
+    "main_pane_size": 60
   }
 }
