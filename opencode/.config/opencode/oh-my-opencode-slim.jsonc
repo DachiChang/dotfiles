@@ -10,23 +10,46 @@
   "presets": {
     "a-team": {
       "orchestrator": {
-        "model": "openai/gpt-5.5",
+        "model": [
+          {
+            "id": "openai/gpt-5.5"
+          },
+          {
+            "id": "opencode-go/glm-5.2"
+          }
+        ],
         "skills": [
           "*"
         ],
         "mcps": []
       },
       "oracle": {
-        "model": "openai/gpt-5.5",
-        "variant": "xhigh",
+        "model": [
+          {
+            "id": "openai/gpt-5.5",
+            "variant": "high"
+          },
+          {
+            "id": "opencode-go/glm-5.2",
+            "variant": "high"
+          }
+        ],
         "skills": [
           "simplify"
         ],
         "mcps": []
       },
       "librarian": {
-        "model": "opencode-go/deepseek-v4-flash",
-        "variant": "low",
+        "model": [
+          {
+            "id": "opencode-go/deepseek-v4-flash",
+            "variant": "low"
+          },
+          {
+            "id": "openai/gpt-5.4-mini-fast",
+            "variant": "low"
+          }
+        ],
         "skills": [],
         "mcps": [
           "context7",
@@ -34,20 +57,44 @@
         ]
       },
       "explorer": {
-        "model": "opencode-go/kimi-k2.6",
-        "variant": "low",
+        "model": [
+          {
+            "id": "opencode-go/kimi-k2.6",
+            "variant": "low"
+          },
+          {
+            "id": "openai/gpt-5.4-mini-fast",
+            "variant": "low"
+          }
+        ],
         "skills": [],
         "mcps": []
       },
       "designer": {
-        "model": "opencode-go/kimi-k2.7-code",
-        "variant": "medium",
+        "model": [
+          {
+            "id": "opencode-go/kimi-k2.7-code",
+            "variant": "medium"
+          },
+          {
+            "id": "openai/gpt-5.5",
+            "variant": "medium"
+          }
+        ],
         "skills": [],
         "mcps": []
       },
       "fixer": {
-        "model": "opencode-go/glm-5.2",
-        "variant": "low",
+        "model": [
+          {
+            "id": "opencode-go/kimi-k2.7-code",
+            "variant": "low"
+          },
+          {
+            "id": "openai/gpt-5.5",
+            "variant": "low"
+          }
+        ],
         "skills": [],
         "mcps": []
       }
