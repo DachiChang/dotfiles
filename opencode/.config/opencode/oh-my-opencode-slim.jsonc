@@ -26,11 +26,11 @@
       "oracle": {
         "model": [
           {
-            "id": "openai/gpt-5.5",
+            "id": "opencode-go/glm-5.2",
             "variant": "high"
           },
           {
-            "id": "opencode-go/glm-5.2",
+            "id": "openai/gpt-5.5",
             "variant": "high"
           }
         ],
