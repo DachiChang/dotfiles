@@ -1,3 +1,4 @@
+// NOTE: bunx oh-my-opencode-slim@latest install --no-tui --skills=yes --companion=no
 {
   "$schema": "https://unpkg.com/oh-my-opencode-slim@latest/oh-my-opencode-slim.schema.json",
   "autoUpdate": true,
