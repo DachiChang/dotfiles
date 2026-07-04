@@ -5,10 +5,12 @@
     "plan": {
       "color": "secondary",
       "model": "openai/gpt-5.5"
+      // "model": "opencode-go/glm-5.2"
     },
     "build": {
       "color": "error",
       "model": "openai/gpt-5.5"
+      // "model": "opencode-go/glm-5.2"
     },
     "explore": {
       "disable": true
@@ -21,17 +23,31 @@
   "mcp": {
     "openpets": {
       "type": "local",
-      "command": ["npx", "-y", "@open-pets/cli@2.0.7", "mcp", "--pet", "cinnamonroll"],
+      "command": [
+        "npx",
+        "-y",
+        "@open-pets/cli@2.0.7",
+        "mcp",
+        "--pet",
+        "cinnamonroll"
+      ],
       "enabled": true
     },
     "tw-591": {
       "type": "local",
-      "command": ["mcp-591"],
+      "command": [
+        "mcp-591"
+      ],
       "enabled": false
     },
     "tw-company": {
       "type": "local",
-      "command": ["uv", "tool", "run", "mcp-tw-company"],
+      "command": [
+        "uv",
+        "tool",
+        "run",
+        "mcp-tw-company"
+      ],
       "enabled": false
     },
     "context7": {
@@ -48,7 +64,9 @@
       "enabled": true
     }
   },
-  "instructions": ["openpets.md"],
+  "instructions": [
+    "openpets.md"
+  ],
   "plugin": [
     "opencode-gpt-imagegen@v0.1.8",
     [
