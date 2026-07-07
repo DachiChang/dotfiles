@@ -21,7 +21,7 @@ return {
 
     local keymap = vim.keymap.set
     -- toggle lazygit
-    keymap({ "n", "t" }, "<leader>\\", function()
+    keymap({ "n", "t" }, "<C-\\>", function()
       lazygit:toggle()
     end)
 
