@@ -11,6 +11,9 @@ return {
   config = function()
     local window_picker = require('window-picker')
     window_picker.setup({
+      picker_config = {
+        handle_mouse_click = true,
+      },
       filter_rules = {
         include_current_win = false,
         autoselect_one = true,
