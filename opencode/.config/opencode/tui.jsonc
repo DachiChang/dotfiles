@@ -3,7 +3,7 @@
   "theme": "custom-gruvbox",
   "keybinds": {
     "leader": false,
-    "command_list": "ctrl+\\",
+    "command_list": "ctrl+o",
     "session_child_first": "ctrl+]",
     "session_child_cycle": "]",
     "session_child_cycle_reverse": "[",
