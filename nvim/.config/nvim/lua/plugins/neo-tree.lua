@@ -76,6 +76,8 @@ return {
       window = {
         mappings = {
           ["<CR>"] = "open_with_window_picker",
+          ["<Space>"] = "open_with_window_picker",
+          ["<2-LeftMouse>"] = "open_with_window_picker",
           ["C"] = "close_all_subnodes",
           ["W"] = "close_all_nodes",
           ["O"] = "expand_all_subnodes",
