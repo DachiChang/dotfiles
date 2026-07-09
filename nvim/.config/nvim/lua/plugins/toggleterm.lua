@@ -4,7 +4,7 @@ return {
   config = function()
     local toggleterm = require('toggleterm')
     local keymap = vim.keymap.set
-    local untoggle = function(term)
+    local function untoggle(term)
       vim.keymap.set({ "n", "t" }, "<leader><Esc>", function()
         term:toggle()
       end, { buffer = term.bufnr })
