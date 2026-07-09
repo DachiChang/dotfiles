@@ -23,6 +23,11 @@
     }
   },
   "lsp": false,
+  "skills": {
+    "paths": [
+      "~/skills"
+    ]
+  },
   "mcp": {
     "openpets": {
       "type": "local",
