@@ -3,12 +3,19 @@ return {
   enabled = true,
   config = function()
     local toggleterm = require('toggleterm')
+    local keymap = vim.keymap.set
+    local untoggle = function(term)
+      vim.keymap.set({ "n", "t" }, "<leader><Esc>", function()
+        term:toggle()
+      end, { buffer = term.bufnr })
+    end
+
     toggleterm.setup({
       direction = "float",
-      open_mapping = "<LEADER><ESC>",
       float_opts = {
         border = 'curved',
       },
+      on_open = untoggle, -- register <leader><Esc> keymap to untoggle
     })
 
     local Terminal = require('toggleterm.terminal').Terminal
@@ -17,11 +24,11 @@ return {
       count = 10,
       hidden = true,
       direction = "float",
+      on_open = untoggle,
     })
 
-    local keymap = vim.keymap.set
     -- toggle lazygit
-    keymap({ "n", "t" }, "<C-\\>", function()
+    keymap({ "n", "t" }, "<leader>l", function()
       lazygit:toggle()
     end)
 
