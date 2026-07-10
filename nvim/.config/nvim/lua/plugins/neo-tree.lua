@@ -126,7 +126,7 @@ return {
             ["<C-c>"] = "clear_clipboard",
             ["f"] = "filter_on_submit",
             ["q"] = "clear_filter",
-            ["<BS>"] = "navigate_up",
+            ["u"] = "navigate_up",
             ["."] = "set_root",
             ["i"] = "show_file_details",
             ["Y"] = {
