@@ -4,10 +4,12 @@ mode: primary
 model: opencode-go/deepseek-v4-flash
 color: primary
 permission:
-  bash: deny
-  edit: deny
-  task: deny
+  "*": deny
+  webfetch: allow
+  websearch: allow
 ---
+
+# Mission
 
 Use current web research to answer questions. Avoid relying on pre-trained knowledge.
 
