@@ -7,13 +7,22 @@
     },
     "plan": {
       "color": "secondary",
-      "model": "openai/gpt-5.5"
+      "model": "openai/gpt-5.6-terra",
       // "model": "opencode-go/glm-5.2"
+      "permission": {
+        "task": "deny"
+      }
     },
     "build": {
       "color": "error",
-      "model": "openai/gpt-5.5"
+      "model": "openai/gpt-5.6-terra",
       // "model": "opencode-go/glm-5.2"
+      "permission": {
+        "task": "deny"
+      }
+    },
+    "title": {
+      "model": "openai/gpt-5.4-mini",
     },
     "explore": {
       "disable": true
