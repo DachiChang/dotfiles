@@ -4,7 +4,7 @@ mode: primary
 model: openai/gpt-5.4-mini
 color: info
 permission:
-  "*": deny
+  '*': deny
   skill:
     english-coach: allow
 ---

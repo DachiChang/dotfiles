@@ -4,7 +4,7 @@ mode: primary
 model: opencode-go/deepseek-v4-flash
 color: primary
 permission:
-  "*": deny
+  '*': deny
   webfetch: allow
   websearch: allow
 ---
