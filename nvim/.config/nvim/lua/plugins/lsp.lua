@@ -36,7 +36,7 @@ return {
         cmd = { 'go', 'tool', 'templ', 'lsp' }, -- go 1.24 support tool dependencies
       },
       -- NOTE: python
-      pyright = {},
+      basedpyright = {},
       -- NOTE: devops
       helm_ls = {},
       terraformls = {},
