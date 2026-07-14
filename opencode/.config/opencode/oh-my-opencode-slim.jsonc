@@ -60,11 +60,11 @@
       "explorer": {
         "model": [
           {
-            "id": "opencode-go/kimi-k2.6",
+            "id": "openai/gpt-5.6-lun",
             "variant": "low"
           },
           {
-            "id": "openai/gpt-5.4-mini",
+            "id": "opencode-go/kimi-k2.6",
             "variant": "low"
           }
         ],
