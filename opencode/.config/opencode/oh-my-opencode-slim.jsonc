@@ -60,7 +60,7 @@
       "explorer": {
         "model": [
           {
-            "id": "openai/gpt-5.6-lun",
+            "id": "openai/gpt-5.6-luna",
             "variant": "low"
           },
           {
