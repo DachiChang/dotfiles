@@ -64,8 +64,8 @@
             "variant": "low"
           },
           {
-            "id": "opencode-go/kimi-k2.6",
-            "variant": "low"
+            "id": "opencode-go/deepseek-v4-flash",
+            "variant": "high"
           }
         ],
         "skills": [],
