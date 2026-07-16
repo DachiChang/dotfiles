@@ -13,10 +13,10 @@
       "orchestrator": {
         "model": [
           {
-            "id": "openai/gpt-5.6-terra"
+            "id": "9router/cx/gpt-5.6-terra"
           },
           {
-            "id": "opencode-go/glm-5.2"
+            "id": "9router/ocg/glm-5.2"
           }
         ],
         "skills": [
@@ -27,11 +27,11 @@
       "oracle": {
         "model": [
           {
-            "id": "openai/gpt-5.6-sol",
+            "id": "9router/cc/claude-opus-4-8",
             "variant": "high"
           },
           {
-            "id": "opencode-go/glm-5.2",
+            "id": "9router/cx/gpt-5.6-sol",
             "variant": "high"
           }
         ],
@@ -43,11 +43,11 @@
       "librarian": {
         "model": [
           {
-            "id": "opencode-go/deepseek-v4-flash",
+            "id": "9router/ocg/deepseek-v4-flash",
             "variant": "low"
           },
           {
-            "id": "openai/gpt-5.4-mini",
+            "id": "9router/cx/gpt-5.4-mini",
             "variant": "low"
           }
         ],
@@ -60,12 +60,12 @@
       "explorer": {
         "model": [
           {
-            "id": "openai/gpt-5.6-luna",
+            "id": "9router/cc/claude-sonnet-5",
             "variant": "low"
           },
           {
-            "id": "opencode-go/deepseek-v4-flash",
-            "variant": "high"
+            "id": "9router/cx/gpt-5.6-luna",
+            "variant": "low"
           }
         ],
         "skills": [],
@@ -74,12 +74,12 @@
       "designer": {
         "model": [
           {
-            "id": "openai/gpt-5.6-terra",
+            "id": "9router/cx/gpt-5.6-terra",
             "variant": "medium"
           },
           {
-            "id": "opencode-go/kimi-k2.7-code",
-            "variant": "medium"
+            "id": "9router/ocg/kimi-k2.7-code",
+            "variant": "low"
           }
         ],
         "skills": [],
@@ -88,11 +88,11 @@
       "fixer": {
         "model": [
           {
-            "id": "openai/gpt-5.6-luna",
+            "id": "9router/cc/claude-sonnet-5",
             "variant": "low"
           },
           {
-            "id": "opencode-go/kimi-k2.7-code",
+            "id": "9router/ocg/kimi-k2.7-code",
             "variant": "low"
           }
         ],

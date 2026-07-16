@@ -1,7 +1,7 @@
 ---
 description: Ask matter
 mode: primary
-model: opencode-go/deepseek-v4-flash
+model: 9router/ocg/deepseek-v4-flash
 color: primary
 permission:
   '*': deny
