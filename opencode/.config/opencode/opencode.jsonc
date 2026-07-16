@@ -10,25 +10,32 @@
       },
       "models": {
         "cx/gpt-5.6-sol": {
-          "name": "GPT-5.6 Sol"
+          "name": "GPT-5.6 Sol",
+          "reasoning": true
         },
         "cx/gpt-5.6-terra": {
-          "name": "GPT-5.6 Terra"
+          "name": "GPT-5.6 Terra",
+          "reasoning": true
         },
         "cx/gpt-5.6-luna": {
-          "name": "GPT-5.6 Luna"
+          "name": "GPT-5.6 Luna",
+          "reasoning": true
         },
         "cc/claude-fable-5": {
-          "name": "Claude Fable 5"
+          "name": "Claude Fable 5",
+          "reasoning": true
         },
         "cc/claude-sonnet-5": {
-          "name": "Claude Sonnet 5"
+          "name": "Claude Sonnet 5",
+          "reasoning": true
         },
         "cc/claude-opus-4-8": {
-          "name": "Claude Opus 4.8"
+          "name": "Claude Opus 4.8",
+          "reasoning": true
         },
         "cx/gpt-5.4-mini": {
-          "name": "GPT-5.4 Mini"
+          "name": "GPT-5.4 Mini",
+          "reasoning": true
         },
         "ocg/glm-5.2": {
           "name": "GLM 5.2"
@@ -53,6 +60,25 @@
         },
         "ocg/qwen3.7-max": {
           "name": "Qwen 3.7 Max"
+        },
+        // specific variant
+        "cx/gpt-5.6-sol(high)": {
+          "name": "GPT-5.6 Sol (high)"
+        },
+        "cx/gpt-5.6-terra(medium)": {
+          "name": "GPT-5.6 Terra (medium)"
+        },
+        "cx/gpt-5.6-luna(low)": {
+          "name": "GPT-5.6 Luna (low)"
+        },
+        "cc/claude-sonnet-5(low)": {
+          "name": "Claude Sonnet 5 (low)"
+        },
+        "cc/claude-opus-4-8(high)": {
+          "name": "Claude Opus 4.8 (high)"
+        },
+        "cx/gpt-5.4-mini(low)": {
+          "name": "GPT-5.4 Mini (low)"
         }
       }
     }

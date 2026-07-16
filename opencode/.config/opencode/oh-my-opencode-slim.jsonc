@@ -27,12 +27,10 @@
       "oracle": {
         "model": [
           {
-            "id": "9router/cc/claude-opus-4-8",
-            "variant": "high"
+            "id": "9router/cc/claude-opus-4-8(high)"
           },
           {
-            "id": "9router/cx/gpt-5.6-sol",
-            "variant": "high"
+            "id": "9router/cx/gpt-5.6-sol(high)"
           }
         ],
         "skills": [
@@ -43,12 +41,10 @@
       "librarian": {
         "model": [
           {
-            "id": "9router/ocg/deepseek-v4-flash",
-            "variant": "low"
+            "id": "9router/ocg/deepseek-v4-flash"
           },
           {
-            "id": "9router/cx/gpt-5.4-mini",
-            "variant": "low"
+            "id": "9router/cx/gpt-5.4-mini(low)"
           }
         ],
         "skills": [],
@@ -60,12 +56,10 @@
       "explorer": {
         "model": [
           {
-            "id": "9router/cc/claude-sonnet-5",
-            "variant": "low"
+            "id": "9router/cc/claude-sonnet-5(low)"
           },
           {
-            "id": "9router/cx/gpt-5.6-luna",
-            "variant": "low"
+            "id": "9router/cx/gpt-5.6-luna(low)"
           }
         ],
         "skills": [],
@@ -74,12 +68,10 @@
       "designer": {
         "model": [
           {
-            "id": "9router/cx/gpt-5.6-terra",
-            "variant": "medium"
+            "id": "9router/cx/gpt-5.6-terra(medium)"
           },
           {
-            "id": "9router/ocg/kimi-k2.7-code",
-            "variant": "low"
+            "id": "9router/ocg/kimi-k2.7-code"
           }
         ],
         "skills": [],
@@ -88,12 +80,10 @@
       "fixer": {
         "model": [
           {
-            "id": "9router/cc/claude-sonnet-5",
-            "variant": "low"
+            "id": "9router/cc/claude-sonnet-5(low)"
           },
           {
-            "id": "9router/ocg/kimi-k2.7-code",
-            "variant": "low"
+            "id": "9router/ocg/kimi-k2.7-code"
           }
         ],
         "skills": [],
