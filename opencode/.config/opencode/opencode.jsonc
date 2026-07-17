@@ -5,80 +5,265 @@
     "9router": {
       "npm": "@ai-sdk/openai-compatible",
       "options": {
-        "baseURL": "http://127.0.0.1:20128/v1",
-        "apiKey": "{file:secrets/9router}"
+        "baseURL": "{env:NINEROUTER_URL}/v1",
+        "apiKey": "{env:NINEROUTER_KEY}"
       },
       "models": {
         "cx/gpt-5.6-sol": {
           "name": "GPT-5.6 Sol",
-          "reasoning": true
+          "reasoning": true,
+          "modalities": {
+            "input": [
+              "text",
+              "image"
+            ],
+            "output": [
+              "text"
+            ]
+          }
         },
         "cx/gpt-5.6-terra": {
           "name": "GPT-5.6 Terra",
-          "reasoning": true
+          "reasoning": true,
+          "modalities": {
+            "input": [
+              "text",
+              "image"
+            ],
+            "output": [
+              "text"
+            ]
+          }
         },
         "cx/gpt-5.6-luna": {
           "name": "GPT-5.6 Luna",
-          "reasoning": true
+          "reasoning": true,
+          "modalities": {
+            "input": [
+              "text",
+              "image"
+            ],
+            "output": [
+              "text"
+            ]
+          }
         },
         "cc/claude-fable-5": {
           "name": "Claude Fable 5",
-          "reasoning": true
+          "reasoning": true,
+          "modalities": {
+            "input": [
+              "text",
+              "image"
+            ],
+            "output": [
+              "text"
+            ]
+          }
         },
         "cc/claude-sonnet-5": {
           "name": "Claude Sonnet 5",
-          "reasoning": true
+          "reasoning": true,
+          "modalities": {
+            "input": [
+              "text",
+              "image"
+            ],
+            "output": [
+              "text"
+            ]
+          }
         },
         "cc/claude-opus-4-8": {
           "name": "Claude Opus 4.8",
-          "reasoning": true
+          "reasoning": true,
+          "modalities": {
+            "input": [
+              "text",
+              "image"
+            ],
+            "output": [
+              "text"
+            ]
+          }
         },
         "cx/gpt-5.4-mini": {
           "name": "GPT-5.4 Mini",
-          "reasoning": true
+          "reasoning": true,
+          "modalities": {
+            "input": [
+              "text",
+              "image"
+            ],
+            "output": [
+              "text"
+            ]
+          }
         },
         "ocg/glm-5.2": {
-          "name": "GLM 5.2"
+          "name": "GLM 5.2",
+          "modalities": {
+            "input": [
+              "text"
+            ],
+            "output": [
+              "text"
+            ]
+          }
         },
         "ocg/kimi-k2.7-code": {
-          "name": "Kimi K2.7 Code"
+          "name": "Kimi K2.7 Code",
+          "modalities": {
+            "input": [
+              "text",
+              "image"
+            ],
+            "output": [
+              "text"
+            ]
+          }
         },
         "ocg/kimi-k2.6": {
-          "name": "Kimi K2.6"
+          "name": "Kimi K2.6",
+          "modalities": {
+            "input": [
+              "text",
+              "image"
+            ],
+            "output": [
+              "text"
+            ]
+          }
         },
         "ocg/deepseek-v4-pro": {
-          "name": "DeepSeek V4 Pro"
+          "name": "DeepSeek V4 Pro",
+          "modalities": {
+            "input": [
+              "text"
+            ],
+            "output": [
+              "text"
+            ]
+          }
         },
         "ocg/deepseek-v4-flash": {
-          "name": "DeepSeek V4 Flash"
+          "name": "DeepSeek V4 Flash",
+          "modalities": {
+            "input": [
+              "text"
+            ],
+            "output": [
+              "text"
+            ]
+          }
         },
         "ocg/mimo-v2.5-pro": {
-          "name": "MiMo V2.5 Pro"
+          "name": "MiMo V2.5 Pro",
+          "modalities": {
+            "input": [
+              "text",
+              "image"
+            ],
+            "output": [
+              "text"
+            ]
+          }
         },
         "ocg/minimax-m3": {
-          "name": "MiniMax M3"
+          "name": "MiniMax M3",
+          "modalities": {
+            "input": [
+              "text",
+              "image"
+            ],
+            "output": [
+              "text"
+            ]
+          }
         },
         "ocg/qwen3.7-max": {
-          "name": "Qwen 3.7 Max"
+          "name": "Qwen 3.7 Max",
+          "modalities": {
+            "input": [
+              "text"
+            ],
+            "output": [
+              "text"
+            ]
+          }
         },
         // specific variant
         "cx/gpt-5.6-sol(high)": {
-          "name": "GPT-5.6 Sol (high)"
+          "name": "GPT-5.6 Sol (high)",
+          "modalities": {
+            "input": [
+              "text",
+              "image"
+            ],
+            "output": [
+              "text"
+            ]
+          }
         },
         "cx/gpt-5.6-terra(medium)": {
-          "name": "GPT-5.6 Terra (medium)"
+          "name": "GPT-5.6 Terra (medium)",
+          "modalities": {
+            "input": [
+              "text",
+              "image"
+            ],
+            "output": [
+              "text"
+            ]
+          }
         },
         "cx/gpt-5.6-luna(low)": {
-          "name": "GPT-5.6 Luna (low)"
+          "name": "GPT-5.6 Luna (low)",
+          "modalities": {
+            "input": [
+              "text",
+              "image"
+            ],
+            "output": [
+              "text"
+            ]
+          }
         },
         "cc/claude-sonnet-5(low)": {
-          "name": "Claude Sonnet 5 (low)"
+          "name": "Claude Sonnet 5 (low)",
+          "modalities": {
+            "input": [
+              "text",
+              "image"
+            ],
+            "output": [
+              "text"
+            ]
+          }
         },
         "cc/claude-opus-4-8(high)": {
-          "name": "Claude Opus 4.8 (high)"
+          "name": "Claude Opus 4.8 (high)",
+          "modalities": {
+            "input": [
+              "text",
+              "image"
+            ],
+            "output": [
+              "text"
+            ]
+          }
         },
         "cx/gpt-5.4-mini(low)": {
-          "name": "GPT-5.4 Mini (low)"
+          "name": "GPT-5.4 Mini (low)",
+          "modalities": {
+            "input": [
+              "text",
+              "image"
+            ],
+            "output": [
+              "text"
+            ]
+          }
         }
       }
     }
@@ -156,7 +341,7 @@
       "url": "https://mcp.context7.com/mcp",
       "enabled": true,
       "headers": {
-        "CONTEXT7_API_KEY": "{file:secrets/context7}"
+        "CONTEXT7_API_KEY": "{env:CONTEXT7_API_KEY}"
       }
     },
     "gh_grep": {
@@ -169,7 +354,6 @@
     "openpets.md"
   ],
   "plugin": [
-    "opencode-gpt-imagegen@v0.1.8",
     [
       "@open-pets/opencode@2.0.7",
       {

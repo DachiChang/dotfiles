@@ -12,7 +12,7 @@
     "session_list": "ctrl+l",
     "session_timeline": "ctrl+g",
     "session_fork": "ctrl+f",
-    "model_list": "ctrl+\\"
+    "model_list": "ctrl+x"
   },
   "plugin": [
     "oh-my-opencode-slim"
