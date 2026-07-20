@@ -20,9 +20,10 @@ return {
       group = treesitter_setup_augroup,
       callback = function(args)
         local filetype = args.match
+        local buf = args.buf
         local language = vim.treesitter.language.get_lang(filetype) or filetype
 
-        -- try to add treesitter parser
+        -- Try to load treesitter parser
         if not vim.treesitter.language.add(language) then
           -- language not installed
           if supported_languages[language] then
@@ -33,12 +34,7 @@ return {
         end
 
         -- hightlight feature
-        vim.treesitter.start()
-        -- fold feature
-        vim.wo.foldmethod = 'expr'
-        vim.wo.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
-        -- indent feature
-        vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+        vim.treesitter.start(buf, language)
       end,
     })
   end
