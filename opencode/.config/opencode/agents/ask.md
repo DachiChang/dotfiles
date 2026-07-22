@@ -1,7 +1,7 @@
 ---
 description: Ask matter
 mode: primary
-model: 9router/ocg/deepseek-v4-flash
+model: 9router/cx/gpt-5.6-luna(low)
 color: primary
 permission:
   '*': deny

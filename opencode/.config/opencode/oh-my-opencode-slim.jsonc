@@ -16,7 +16,7 @@
             "id": "9router/cx/gpt-5.6-terra"
           },
           {
-            "id": "9router/ocg/glm-5.2"
+            "id": "9router/cc/claude-sonnet-5"
           }
         ],
         "skills": [
@@ -41,10 +41,10 @@
       "librarian": {
         "model": [
           {
-            "id": "9router/ocg/deepseek-v4-flash"
+            "id": "9router/cx/gpt-5.4-mini(low)"
           },
           {
-            "id": "9router/cx/gpt-5.4-mini(low)"
+            "id": "9router/cc/claude-sonnet-5(low)"
           }
         ],
         "skills": [],
@@ -71,7 +71,7 @@
             "id": "9router/cx/gpt-5.6-terra(medium)"
           },
           {
-            "id": "9router/ocg/kimi-k2.7-code"
+            "id": "9router/cc/claude-sonnet-5(medium)"
           }
         ],
         "skills": [],
@@ -83,7 +83,7 @@
             "id": "9router/cc/claude-sonnet-5(low)"
           },
           {
-            "id": "9router/ocg/kimi-k2.7-code"
+            "id": "9router/cx/gpt-5.6-terra(low)"
           }
         ],
         "skills": [],
