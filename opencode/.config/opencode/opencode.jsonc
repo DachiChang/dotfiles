@@ -128,23 +128,6 @@
             ]
           }
         },
-        "ocg/kimi-k3": {
-          "name": "Kimi K3",
-          "reasoning": true,
-          "limit": {
-            "context": 1048576,
-            "output": 131072
-          },
-          "modalities": {
-            "input": [
-              "text",
-              "image"
-            ],
-            "output": [
-              "text"
-            ]
-          }
-        },
         // specific variant
         "cx/gpt-5.6-sol(high)": {
           "name": "GPT-5.6 Sol (high)",
