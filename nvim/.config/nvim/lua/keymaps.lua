@@ -21,6 +21,7 @@ keymap.set("n", "<LEADER>q", "<CMD>qa!<CR>")
 keymap.set("n", "<LEADER><Tab>", "<CMD>e#<CR>")
 
 -- Tab
+keymap.set("n", "<LEADER>t", "<CMD>tab split<CR>")
 keymap.set("n", "<", "<CMD>tabm -1<CR>")
 keymap.set("n", ">", "<CMD>tabm +1<CR>")
 keymap.set("n", "<C-n>", "<CMD>tabnext<CR>")
