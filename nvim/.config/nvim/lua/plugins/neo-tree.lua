@@ -96,6 +96,11 @@ return {
           ["s"] = "split_with_window_picker",
           ["v"] = "vsplit_with_window_picker",
           ["t"] = "open_tabnew",
+          ["<LEADER>t"] = {
+            function()
+              -- NOTE: override default keymap :tab split
+            end,
+          },
           ["y"] = {
             function(state)
               local node = state.tree:get_node()
