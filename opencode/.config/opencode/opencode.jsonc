@@ -291,6 +291,7 @@
     }
   },
   "lsp": false,
+  "snapshot": false,
   "skills": {
     "paths": [
       "~/skills"
