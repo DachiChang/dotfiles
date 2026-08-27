@@ -4,7 +4,11 @@ return {
   branch = 'main',
   dependencies = {
     "nvim-lua/plenary.nvim",
-    "MunifTanjim/nui.nvim",
+    {
+      -- bug https://github.com/nvim-neo-tree/neo-tree.nvim/issues/2080
+      "MunifTanjim/nui.nvim",
+      version = "0.4.0",
+    },
     "nvim-tree/nvim-web-devicons",
     "s1n7ax/nvim-window-picker",
   },
