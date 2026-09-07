@@ -269,7 +269,7 @@
     },
     "plan": {
       "color": "secondary",
-      "model": "9router/cc/claude-sonnet-5",
+      "model": "9router/cc/claude-opus-5",
       // "model": "9router/cx/gpt-5.6-sol"
       "permission": {
         "task": "deny"
@@ -277,7 +277,7 @@
     },
     "build": {
       "color": "error",
-      "model": "9router/cc/claude-sonnet-5",
+      "model": "9router/cc/claude-opus-5",
       // "model": "9router/cx/gpt-5.6-sol"
       "permission": {
         "task": "deny"
