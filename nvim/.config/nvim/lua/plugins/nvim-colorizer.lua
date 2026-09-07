@@ -5,7 +5,8 @@ return {
     local colorizer = require('colorizer')
     colorizer.setup({
       user_default_options = {
-        names = false, -- disable Name color ex: Red, Blue
+        buftypes = { "" }, -- only support normal buftypes
+        names = false,     -- disable Name color ex: Red, Blue
         tailwind = true,
       }
     })
