@@ -164,7 +164,7 @@ return {
     })
     -- keymap
     local keymap = vim.keymap.set
-    keymap("n", "<LEADER>e", "<CMD>Neotree toggle<CR>")
-    keymap("n", "<LEADER>R", "<CMD>Neotree reveal<CR>")
+    keymap("n", "<LEADER>e", ":Neotree toggle<CR>")
+    keymap("n", "<LEADER>R", ":Neotree reveal<CR>")
   end,
 }

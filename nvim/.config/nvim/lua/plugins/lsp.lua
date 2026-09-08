@@ -100,11 +100,11 @@ return {
         local bufopts = { buffer = event.buf }
         keymap("n", "gt", function() buf.hover { border = 'rounded' } end, bufopts)
         keymap("n", "gD", buf.declaration, bufopts)
-        keymap("n", "gd", "<CMD>Telescope lsp_definitions<CR>", bufopts) -- 用 Telescope command 讓 plugins 之間解偶合
-        keymap("n", "gi", "<CMD>Telescope lsp_implementations<CR>", bufopts)
-        keymap("n", "gT", "<CMD>Telescope lsp_type_definitions<CR>", bufopts)
-        keymap("n", "gr", "<CMD>Telescope lsp_references<CR>", bufopts)
-        keymap("n", "<LEADER>s", "<CMD>Telescope lsp_document_symbols symbol_width=50<CR>", bufopts)
+        keymap("n", "gd", ":Telescope lsp_definitions<CR>", bufopts) -- 用 Telescope command 讓 plugins 之間解偶合
+        keymap("n", "gi", ":Telescope lsp_implementations<CR>", bufopts)
+        keymap("n", "gT", ":Telescope lsp_type_definitions<CR>", bufopts)
+        keymap("n", "gr", ":Telescope lsp_references<CR>", bufopts)
+        keymap("n", "<LEADER>s", ":Telescope lsp_document_symbols symbol_width=50<CR>", bufopts)
         keymap("n", "gn", buf.rename, bufopts)
         keymap("n", "ga", buf.code_action, bufopts)
       end,

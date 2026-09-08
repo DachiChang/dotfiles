@@ -36,11 +36,11 @@ return {
         },
       }
     })
-    keymap("n", "<LEADER>f", "<CMD>Telescope find_files hidden=true no_ignore=true<CR>")
-    keymap("n", "<LEADER>g", "<CMD>Telescope live_grep<CR>")
-    keymap("n", "<LEADER>h", "<CMD>Telescope help_tags<CR>")
-    keymap("n", "<LEADER>k", "<CMD>Telescope keymaps<CR>")
-    keymap("n", "<LEADER>w", "<CMD>Telescope grep_string<CR>")
-    keymap("n", "<LEADER>b", "<CMD>Telescope buffers<CR>")
+    keymap("n", "<LEADER>f", ":Telescope find_files hidden=true no_ignore=true<CR>")
+    keymap("n", "<LEADER>g", ":Telescope live_grep<CR>")
+    keymap("n", "<LEADER>h", ":Telescope help_tags<CR>")
+    keymap("n", "<LEADER>k", ":Telescope keymaps<CR>")
+    keymap("n", "<LEADER>w", ":Telescope grep_string<CR>")
+    keymap("n", "<LEADER>b", ":Telescope buffers<CR>")
   end,
 }

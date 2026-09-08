@@ -14,21 +14,21 @@ local keymap = vim.keymap
 ]]
 
 -- Quit
-keymap.set("n", "<C-q>", "<CMD>q!<CR>")
-keymap.set("n", "<LEADER>q", "<CMD>qa!<CR>")
+keymap.set("n", "<C-q>", ":q!<CR>")
+keymap.set("n", "<LEADER>q", ":qa!<CR>")
 
 -- Jump
-keymap.set("n", "<LEADER><Tab>", "<CMD>e#<CR>")
+keymap.set("n", "<LEADER><Tab>", ":e#<CR>")
 
 -- Tab
-keymap.set("n", "<", "<CMD>tabm -1<CR>")
-keymap.set("n", ">", "<CMD>tabm +1<CR>")
-keymap.set("n", "<C-n>", "<CMD>tabnext<CR>")
-keymap.set("n", "<C-p>", "<CMD>tabprev<CR>")
-keymap.set("n", "<C-t>", "<CMD>tabnew<CR>")
+keymap.set("n", "<", ":tabm -1<CR>")
+keymap.set("n", ">", ":tabm +1<CR>")
+keymap.set("n", "<C-n>", ":tabnext<CR>")
+keymap.set("n", "<C-p>", ":tabprev<CR>")
+keymap.set("n", "<C-t>", ":tabnew<CR>")
 
 -- Functional
-keymap.set("n", "<F5>", "<CMD>e!<CR>")
+keymap.set("n", "<F5>", ":e!<CR>")
 
 -- Window
 keymap.set("n", "=", "<C-w>=")
@@ -37,31 +37,31 @@ keymap.set("n", "<C-h>", "<C-w>h")
 keymap.set("n", "<C-j>", "<C-w>j")
 keymap.set("n", "<C-k>", "<C-w>k")
 keymap.set("n", "<C-l>", "<C-w>l")
-keymap.set("n", "<S-Right>", "<CMD>vertical resize +5<CR>")
-keymap.set("n", "<S-Left>", "<CMD>vertical resize -5<CR>")
-keymap.set("n", "<S-Down>", "<CMD>resize -5<CR>")
-keymap.set("n", "<S-Up>", "<CMD>resize +5<CR>")
+keymap.set("n", "<S-Right>", ":vertical resize +5<CR>")
+keymap.set("n", "<S-Left>", ":vertical resize -5<CR>")
+keymap.set("n", "<S-Down>", ":resize -5<CR>")
+keymap.set("n", "<S-Up>", ":resize +5<CR>")
 
 -- Incremental Selection
 keymap.set("n", "<Space>", "van", { remap = true })
-keymap.set("v", "<Space>", "an", { remap = true })
-keymap.set("v", "<BS>", "in", { remap = true })
+keymap.set("x", "<Space>", "an", { remap = true })
+keymap.set("x", "<BS>", "in", { remap = true })
 
 -- Comment
 keymap.set("n", "cc", "gcc", { remap = true })
-keymap.set("v", "cc", "gc", { remap = true })
+keymap.set("x", "cc", "gc", { remap = true })
 
 -- Temporary disable hightlight
-keymap.set("n", "<ESC>", "<CMD>noh<CR>")
+keymap.set("n", "<ESC>", ":noh<CR>")
 
 -- Use cp shortcut to copy editing file path
-keymap.set("n", "cp", "<CMD>let @+=expand('%:p:h')<CR>")
+keymap.set("n", "cp", ":let @+=expand('%:p:h')<CR>")
 
 -- yank word and paste without override register
-keymap.set("v", "p", "pgvy")
+keymap.set("x", "p", "pgvy")
 
 -- hightlight, but don't jump
-keymap.set("n", "*", "<CMD>keepjumps normal! mi*`i<CR>")
+keymap.set("n", "*", ":keepjumps normal! mi*`i<CR>")
 
 -- Diff
 keymap.set("n", "<LEADER>d", function()
@@ -71,7 +71,7 @@ keymap.set("n", "<LEADER>d", function()
     vim.cmd('diffthis')
   end
 end)
-keymap.set("n", "<LEADER>D", "<CMD>diffoff!<CR>")
+keymap.set("n", "<LEADER>D", ":diffoff!<CR>")
 
 -- Diagnostics
 local diagnostic = vim.diagnostic

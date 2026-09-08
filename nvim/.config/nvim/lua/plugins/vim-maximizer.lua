@@ -7,6 +7,6 @@ return {
 
     local keymap = vim.keymap.set
     -- Toggle with bang "!" to recover window layout
-    keymap("n", "m", "<CMD>MaximizerToggle!<CR>")
+    keymap("n", "m", ":MaximizerToggle!<CR>")
   end
 }

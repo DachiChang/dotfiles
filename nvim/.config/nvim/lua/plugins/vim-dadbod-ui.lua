@@ -30,7 +30,7 @@ return {
     }
 
     local keymap = vim.keymap.set
-    keymap("n", "<F1>", "<CMD>DBUIToggle<CR>")
+    keymap("n", "<F1>", ":DBUIToggle<CR>")
   end,
   config = function()
     local keymap = vim.keymap.set
@@ -63,8 +63,8 @@ return {
       callback = function(event)
         local bufopts = { buffer = event.buf }
         keymap("n", "<Tab>", "<Plug>(DBUI_ToggleResultLayout)", bufopts)
-        keymap({ "n", "v" }, "yc", ":DBUIYankAsCSV<CR>", bufopts) -- 因為需要傳 range 進去，所以不能用 <CMD> 直接執行
-        keymap({ "n", "v" }, "yj", ":DBUIYankAsJSON<CR>", bufopts)
+        keymap({ "n", "x" }, "yc", ":DBUIYankAsCSV<CR>", bufopts) -- 因為需要傳 range 進去，所以不能用 <CMD> 直接執行
+        keymap({ "n", "x" }, "yj", ":DBUIYankAsJSON<CR>", bufopts)
       end,
     })
 
@@ -73,7 +73,7 @@ return {
       group = dadbod_ui_augroup,
       callback = function(event)
         local bufopts = { buffer = event.buf }
-        keymap("v", "<CR>", "<Plug>(DBUI_ExecuteQuery)", bufopts)
+        keymap("x", "<CR>", "<Plug>(DBUI_ExecuteQuery)", bufopts)
         keymap("n", "s", "<Plug>(DBUI_SaveQuery)", bufopts)
       end,
     })
