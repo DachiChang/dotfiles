@@ -5,7 +5,6 @@ return {
     local carbon = require('carbon-now')
     carbon.setup({
       base_url = "https://carbon.now.sh/",
-      open_cmd = "open",
       options = {
         bg = "#B6A292",
         drop_shadow_blur = "68px",
@@ -18,7 +17,6 @@ return {
         theme = "zenburn",
         titlebar = "",
         watermark = false,
-        width = "680",
         window_theme = "bw",
         padding_horizontal = "50px",
         padding_vertical = "50px",
@@ -27,6 +25,6 @@ return {
 
     -- toggle Code snapshoot on F4
     local keymap = vim.keymap.set
-    keymap({ "n", "v" }, "<F4>", "<CMD>CarbonNow<CR>")
+    keymap({ "n", "x" }, "<F4>", ":CarbonNow<CR>")
   end
 }
