@@ -1,7 +1,7 @@
 ---
 description: English Teacher
 mode: primary
-model: 9router/cx/gpt-5.4-mini(low)
+model: 9router/cx/gpt-5.6-luna(low)
 color: info
 permission:
   '*': deny

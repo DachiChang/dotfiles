@@ -41,7 +41,7 @@
       "librarian": {
         "model": [
           {
-            "id": "9router/cx/gpt-5.4-mini(low)"
+            "id": "9router/cx/gpt-5.6-luna(low)"
           },
           {
             "id": "9router/cc/claude-sonnet-5(low)"
