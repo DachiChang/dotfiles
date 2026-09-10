@@ -4,6 +4,11 @@
   "enabled_providers": [
     "9router",
   ],
+  "permission": {
+    "external_directory": {
+      "/tmp/**": "allow"
+    }
+  },
   "provider": {
     "9router": {
       "npm": "@ai-sdk/openai-compatible",
