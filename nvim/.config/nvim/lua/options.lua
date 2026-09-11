@@ -20,6 +20,7 @@ opt.backspace = "2"
 opt.mouse = "n"
 opt.clipboard = "unnamed"
 opt.termguicolors = true
+opt.equalalways = false
 
 -- option search
 opt.hlsearch = true
