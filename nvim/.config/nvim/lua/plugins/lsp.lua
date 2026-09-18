@@ -41,7 +41,7 @@ return {
       helm_ls = {},
       terraformls = {},
       lemminx = {}, -- xml lsp
-      -- clangd = {},
+      clangd = {},
       -- csharp_ls = {},
       -- intelephense = {},
       rust_analyzer = {},
