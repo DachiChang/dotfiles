@@ -76,6 +76,18 @@ return {
           ["C"] = "close_all_subnodes",
           ["W"] = "close_all_nodes",
           ["O"] = "expand_all_subnodes",
+          ["o"] = {
+            function(state)
+              local node = state.tree:get_node()
+              if not node or not node.path then
+                return
+              end
+              local kind = node.type == "directory" and "directory" or "file"
+              vim.ui.open(node.path)
+              vim.notify("Open " .. kind .. ": " .. node.path)
+            end,
+            desc = "Open with system app",
+          },
           ["r"] = "refresh",
           ["s"] = "split_with_window_picker",
           ["v"] = "vsplit_with_window_picker",
@@ -144,12 +156,6 @@ return {
               end,
               desc = "Search and replace",
             },
-            ["oc"] = "order_by_created",
-            ["oe"] = "order_by_diagnostics",
-            ["om"] = "order_by_modified",
-            ["on"] = "order_by_name",
-            ["os"] = "order_by_size",
-            ["ot"] = "order_by_type",
           },
         },
       },
