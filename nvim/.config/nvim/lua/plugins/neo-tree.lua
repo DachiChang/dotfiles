@@ -34,7 +34,7 @@ return {
         sync = "universal", -- or "global"/"universal" to share a clipboard for each/all Neovim instance(s), respectively
       },
       close_if_last_window = true,
-      log_level = "debug",
+      log_level = "info",
       log_to_file = false, -- "/tmp/neo-tree.log"
       popup_border_style = "rounded",
       use_default_mappings = false,
