@@ -9,7 +9,9 @@ return {
     conform.setup({
       formatters_by_ft = {
         javascript = { "prettier" }, -- WARN: Mason install
+        javascriptreact = { "prettier" },
         typescript = { "prettier" },
+        typescriptreact = { "prettier" },
         css = { "prettier" },
         html = { "prettier" },
         json = { "prettier" },
