@@ -119,8 +119,8 @@
             ]
           }
         },
-        "cc/claude-opus-5": {
-          "name": "Claude Opus 5",
+        "cc/claude-opus-5-5": {
+          "name": "Claude Opus 5.5",
           "reasoning": true,
           "limit": {
             "context": 1000000,
@@ -233,8 +233,8 @@
             ]
           }
         },
-        "cc/claude-opus-5(medium)": {
-          "name": "Claude Opus 5 (medium)",
+        "cc/claude-opus-5-5(medium)": {
+          "name": "Claude Opus 5.5 (medium)",
           "limit": {
             "context": 1000000,
             "output": 128000
@@ -258,7 +258,7 @@
     },
     "plan": {
       "color": "secondary",
-      "model": "9router/cc/claude-opus-5",
+      "model": "9router/cc/claude-opus-5-5",
       // "model": "9router/cx/gpt-5.6-sol"
       "permission": {
         "task": "deny"
@@ -266,7 +266,7 @@
     },
     "build": {
       "color": "error",
-      "model": "9router/cc/claude-opus-5",
+      "model": "9router/cc/claude-opus-5-5",
       // "model": "9router/cx/gpt-5.6-sol"
       "permission": {
         "task": "deny"
