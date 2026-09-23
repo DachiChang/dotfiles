@@ -5,7 +5,6 @@ return {
   -- build = 'cargo build --release',
   dependencies = {
     'rafamadriz/friendly-snippets',        -- source snippets
-    'kristijanhusak/vim-dadbod-completion' -- dadbod SQL completion
   },
   config = function()
     -- friendly-snippets will be autoload
@@ -43,9 +42,6 @@ return {
       },
       sources = { -- completion sources
         default = { 'lsp', 'path', 'snippets', 'buffer' },
-        per_filetype = {
-          sql = { 'dadbod', 'buffer' },
-        },
         providers = {
           lsp = {
             name = '[Lsp]',
@@ -67,11 +63,6 @@ return {
           },
           cmdline = {
             name = '[Cmd]'
-          },
-          dadbod = {
-            name = "[Dadbod]",
-            score_offset = 0,
-            module = "vim_dadbod_completion.blink"
           },
         },
       },

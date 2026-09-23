@@ -17,8 +17,8 @@ return {
         "neo-tree",
         "spectre_panel",
         "toggleterm",
-        "dbui",
-        "dbout",
+        "sqmeow-drawer",
+        "sqmeow-result",
       },
     })
   end,

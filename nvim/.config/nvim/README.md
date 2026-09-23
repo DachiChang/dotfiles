@@ -12,8 +12,5 @@
 | tree-sitter-manager.nvim | cc/clang/gcc | compile parsers |
 | telescope.nvim | rg/ripgrep | live_grep/grep_string |
 | img-clip.nvim | pngpaste | macOS clipboard image paste |
-| vim-dadbod/vim-dadbod-ui | psql | PostgreSQL |
-| vim-dadbod/vim-dadbod-ui | sqlite3 | SQLite |
-| vim-dadbod/vim-dadbod-ui | mysql | MySQL/MariaDB |
 | vim-helm | helm | Helm workflow |
 | terraformls | terraform | Terraform workflow |

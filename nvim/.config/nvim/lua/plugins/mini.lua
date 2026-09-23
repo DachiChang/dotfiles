@@ -33,7 +33,7 @@ return {
         "mason",
         "toggleterm",
         "neo-tree",
-        "dbui",
+        "sqmeow-drawer",
       },
       group = mini_indentscope_augroup,
       callback = function()

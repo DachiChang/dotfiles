@@ -11,8 +11,6 @@ return {
       "mason",
       "spectre_panel",
       "toggleterm",
-      "dbui",
-      "dbout",
     }
 
     local winbar_augroup = vim.api.nvim_create_augroup("WinbarTitle", { clear = true })
