@@ -83,8 +83,14 @@ return {
                 return
               end
               local kind = node.type == "directory" and "directory" or "file"
-              vim.ui.open(node.path)
-              vim.notify("Open " .. kind .. ": " .. node.path)
+
+              local _, err = vim.ui.open(node.path)
+              if err then
+                vim.notify(string.format("Failed to open '%s': %s", node.name, err))
+                return
+              end
+
+              vim.notify("Open " .. kind .. ": " .. node.name)
             end,
             desc = "Open with system app",
           },
