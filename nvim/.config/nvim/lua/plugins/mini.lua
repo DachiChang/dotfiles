@@ -34,6 +34,7 @@ return {
         "toggleterm",
         "neo-tree",
         "sqmeow-drawer",
+        "sqmeow-result",
       },
       group = mini_indentscope_augroup,
       callback = function()
