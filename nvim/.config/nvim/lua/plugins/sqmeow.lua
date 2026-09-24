@@ -20,6 +20,7 @@ return {
         },
       },
       query = {
+        max_rows= 1000,
         persist_history = false,
       },
       keymaps = {
