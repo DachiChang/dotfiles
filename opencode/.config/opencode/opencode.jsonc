@@ -319,6 +319,18 @@
       ],
       "enabled": false
     },
+    "finacompass": {
+      "type": "local",
+      "command": [
+        "finacompass",
+        "mcp"
+      ],
+      "enabled": true,
+      "environment": {
+        "FINACOMPASS_SERVER_URL": "http://localhost:8080",
+        "FINACOMPASS_TIMEOUT": "30s"
+      }
+    },
     "context7": {
       "type": "remote",
       "url": "https://mcp.context7.com/mcp",
