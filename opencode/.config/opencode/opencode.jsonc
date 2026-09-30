@@ -3,6 +3,7 @@
   "default_agent": "plan",
   "enabled_providers": [
     "9router",
+    "openai",
   ],
   "permission": {
     "external_directory": {
@@ -17,57 +18,6 @@
         "apiKey": "{env:NINEROUTER_KEY}"
       },
       "models": {
-        "cx/gpt-6-astra": {
-          "name": "GPT-6 Astra",
-          "reasoning": true,
-          "limit": {
-            "context": 272000,
-            "output": 128000
-          },
-          "modalities": {
-            "input": [
-              "text",
-              "image"
-            ],
-            "output": [
-              "text"
-            ]
-          }
-        },
-        "cx/gpt-6-sol": {
-          "name": "GPT-6 Sol",
-          "reasoning": true,
-          "limit": {
-            "context": 272000,
-            "output": 128000
-          },
-          "modalities": {
-            "input": [
-              "text",
-              "image"
-            ],
-            "output": [
-              "text"
-            ]
-          }
-        },
-        "cx/gpt-6-luna": {
-          "name": "GPT-6 Luna",
-          "reasoning": true,
-          "limit": {
-            "context": 272000,
-            "output": 128000
-          },
-          "modalities": {
-            "input": [
-              "text",
-              "image"
-            ],
-            "output": [
-              "text"
-            ]
-          }
-        },
         "cc/claude-sonnet-5": {
           "name": "Claude Sonnet 5",
           "reasoning": true,
@@ -102,109 +52,15 @@
             ]
           }
         },
-        // specific variant
-        "cx/gpt-6-sol(high)": {
-          "name": "GPT-6 Sol (high)",
-          "limit": {
-            "context": 272000,
-            "output": 128000
-          },
-          "modalities": {
-            "input": [
-              "text",
-              "image"
-            ],
-            "output": [
-              "text"
-            ]
-          }
-        },
-        "cx/gpt-6-luna(medium)": {
-          "name": "GPT-6 Luna (medium)",
-          "limit": {
-            "context": 272000,
-            "output": 128000
-          },
-          "modalities": {
-            "input": [
-              "text",
-              "image"
-            ],
-            "output": [
-              "text"
-            ]
-          }
-        },
-        "cx/gpt-6-luna(low)": {
-          "name": "GPT-6 Luna (low)",
-          "limit": {
-            "context": 272000,
-            "output": 128000
-          },
-          "modalities": {
-            "input": [
-              "text",
-              "image"
-            ],
-            "output": [
-              "text"
-            ]
-          }
-        },
-        "cc/claude-sonnet-5(medium)": {
-          "name": "Claude Sonnet 5 (medium)",
-          "limit": {
-            "context": 1000000,
-            "output": 128000
-          },
-          "modalities": {
-            "input": [
-              "text",
-              "image"
-            ],
-            "output": [
-              "text"
-            ]
-          }
-        },
-        "cc/claude-sonnet-5(low)": {
-          "name": "Claude Sonnet 5 (low)",
-          "limit": {
-            "context": 1000000,
-            "output": 128000
-          },
-          "modalities": {
-            "input": [
-              "text",
-              "image"
-            ],
-            "output": [
-              "text"
-            ]
-          }
-        },
-        "cc/claude-opus-5-5(medium)": {
-          "name": "Claude Opus 5.5 (medium)",
-          "limit": {
-            "context": 1000000,
-            "output": 128000
-          },
-          "modalities": {
-            "input": [
-              "text",
-              "image"
-            ],
-            "output": [
-              "text"
-            ]
-          }
-        }
       }
     }
   },
   "agent": {
     "orchestrator": {
       "color": "success"
+    },
+    "explorer": {
+      "disable": false,
     },
     "plan": {
       "color": "secondary",
@@ -221,7 +77,7 @@
       }
     },
     "title": {
-      "model": "9router/cx/gpt-6-luna(low)"
+      "model": "openai/gpt-5.6-luna"
     },
     "explore": {
       "disable": true

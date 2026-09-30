@@ -1,7 +1,7 @@
 ---
 description: English Teacher
 mode: primary
-model: 9router/cx/gpt-6-luna(low)
+model: openai/gpt-6-luna
 color: info
 permission:
   '*': deny

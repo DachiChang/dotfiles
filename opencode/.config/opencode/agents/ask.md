@@ -1,7 +1,7 @@
 ---
 description: Ask matter
 mode: primary
-model: 9router/cx/gpt-6-luna(low)
+model: openai/gpt-6-luna
 color: primary
 permission:
   '*': deny

@@ -11,42 +11,23 @@
   "presets": {
     "a-team": {
       "orchestrator": {
-        "model": [
-          {
-            "id": "9router/cx/gpt-6-sol"
-          },
-          {
-            "id": "9router/cc/claude-sonnet-5"
-          }
-        ],
+        "model": "openai/gpt-6-sol",
         "skills": [
           "*"
         ],
         "mcps": []
       },
       "oracle": {
-        "model": [
-          {
-            "id": "9router/cc/claude-opus-5-5(medium)"
-          },
-          {
-            "id": "9router/cx/gpt-6-sol(high)"
-          }
-        ],
+        "model": "9router/cc/claude-opus-5-5",
+        "variant": "high",
         "skills": [
           "simplify"
         ],
         "mcps": []
       },
       "librarian": {
-        "model": [
-          {
-            "id": "9router/cx/gpt-6-luna(low)"
-          },
-          {
-            "id": "9router/cc/claude-sonnet-5(low)"
-          }
-        ],
+        "model": "openai/gpt-6-luna",
+        "variant": "low",
         "skills": [],
         "mcps": [
           "context7",
@@ -54,38 +35,20 @@
         ]
       },
       "explorer": {
-        "model": [
-          {
-            "id": "9router/cc/claude-sonnet-5(low)"
-          },
-          {
-            "id": "9router/cx/gpt-6-luna(low)"
-          }
-        ],
+        "model": "openai/gpt-6-luna",
+        "variant": "low",
         "skills": [],
         "mcps": []
       },
       "designer": {
-        "model": [
-          {
-            "id": "9router/cx/gpt-6-luna(medium)"
-          },
-          {
-            "id": "9router/cc/claude-sonnet-5(medium)"
-          }
-        ],
+        "model": "openai/gpt-6-luna",
+        "variant": "medium",
         "skills": [],
         "mcps": []
       },
       "fixer": {
-        "model": [
-          {
-            "id": "9router/cc/claude-sonnet-5(low)"
-          },
-          {
-            "id": "9router/cx/gpt-6-luna(medium)"
-          }
-        ],
+        "model": "9router/cc/claude-sonnet-5",
+        "variant": "low",
         "skills": [],
         "mcps": []
       }
