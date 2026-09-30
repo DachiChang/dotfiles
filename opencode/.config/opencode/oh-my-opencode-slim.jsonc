@@ -13,7 +13,7 @@
       "orchestrator": {
         "model": [
           {
-            "id": "9router/cx/gpt-5.6-terra"
+            "id": "9router/cx/gpt-6-sol"
           },
           {
             "id": "9router/cc/claude-sonnet-5"
@@ -30,7 +30,7 @@
             "id": "9router/cc/claude-opus-5-5(medium)"
           },
           {
-            "id": "9router/cx/gpt-5.6-sol(high)"
+            "id": "9router/cx/gpt-6-sol(high)"
           }
         ],
         "skills": [
@@ -41,7 +41,7 @@
       "librarian": {
         "model": [
           {
-            "id": "9router/cx/gpt-5.6-luna(low)"
+            "id": "9router/cx/gpt-6-luna(low)"
           },
           {
             "id": "9router/cc/claude-sonnet-5(low)"
@@ -59,7 +59,7 @@
             "id": "9router/cc/claude-sonnet-5(low)"
           },
           {
-            "id": "9router/cx/gpt-5.6-luna(low)"
+            "id": "9router/cx/gpt-6-luna(low)"
           }
         ],
         "skills": [],
@@ -68,7 +68,7 @@
       "designer": {
         "model": [
           {
-            "id": "9router/cx/gpt-5.6-terra(medium)"
+            "id": "9router/cx/gpt-6-luna(medium)"
           },
           {
             "id": "9router/cc/claude-sonnet-5(medium)"
@@ -83,7 +83,7 @@
             "id": "9router/cc/claude-sonnet-5(low)"
           },
           {
-            "id": "9router/cx/gpt-5.6-terra(low)"
+            "id": "9router/cx/gpt-6-luna(medium)"
           }
         ],
         "skills": [],
