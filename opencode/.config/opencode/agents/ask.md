@@ -2,11 +2,27 @@
 description: Ask matter
 mode: primary
 model: openai/gpt-6-luna
-color: primary
-permission:
-  '*': deny
-  webfetch: allow
-  websearch: allow
+color: "#fabd2f"
+disabled: false
+permissions:
+  - action: "*"
+    resource: "*"
+    effect: deny
+  - action: webfetch
+    resource: "*"
+    effect: allow
+  - action: websearch
+    resource: "*"
+    effect: allow
+  - action: execute
+    resource: "*"
+    effect: allow
+  - action: context7_*
+    resource: "*"
+    effect: allow
+  - action: gh_grep_*
+    resource: "*"
+    effect: allow
 ---
 
 # Mission

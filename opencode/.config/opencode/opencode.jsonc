@@ -1,31 +1,25 @@
 {
   "$schema": "https://opencode.ai/config.json",
   "default_agent": "plan",
-  "enabled_providers": [
-    "9router",
-    "openai",
-  ],
-  "permission": {
-    "external_directory": {
-      "/tmp/**": "allow"
+  "permissions": [
+    {
+      "action": "external_directory",
+      "resource": "/tmp/**",
+      "effect": "allow"
     }
-  },
-  "provider": {
+  ],
+  "providers": {
     "9router": {
-      "npm": "@ai-sdk/openai-compatible",
-      "options": {
+      "package": "@opencode/ai/providers/openai-compatible",
+      "settings": {
         "baseURL": "{env:NINEROUTER_URL}/v1",
         "apiKey": "{env:NINEROUTER_KEY}"
       },
       "models": {
         "cc/claude-sonnet-5": {
           "name": "Claude Sonnet 5",
-          "reasoning": true,
-          "limit": {
-            "context": 1000000,
-            "output": 128000
-          },
-          "modalities": {
+          "capabilities": {
+            "tools": true,
             "input": [
               "text",
               "image"
@@ -33,16 +27,16 @@
             "output": [
               "text"
             ]
-          }
+          },
+          "limit": {
+            "context": 1000000,
+            "output": 128000
+          },
         },
         "cc/claude-opus-5-5": {
           "name": "Claude Opus 5.5",
-          "reasoning": true,
-          "limit": {
-            "context": 1000000,
-            "output": 128000
-          },
-          "modalities": {
+          "capabilities": {
+            "tools": true,
             "input": [
               "text",
               "image"
@@ -50,115 +44,86 @@
             "output": [
               "text"
             ]
-          }
-        },
+          },
+          "limit": {
+            "context": 1000000,
+            "output": 128000
+          },
+        }
       }
     }
   },
-  "agent": {
-    "orchestrator": {
-      "color": "success"
-    },
-    "explorer": {
-      "disable": false,
-    },
+  "agents": {
     "plan": {
-      "color": "secondary",
+      "color": "#83a598",
       "model": "9router/cc/claude-opus-5-5",
-      "permission": {
-        "task": "deny"
-      }
     },
     "build": {
-      "color": "error",
+      "color": "#fb4934",
       "model": "9router/cc/claude-opus-5-5",
-      "permission": {
-        "task": "deny"
-      }
-    },
-    "title": {
-      "model": "openai/gpt-5.6-luna"
     },
     "explore": {
-      "disable": true
+      "color": "#b8bb26",
+      "model": "openai/gpt-6-luna#low",
     },
     "general": {
-      "disable": true
-    }
+      "color": "#d3869b",
+      "model": "9router/cc/claude-sonnet-5#medium",
+    },
+    "title": {
+      "model": "openai/gpt-5.6-luna#low"
+    },
   },
-  "lsp": false,
-  "snapshot": false,
-  "skills": {
-    "paths": [
-      "~/skills"
-    ]
+  "snapshots": false,
+  "skills": [
+    "~/skills"
+  ],
+  "worktree": {
+    "directory": ".worktree",
+  },
+  "websearch": {
+    "provider": "exa",
   },
   "mcp": {
-    "openpets": {
-      "type": "local",
-      "command": [
-        "npx",
-        "-y",
-        "@open-pets/cli@2.0.7",
-        "mcp",
-        "--pet",
-        "cinnamonroll"
-      ],
-      "enabled": true
-    },
-    "tw-591": {
-      "type": "local",
-      "command": [
-        "mcp-591"
-      ],
-      "enabled": false
-    },
-    "tw-company": {
-      "type": "local",
-      "command": [
-        "uv",
-        "tool",
-        "run",
-        "mcp-tw-company"
-      ],
-      "enabled": false
-    },
-    "finacompass": {
-      "type": "local",
-      "command": [
-        "finacompass",
-        "mcp"
-      ],
-      "enabled": true,
-      "environment": {
-        "FINACOMPASS_SERVER_URL": "http://localhost:8080",
-        "FINACOMPASS_TIMEOUT": "30s"
+    "servers": {
+      "tw-591": {
+        "type": "local",
+        "command": [
+          "mcp-591"
+        ],
+        "disabled": true
+      },
+      "finacompass": {
+        "type": "local",
+        "command": [
+          "finacompass",
+          "mcp"
+        ],
+        "disabled": false,
+        "environment": {
+          "FINACOMPASS_SERVER_URL": "http://localhost:8080",
+          "FINACOMPASS_TIMEOUT": "30s"
+        }
+      },
+      "context7": {
+        "type": "remote",
+        "url": "https://mcp.context7.com/mcp",
+        "disabled": false,
+        "headers": {
+          "CONTEXT7_API_KEY": "{env:CONTEXT7_API_KEY}"
+        }
+      },
+      "gh_grep": {
+        "type": "remote",
+        "url": "https://mcp.grep.app",
+        "disabled": false
       }
-    },
-    "context7": {
-      "type": "remote",
-      "url": "https://mcp.context7.com/mcp",
-      "enabled": true,
-      "headers": {
-        "CONTEXT7_API_KEY": "{env:CONTEXT7_API_KEY}"
-      }
-    },
-    "gh_grep": {
-      "type": "remote",
-      "url": "https://mcp.grep.app",
-      "enabled": true
     }
   },
-  "instructions": [
-    "openpets.md"
-  ],
-  "plugin": [
-    [
-      "@open-pets/opencode@2.0.7",
-      {
-        "pet": "cinnamonroll"
-      }
-    ],
-    "oh-my-opencode-slim"
-  ]
+  // "references": {
+  //   "goath-ddd-design": {
+  //     "path": "~/workspace/aicova/fina-compass",
+  //     "description": "Use when designing or implementing full-stack applications with Go, Alpine.js, Tailwind CSS, templ, and HTMX. Refer to this project for DDD architecture, module boundaries, and implementation patterns."
+  //   }
+  // }
 }
