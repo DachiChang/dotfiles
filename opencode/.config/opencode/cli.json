@@ -13,6 +13,7 @@
     "session.list": "ctrl+l",
     "agent.cycle": "tab",
     "agent.cycle.reverse": "shift+tab",
+    "dialog.move_session.move": "ctrl+g",
     "terminal.toggle": false,
     "open.menu": false
   },
