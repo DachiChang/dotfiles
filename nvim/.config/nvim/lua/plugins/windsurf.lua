@@ -27,7 +27,7 @@ return {
     end, { expr = true })
 
     -- codeium manual/auto switcher
-    keymap("n", "<S-Tab>", function()
+    keymap("n", "<F10>", function()
       local manual_mode = vim.g.codeium_manual or false
       if manual_mode then
         vim.g.codeium_manual = false -- switch to auto
