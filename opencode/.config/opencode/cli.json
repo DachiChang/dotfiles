@@ -12,7 +12,7 @@
     "session.tab.close": "ctrl+q",
     "session.list": "ctrl+l",
     "agent.cycle": "tab",
-    "agent.cycle.reverse": "shift+tab",
+    "model.cycle_favorite": "ctrl+]",
     "dialog.move_session.move": "ctrl+g",
     "terminal.toggle": false,
     "open.menu": false
