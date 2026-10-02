@@ -3,7 +3,7 @@ description: Ask matter
 mode: primary
 model: openai/gpt-6-luna
 color: "#fabd2f"
-disabled: false
+disabled: true
 permissions:
   - action: "*"
     resource: "*"
