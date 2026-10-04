@@ -4,7 +4,7 @@
   "permissions": [
     {
       "action": "external_directory",
-      "resource": "/tmp/**",
+      "resource": "/tmp/*",
       "effect": "allow"
     }
   ],
