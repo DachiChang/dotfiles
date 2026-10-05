@@ -4,7 +4,7 @@ return {
   version = '1.*',
   -- build = 'cargo build --release',
   dependencies = {
-    'rafamadriz/friendly-snippets',        -- source snippets
+    'rafamadriz/friendly-snippets', -- source snippets
   },
   config = function()
     -- friendly-snippets will be autoload
@@ -42,6 +42,9 @@ return {
       },
       sources = { -- completion sources
         default = { 'lsp', 'path', 'snippets', 'buffer' },
+        per_filetype = {
+          sql = { inherit_defaults = true, 'sqmeow' },
+        },
         providers = {
           lsp = {
             name = '[Lsp]',
@@ -63,6 +66,10 @@ return {
           },
           cmdline = {
             name = '[Cmd]'
+          },
+          sqmeow = {
+            name = '[Sqmeow]',
+            module = 'sqmeow.completion.blink',
           },
         },
       },
