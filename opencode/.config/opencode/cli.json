@@ -11,8 +11,8 @@
     "session.tab.previous": "ctrl+p",
     "session.tab.close": "ctrl+q",
     "session.list": "ctrl+l",
-    "agent.cycle": "tab",
-    "model.cycle_favorite": "ctrl+]",
+    "agent.cycle": "shift+tab",
+    "model.cycle_favorite": "tab",
     "dialog.move_session.move": "ctrl+g",
     "terminal.toggle": false,
     "open.menu": false
