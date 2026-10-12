@@ -20,7 +20,7 @@ return {
         },
       },
       query = {
-        max_rows= 1000,
+        max_rows = 1000,
         persist_history = false,
       },
       keymaps = {
@@ -28,7 +28,6 @@ return {
           toggle = "<CR>",
           add = "a",
           new_scratchpad = "n",
-          preview = "v",
           structure = "i",
         },
         result = {
@@ -36,6 +35,7 @@ return {
           structure = "i",
           filter = "f",
           order = false,
+          group = false,
           reset_view = "r",
           hide_column = "-",
           show_columns = "g-",
