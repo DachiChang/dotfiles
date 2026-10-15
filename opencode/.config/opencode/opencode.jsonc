@@ -74,22 +74,22 @@
   "agents": {
     "plan": {
       "color": "#83a598",
-      "model": "9router/cc/claude-opus-5-5",
+      "model": "openai/gpt-6.1-sol",
     },
     "build": {
       "color": "#fb4934",
-      "model": "9router/cc/claude-opus-5-5",
+      "model": "openai/gpt-6.1-sol",
     },
     "explore": {
       "color": "#b8bb26",
-      "model": "openai/gpt-6-luna#low",
+      "model": "openai/gpt-6-luna#medium",
     },
     "general": {
       "color": "#d3869b",
-      "model": "9router/cc/claude-sonnet-5#medium",
+      "model": "openai/gpt-6.1-sol#medium",
     },
     "title": {
-      "model": "openai/gpt-5.6-luna#low"
+      "model": "openai/gpt-6-luna#none"
     },
   },
   "snapshots": false,
