@@ -34,13 +34,14 @@
         "apiKey": "{env:NINEROUTER_KEY}"
       },
       "models": {
-        "cc/claude-sonnet-5": {
-          "name": "Claude Sonnet 5",
+        "cc/claude-sonnet-5-5": {
+          "name": "Claude Sonnet 5.5",
           "capabilities": {
             "tools": true,
             "input": [
               "text",
-              "image"
+              "image",
+              "pdf"
             ],
             "output": [
               "text"
@@ -57,7 +58,8 @@
             "tools": true,
             "input": [
               "text",
-              "image"
+              "image",
+              "pdf"
             ],
             "output": [
               "text"
