@@ -127,6 +127,7 @@ load-nvmrc
 export GOG_KEYRING_PASSWORD=''
 
 # opencode
+export OPENCODE_DISABLE_CLAUDE_CODE=1
 export EXA_API_KEY="$(<"$HOME/.secrets/exa-search")"
 export CONTEXT7_API_KEY="$(<"$HOME/.secrets/context7")"
 export NINEROUTER_URL="http://127.0.0.1:20128"
