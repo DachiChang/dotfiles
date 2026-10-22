@@ -28,7 +28,7 @@ return {
         filetypes = { "html", "css", "templ" },
       },
       tailwindcss = {},
-      ts_ls = {},
+      tsc = {},
       -- NOTE: go
       gopls = {},
       buf_ls = {},
