@@ -28,7 +28,17 @@
             ],
             "output": [
               "text"
-            ]
+            ],
+            "reasoning": {
+              "supported": true,
+              "effort": [
+                "low",
+                "medium",
+                "high",
+                "xhigh",
+                "max"
+              ]
+            }
           },
           "limit": {
             "context": 1000000,
@@ -46,7 +56,17 @@
             ],
             "output": [
               "text"
-            ]
+            ],
+            "reasoning": {
+              "supported": true,
+              "effort": [
+                "low",
+                "medium",
+                "high",
+                "xhigh",
+                "max"
+              ]
+            }
           },
           "limit": {
             "context": 1000000,
