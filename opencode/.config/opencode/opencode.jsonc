@@ -89,6 +89,8 @@
     "servers": {
       "tw-591": {
         "type": "local",
+        "cwd": "~", // local mcp 使用 pool 必須指定相同的 cwd
+        "pool": true,
         "command": [
           "mcp-591"
         ],
@@ -96,6 +98,8 @@
       },
       "finacompass": {
         "type": "local",
+        "cwd": "~",
+        "pool": true,
         "command": [
           "finacompass",
           "mcp"
@@ -108,6 +112,7 @@
       },
       "context7": {
         "type": "remote",
+        "pool": true,
         "url": "https://mcp.context7.com/mcp",
         "oauth": false,
         "disabled": false,
@@ -117,11 +122,13 @@
       },
       "gh_grep": {
         "type": "remote",
+        "pool": true,
         "url": "https://mcp.grep.app",
         "disabled": false
       },
       "hackmd": {
         "type": "remote",
+        "pool": true,
         "url": "https://mcp.hackmd.io",
         "disabled": false
       }
