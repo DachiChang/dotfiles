@@ -22,6 +22,7 @@
     "mode": "on"
   },
   "session": {
+    "verbosity":"medium",
     "submit_scroll":"keep",
     "sidebar": "hide",
     "thinking": "show"
