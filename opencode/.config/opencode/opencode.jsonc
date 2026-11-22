@@ -89,7 +89,7 @@
     },
     "general": {
       "color": "#d3869b",
-      "model": "openai/gpt-6.2-sol#medium",
+      "model": "9router/combo-claude-sonnet-5-5medium",
     },
     "title": {
       "model": "openai/gpt-6-luna#none"
