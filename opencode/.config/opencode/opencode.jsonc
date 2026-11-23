@@ -7,7 +7,12 @@
       "action": "experimental_image_generate",
       "resource": "*",
       "effect": "deny"
-    }
+    },
+    {
+      "action": "external_directory",
+      "resource": "*",
+      "effect": "ask"
+    },
   ],
   "providers": {
     "9router": {
