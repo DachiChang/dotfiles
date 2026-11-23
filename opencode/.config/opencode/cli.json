@@ -26,5 +26,6 @@
     "submit_scroll": "keep",
     "sidebar": "hide",
     "thinking": "show"
-  }
+  },
+  "plugins": ["*", "-opencode.notifications"]
 }
