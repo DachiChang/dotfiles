@@ -4,7 +4,12 @@
   "model": "openai/gpt-6.2-sol",
   "permissions": [ // use 9router as media provider
     {
-      "action": "experimental_image_generate",
+      "action": "generate_image",
+      "resource": "*",
+      "effect": "deny"
+    },
+    {
+      "action": "generate_video",
       "resource": "*",
       "effect": "deny"
     },
