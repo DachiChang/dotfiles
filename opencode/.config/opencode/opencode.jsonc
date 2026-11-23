@@ -157,8 +157,8 @@
       },
       "gh_grep": {
         "type": "remote",
-        "pool": true,
         "url": "https://mcp.grep.app",
+        "protocol": "legacy",
         "disabled": false
       },
       "hackmd": {
