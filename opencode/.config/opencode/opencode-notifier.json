@@ -1,0 +1,18 @@
+{
+  "suppressWhenFocused": false,
+  "showSessionTitle": true,
+  "deferCompleteUntilChildrenIdle": true,
+  "deferredCompleteTimeout": 3600000,
+  "notificationTitle": "Project - {projectName}",
+  "events": {
+    "session_started": false,
+    "user_message": false,
+    "client_connected": false
+  },
+  "messages": {
+    "permission": "{sessionTitle}\nNeeds your permission",
+    "complete": "{sessionTitle}\nDone",
+    "error": "{sessionTitle}\nRan into an error",
+    "question": "{sessionTitle}\nHas a question for you"
+  }
+}

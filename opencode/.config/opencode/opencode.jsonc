@@ -154,6 +154,9 @@
       }
     }
   },
+  "plugins": [
+    "@mohak34/opencode-notifier@1.1.3"
+  ]
   // "references": {
   //   "goath-ddd-design": {
   //     "path": "~/workspace/aicova/fina-compass",
