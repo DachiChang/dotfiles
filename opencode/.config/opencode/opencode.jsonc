@@ -18,6 +18,11 @@
       "resource": "*",
       "effect": "ask"
     },
+    {
+      "action": "external_directory",
+      "resource": "/private{env:TMPDIR}*",
+      "effect": "allow"
+    },
   ],
   "providers": {
     "9router": {
