@@ -25,70 +25,17 @@
     },
   ],
   "providers": {
+    "anthropic": {
+      "settings": {
+        "baseURL": "http://127.0.0.1:20128/v1"
+      }
+    },
     "9router": {
       "package": "@opencode/ai/providers/openai-compatible",
       "settings": {
         "baseURL": "{env:NINEROUTER_URL}/v1",
         "apiKey": "{env:NINEROUTER_KEY}"
       },
-      "models": {
-        "combo-claude-sonnet-5-5": {
-          "name": "Claude Sonnet 5.5",
-          "capabilities": {
-            "tools": true,
-            "input": [
-              "text",
-              "image",
-              "pdf"
-            ],
-            "output": [
-              "text"
-            ],
-            "reasoning": {
-              "supported": true,
-              "effort": [
-                "low",
-                "medium",
-                "high",
-                "xhigh",
-                "max"
-              ]
-            }
-          },
-          "limit": {
-            "context": 1000000,
-            "output": 128000
-          },
-        },
-        "combo-claude-opus-5-5": {
-          "name": "Claude Opus 5.5",
-          "capabilities": {
-            "tools": true,
-            "input": [
-              "text",
-              "image",
-              "pdf"
-            ],
-            "output": [
-              "text"
-            ],
-            "reasoning": {
-              "supported": true,
-              "effort": [
-                "low",
-                "medium",
-                "high",
-                "xhigh",
-                "max"
-              ]
-            }
-          },
-          "limit": {
-            "context": 1000000,
-            "output": 128000
-          },
-        }
-      }
     }
   },
   "agents": {
@@ -104,7 +51,10 @@
     },
     "general": {
       "color": "#d3869b",
-      "model": "9router/combo-claude-sonnet-5-5#medium",
+      "model": "anthropic/claude-sonnet-5-5#medium",
+      // opencode use 9router api-key to connect local 9router
+      // 9router will search model in combo list first then in provider
+      // combo list exist same model name will be used once exist
     },
     "title": {
       "model": "openai/gpt-6-luna#none"
@@ -124,7 +74,7 @@
     "servers": {
       "tw-591": {
         "type": "local",
-        "cwd": "~", // local mcp 使用 pool 必須指定相同的 cwd
+        "cwd": "~", // local mcp use same pool need to set the same "cwd"
         "pool": true,
         "command": [
           "mcp-591"
