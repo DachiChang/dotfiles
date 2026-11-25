@@ -27,8 +27,25 @@
   "providers": {
     "anthropic": {
       "settings": {
-        "baseURL": "http://127.0.0.1:20128/v1"
-      }
+        "baseURL": "http://127.0.0.1:20128/v1",
+        "apiKey": "{env:NINEROUTER_KEY}",
+      },
+      "models": {
+        "claude-opus-5-5": {
+          "body": {
+            "thinking": {
+              "display": "omitted"
+            }
+          }
+        },
+        "claude-sonnet-5-5": {
+          "body": {
+            "thinking": {
+              "display": "omitted"
+            }
+          }
+        }
+      },
     },
     "9router": {
       "package": "@opencode/ai/providers/openai-compatible",
