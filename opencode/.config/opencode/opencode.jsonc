@@ -2,6 +2,42 @@
   "$schema": "https://opencode.ai/config.json",
   "default_agent": "plan",
   "model": "openai/gpt-6.2-sol",
+  // 階段一：每一步送給模型前，決定工具清單
+  // 1. 列出所有註冊的工具（內建 + plugin + MCP）
+  // 2. 對每個工具：
+  //    a. 呼叫端設成隱藏（hidden）→ 跳過
+  //    b. 取得權限名稱 = tool.options.permission ?? 工具名稱
+  //    c. 從 {ask} 開始，依序掃過合併後的整份規則：
+  //       - 規則的 action 對不上 → 跳過
+  //       - resource 是 *（全部比對）→ 集合清空，只放這條的 effect
+  //       - resource 是窄的 → 把 effect 加進集合
+  //    d. 集合只有 {deny} → 隱藏
+  //       其他情況（有 ask 或 allow）→ 保留
+  // 3. 保留下來的工具分兩類：
+  //    - 預設放進 Code Mode 的 → 放進 execute 的目錄
+  //    - 其他 → 直接列出
+  //    （execute 本身被全部 deny 的話，Code Mode 會關掉，裡面的工具改成直接列出）
+  // 4. 把清單送給模型
+
+  // 這個階段還不知道具體資源，所以只能判斷「這個工具有沒有可能被允許」。
+  //
+  // 階段二：模型呼叫工具時，判斷這一次能不能執行
+  // 1. 工具決定這次要檢查哪些 (action, resource)
+  //    例如 read /Users/x/foo.txt：
+  //      - 路徑在專案外 → 先檢查 (external_directory, /Users/x/*)
+  //      - 再檢查 (read, /Users/x/foo.txt)
+  // 2. 每一組：從規則清單的「最後一條」往前找，第一條符合的就是結果
+  //    （找不到任何符合的規則 → ask）
+  // 3. 有多個資源時合併結果，例如一次 patch 改好幾個檔案：
+  //      任何一個 deny → deny
+  //      否則任何一個 ask → ask
+  //      否則 → allow
+  // 4. 結果是 ask → 再查已記住的核准，有的話改成 allow
+  // 5. policies 有 deny → 改成 deny
+  // 6. 依最後的結果處理：
+  //      allow → 直接執行
+  //      ask   → 詢問你（允許一次 / 永遠允許 / 拒絕）
+  //      deny  → 擋下，回錯誤給模型
   "permissions": [ // use 9router as media provider
     {
       "action": "generate_image",
