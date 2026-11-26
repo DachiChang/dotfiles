@@ -38,6 +38,8 @@
   //      allow → 直接執行
   //      ask   → 詢問你（允許一次 / 永遠允許 / 拒絕）
   //      deny  → 擋下，回錯誤給模型
+  //
+  // 可以使用 opencode debug agents 來列出每個 agents 最終算完的工具和 code mode 列表
   "permissions": [ // use 9router as media provider
     {
       "action": "generate_image",
