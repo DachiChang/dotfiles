@@ -58,6 +58,11 @@
     },
     {
       "action": "external_directory",
+      "resource": "~/dotfiles/*",
+      "effect": "allow",
+    },
+    {
+      "action": "external_directory",
       "resource": "/private{env:TMPDIR}*",
       "effect": "allow",
     },
