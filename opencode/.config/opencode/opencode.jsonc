@@ -177,7 +177,7 @@
     },
   },
   "plugins": [
-    "@mohak34/opencode-notifier@1.1.3",
+    "@mohak34/opencode-notifier@1.2.0",
   ],
   // "references": {
   //   "goath-ddd-design": {
