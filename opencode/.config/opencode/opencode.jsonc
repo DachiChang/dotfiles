@@ -63,33 +63,38 @@
     },
   ],
   "providers": {
-    "anthropic": {
+    "anthropic-tyr": {
+      "canonical": "anthropic",
+      "package": "@opencode/ai/providers/anthropic-compatible",
       "settings": {
-        "baseURL": "http://127.0.0.1:20128/v1",
+        "baseURL": "https://tyr-gateway.dev.asgard-ai.com/v1",
+        "authToken": "{env:ASGARD_TYR_TOKEN}",
+      },
+      "models": {
+        "claude-opus-5-5": {
+          "name": "Tyr Opus 5.5",
+        },
+        "claude-sonnet-5-5": {
+          "name": "Tyr Sonnet 5.5",
+        },
+      },
+    },
+    "anthropic-9router": {
+      "canonical": "anthropic",
+      "package": "@opencode/ai/providers/anthropic-compatible",
+      "settings": {
+        "baseURL": "{env:NINEROUTER_URL}/v1",
         "apiKey": "{env:NINEROUTER_KEY}",
       },
       "models": {
         "claude-opus-5-5": {
-          "body": {
-            "thinking": {
-              "display": "omitted",
-            },
-          },
+          "name": "9router Opus 5.5",
+          "modelID": "cc/claude-opus-5-5",
         },
         "claude-sonnet-5-5": {
-          "body": {
-            "thinking": {
-              "display": "omitted",
-            },
-          },
+          "name": "9router Sonnet 5.5",
+          "modelID": "cc/claude-sonnet-5-5",
         },
-      },
-    },
-    "9router": {
-      "package": "@opencode/ai/providers/openai-compatible",
-      "settings": {
-        "baseURL": "{env:NINEROUTER_URL}/v1",
-        "apiKey": "{env:NINEROUTER_KEY}",
       },
     },
   },
@@ -106,10 +111,7 @@
     },
     "general": {
       "color": "#d3869b",
-      "model": "anthropic/claude-sonnet-5-5#medium",
-      // opencode use 9router api-key to connect local 9router
-      // 9router will search model in combo list first then in provider
-      // combo list exist same model name will be used once exist
+      "model": "anthropic-tyr/claude-sonnet-5-5#medium",
     },
     "title": {
       "model": "openai/gpt-6-luna#none",
